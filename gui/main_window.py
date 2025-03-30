@@ -550,8 +550,8 @@ class MainWindow(QMainWindow, NetworkTestMixin):
             logger.info(f"Scan completed: {len(result.networks)} networks found")
             self.status_bar.showMessage(f"Found {len(result.networks)} networks", 3000)
         else:
-            logger.error(f"Scan failed: {result.error}")
-            self.status_bar.showMessage(f"Scan failed: {result.error}", 5000)
+            logger.error(f"Scan failed: {result.error_message if result.error_message else 'Unknown error'}")
+            self.status_bar.showMessage(f"Scan failed: {result.error_message if result.error_message else 'Unknown error'}", 5000)
     
     def event(self, event: QEvent) -> bool:
         """Handle custom events."""

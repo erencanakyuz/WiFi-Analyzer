@@ -1,0 +1,18 @@
+ 
+Interface name : Wi-Fi 
+There are 1 networks currently visible. 
+
+SSID 1 : Romansal 5GHZ
+    Network type            : Infrastructure
+    Authentication          : WPA2-Personal
+    Encryption              : CCMP 
+    BSSID 1                 : ac:15:a2:26:3e:55
+         Signal             : 75%  
+         Radio type         : 802.11ax
+         Band               : 5 GHz
+         Channel            : 48 
+         QoS MSCS Supported    : 0
+         QoS Map Supported     : 0
+         Basic rates (Mbps) : 6 12 24
+         Other rates (Mbps) : 9 18 36 48 54
+

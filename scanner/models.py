@@ -15,14 +15,22 @@ class NetworkBSSID:
     Represents a single BSSID (Basic Service Set Identifier) entry for a WiFi network.
     """
     bssid: str
-    signal_percent: int
-    signal_dbm: float
-    channel: int
-    band: str  # "2.4 GHz" or "5 GHz"
+    signal_percent: int = 0
+    signal_dbm: float = -100.0
+    channel: int = 1
+    band: str = "2.4 GHz"
     
     # Additional optional fields
     channel_width: Optional[int] = None  # in MHz
     encryption: Optional[str] = None
+    
+    def __post_init__(self):
+        """Validate inputs after initialization."""
+        # Channel validation (0 or 1-196)
+        if self.channel != 0 and not 1 <= self.channel <= 196:
+            raise ValueError(f"Invalid channel number: {self.channel}")
+        if not 0 <= self.signal_percent <= 100:
+            raise ValueError(f"Invalid signal percentage: {self.signal_percent}")
     
     def __eq__(self, other):
         """Compare BSSIDs for equality."""
@@ -68,6 +76,27 @@ class WiFiNetwork:
     last_seen: float = field(default_factory=time.time)
     favorite: bool = False
     notes: str = ""
+
+    def __post_init__(self):
+        """Validate required fields."""
+        pass  # Defer validation to validate() method
+
+    def validate(self):
+        """Validate network has required fields."""
+        if not self.bssids:
+            raise TypeError("At least one BSSID is required")
+
+    def __eq__(self, other):
+        """Compare WiFiNetworks for equality based on BSSIDs only."""
+        if not isinstance(other, WiFiNetwork):
+            return False
+        return (sorted(self.bssids, key=lambda x: x.bssid) == 
+                sorted(other.bssids, key=lambda x: x.bssid))
+
+    def __str__(self):
+        """Simple string representation showing SSID and strongest signal."""
+        signal = f"{self.strongest_signal} dBm" if self.strongest_signal else "N/A"
+        return f"{self.ssid} ({signal})"
     
     @property
     def strongest_signal(self) -> Optional[float]:

@@ -995,3 +995,143 @@ For full functionality, please run the application as Administrator.
 2025-03-30 19:57:43,217 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
 2025-03-30 19:57:43,217 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
 2025-03-30 19:57:43,362 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 20:19:13,808 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:19:13,844 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 20:19:13,853 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 20:19:13,858 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:19:13,858 - root - INFO - Applied dark theme successfully
+2025-03-30 20:19:13,859 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 20:19:13,859 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 20:19:13,879 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:19:13,924 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:19:13,925 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:19:14,318 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:19:14,319 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:19:14,431 - scanner.parser - ERROR - Error parsing netsh output: At least one BSSID is required
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\parser.py", line 63, in create_scan_result
+    networks = parse_netsh_output(output_text)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\parser.py", line 153, in parse_netsh_output
+    current_network = WiFiNetwork(ssid=ssid)
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 10, in __init__
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\models.py", line 83, in __post_init__
+    raise ValueError("At least one BSSID is required")
+ValueError: At least one BSSID is required
+2025-03-30 20:19:14,434 - scanner.windows_scanner - INFO - Scan completed: 0 networks found
+2025-03-30 20:19:14,434 - scanner.windows_scanner - WARNING - No networks found - this may indicate a problem with WiFi or parsing
+2025-03-30 20:21:55,273 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:21:55,313 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 20:21:55,326 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 20:21:55,332 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:21:55,333 - root - INFO - Applied dark theme successfully
+2025-03-30 20:21:55,334 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 20:21:55,335 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 20:21:55,359 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:21:55,407 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:21:55,408 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:21:55,930 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:21:55,930 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:21:56,046 - scanner.parser - ERROR - Error parsing netsh output: Invalid channel number: 0
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\parser.py", line 63, in create_scan_result
+    networks = parse_netsh_output(output_text)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\parser.py", line 173, in parse_netsh_output
+    current_bssid = NetworkBSSID(
+                    ^^^^^^^^^^^^^
+  File "<string>", line 10, in __init__
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\scanner\models.py", line 31, in __post_init__
+    raise ValueError(f"Invalid channel number: {self.channel}")
+ValueError: Invalid channel number: 0
+2025-03-30 20:21:56,048 - scanner.windows_scanner - INFO - Scan completed: 0 networks found
+2025-03-30 20:21:56,048 - scanner.windows_scanner - WARNING - No networks found - this may indicate a problem with WiFi or parsing
+2025-03-30 20:23:04,902 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:23:04,937 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 20:23:04,948 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 20:23:04,951 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:23:04,953 - root - INFO - Applied dark theme successfully
+2025-03-30 20:23:04,954 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 20:23:04,955 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 20:23:04,974 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:23:05,017 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:23:05,017 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:23:05,809 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:23:05,810 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:23:06,019 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 20:23:06,019 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 20:23:06,265 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 20:23:14,643 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 20:26:10,978 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:26:11,011 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 20:26:11,023 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 20:26:11,028 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:26:11,028 - root - INFO - Applied dark theme successfully
+2025-03-30 20:26:11,029 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 20:26:11,029 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 20:26:11,048 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:26:11,089 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:26:11,090 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:26:11,596 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:26:11,597 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:26:11,857 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 20:26:11,857 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 20:26:12,038 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 20:26:23,555 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 20:27:09,602 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:27:09,625 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 20:27:09,625 - gui.widgets - WARNING - Could not load font Roboto-Italic, will use system fallback
+2025-03-30 20:27:09,629 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:27:09,629 - root - INFO - Applied dark theme successfully
+2025-03-30 20:27:09,630 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 20:27:09,630 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 20:27:09,653 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:27:09,693 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:27:09,693 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:27:10,113 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:27:10,113 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:27:10,203 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 20:27:10,204 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 20:27:10,367 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 20:27:21,515 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 20:27:21,546 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 20:27:21,556 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 20:27:21,560 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 20:27:21,561 - root - INFO - Applied dark theme successfully
+2025-03-30 20:27:21,561 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 20:27:21,562 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 20:27:21,577 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 20:27:21,612 - gui.main_window - INFO - Starting network scan
+2025-03-30 20:27:21,613 - gui.main_window - INFO - Main window initialized
+2025-03-30 20:27:22,002 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 20:27:22,004 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 20:27:22,122 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 20:27:22,123 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 20:27:22,284 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 20:27:42,509 - root - INFO - WiFi Analyzer shutting down with exit code 0
