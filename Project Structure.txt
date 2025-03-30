@@ -1,0 +1,21 @@
+wifi_analyzer/
+├── config/
+│   └── settings.py
+├── gui/
+│   ├── channel_graph.py
+│   ├── main_window.py
+│   ├── network_table.py
+│   └── resources/
+├── scanner/
+│   ├── models.py
+│   ├── parser.py
+│   └── windows_scanner.py
+├── utils/
+│   ├── channel_analyzer.py
+│   ├── network_tester.py
+│   └── signal_utils.py
+├── tests/
+│   └── test_scanner.py
+├── main.py
+├── requirements.txt
+└── README.md

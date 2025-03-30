@@ -1,0 +1,795 @@
+2025-03-29 04:05:32,489 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:05:32,515 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:05:32,536 - root - ERROR - Unhandled exception: 'MainWindow' object has no attribute 'show_network_details'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 150, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 230, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 260, in setup_ui
+    self.network_table.network_selected.connect(self.show_network_details)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'show_network_details'
+2025-03-29 04:06:58,822 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:06:58,846 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:06:58,889 - gui.main_window - INFO - Set light theme
+2025-03-29 04:06:58,889 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:13:19,033 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:13:19,055 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:13:19,098 - gui.main_window - INFO - Set light theme
+2025-03-29 04:13:19,101 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:13:19,455 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:13:19,460 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:14:47,412 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:14:47,441 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:14:47,484 - gui.main_window - INFO - Set light theme
+2025-03-29 04:14:47,489 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:14:47,855 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:14:47,855 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:14:47,859 - gui.channel_graph - ERROR - Error updating channel graphs: 'WiFiNetwork' object has no attribute 'get'
+2025-03-29 04:14:47,859 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:18:18,313 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:18:18,341 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:18:18,384 - gui.main_window - INFO - Set light theme
+2025-03-29 04:18:18,384 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:18:18,751 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-29 04:18:18,751 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:18:18,891 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:20:33,972 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:20:34,001 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:20:34,052 - gui.main_window - INFO - Set light theme
+2025-03-29 04:20:34,053 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:20:34,481 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:20:34,481 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:20:34,627 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:23:00,355 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:23:00,388 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:23:00,436 - gui.main_window - INFO - Set light theme
+2025-03-29 04:23:00,436 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:23:00,914 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:23:00,914 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:23:01,166 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:25:50,881 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:25:50,908 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:25:50,954 - gui.main_window - INFO - Set light theme
+2025-03-29 04:25:50,954 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:25:51,583 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-29 04:25:51,583 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:25:51,733 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:28:18,232 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:28:18,262 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:28:18,306 - gui.main_window - INFO - Set light theme
+2025-03-29 04:28:18,308 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:28:18,891 - scanner.parser - INFO - Parsed 4 networks with 14 BSSIDs
+2025-03-29 04:28:18,891 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-29 04:28:19,030 - gui.main_window - INFO - Scan completed successfully: 4 networks found
+2025-03-29 04:32:07,932 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:32:07,963 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:32:08,012 - gui.main_window - INFO - Set light theme
+2025-03-29 04:32:08,012 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:32:08,476 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:32:08,476 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:32:08,658 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:32:42,007 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:32:42,040 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:32:42,087 - gui.main_window - INFO - Set light theme
+2025-03-29 04:32:42,087 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:32:42,523 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-29 04:32:42,523 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:32:42,670 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:34:15,406 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:34:15,431 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:34:15,470 - gui.main_window - INFO - Set light theme
+2025-03-29 04:34:15,470 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:34:15,844 - scanner.parser - INFO - Parsed 2 networks with 6 BSSIDs
+2025-03-29 04:34:15,847 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:34:15,847 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:34:15,847 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:35:06,968 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:35:06,997 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:35:07,046 - gui.main_window - INFO - Set light theme
+2025-03-29 04:35:07,046 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:35:07,411 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 04:35:07,411 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:35:07,414 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:35:07,414 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:35:29,919 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:35:29,948 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:35:29,997 - gui.main_window - INFO - Set light theme
+2025-03-29 04:35:30,001 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:35:30,389 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 04:35:30,389 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:35:30,394 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:35:30,394 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:38:05,561 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:38:05,587 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:38:05,629 - gui.main_window - INFO - Set light theme
+2025-03-29 04:38:05,634 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:38:06,060 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:38:06,060 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:38:06,065 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:38:06,065 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:39:22,178 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:39:22,513 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:39:23,580 - gui.main_window - INFO - Set light theme
+2025-03-29 04:39:23,584 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:39:24,018 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:39:24,018 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:39:24,020 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:39:24,020 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:40:16,260 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:40:16,284 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:40:16,327 - gui.main_window - INFO - Set light theme
+2025-03-29 04:40:16,327 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:40:16,736 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 04:40:16,736 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:40:16,741 - gui.channel_graph - ERROR - Error updating channel graphs: 'ChannelGraphWidget' object has no attribute 'fig'
+2025-03-29 04:40:16,741 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:44:08,811 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:44:08,838 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:44:08,864 - root - ERROR - Unhandled exception: 'ChannelGraphWidget' object has no attribute 'channel_graph'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 150, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 236, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 272, in setup_ui
+    self.channel_graph = ChannelGraphWidget(analyzer=self.channel_analyzer, parent=self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\channel_graph.py", line 308, in __init__
+    self.init_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\channel_graph.py", line 352, in init_ui
+    main_layout.addWidget(self.channel_graph)
+                          ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChannelGraphWidget' object has no attribute 'channel_graph'
+2025-03-29 04:44:25,380 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:44:25,406 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:44:25,431 - root - ERROR - Unhandled exception: 'ChannelGraphWidget' object has no attribute 'channel_graph'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 150, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 236, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 272, in setup_ui
+    self.channel_graph = ChannelGraphWidget(analyzer=self.channel_analyzer, parent=self)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\channel_graph.py", line 308, in __init__
+    self.init_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\channel_graph.py", line 352, in init_ui
+    main_layout.addWidget(self.channel_graph)
+                          ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChannelGraphWidget' object has no attribute 'channel_graph'
+2025-03-29 04:44:49,698 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:44:49,730 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:44:49,778 - gui.main_window - INFO - Set light theme
+2025-03-29 04:44:49,778 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:44:50,338 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:44:50,338 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:44:50,496 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:45:19,934 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:45:19,934 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:45:20,047 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:47:35,209 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:47:35,235 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:47:35,271 - gui.main_window - INFO - Set light theme
+2025-03-29 04:47:35,271 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:47:35,633 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 04:47:35,633 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:47:35,754 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:47:38,707 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 04:48:24,837 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 04:48:24,863 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 04:48:24,910 - gui.main_window - INFO - Set light theme
+2025-03-29 04:48:24,911 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 04:48:25,419 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 04:48:25,419 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 04:48:25,574 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 04:48:55,078 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:48:55,078 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:48:55,193 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:48:57,987 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:48:57,987 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:48:58,113 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:48:59,965 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:48:59,965 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:49:00,109 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 04:49:25,077 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 04:49:25,082 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 04:49:25,227 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:02:29,633 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 05:02:29,657 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 05:02:29,723 - gui.main_window - INFO - Set light theme
+2025-03-29 05:02:29,728 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 05:02:30,082 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:02:30,082 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:02:30,214 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:02:54,164 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:02:54,164 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:02:54,280 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:02:59,897 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:02:59,897 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:03:00,032 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:03:23,497 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:03:23,497 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:03:23,684 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:03:29,896 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:03:29,896 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:03:30,117 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:03:52,384 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:03:52,384 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:03:52,597 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:03:59,899 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:03:59,899 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:04:00,120 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:05:19,140 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 05:05:19,164 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 05:05:19,213 - gui.main_window - INFO - Set light theme
+2025-03-29 05:05:19,215 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 05:05:19,575 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-29 05:05:19,575 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-29 05:05:19,701 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-29 05:05:33,407 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-29 05:05:33,407 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-29 05:05:33,572 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-29 05:05:49,399 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-29 05:05:49,399 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-29 05:05:49,556 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-29 05:06:13,791 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 05:07:01,512 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 05:07:01,539 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 05:07:01,578 - gui.main_window - INFO - Set light theme
+2025-03-29 05:07:01,578 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 05:07:01,941 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:07:01,944 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:07:02,076 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:07:21,680 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:07:21,680 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:07:21,839 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:07:25,803 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:07:25,803 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:07:25,952 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:07:31,752 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:07:31,752 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:07:31,927 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:08:01,763 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:08:01,763 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:08:01,978 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:08:31,767 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 05:08:31,767 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 05:08:31,996 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 05:08:44,404 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 18:18:24,869 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 18:18:24,893 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 18:18:25,073 - gui.main_window - INFO - Set light theme
+2025-03-29 18:18:25,073 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 18:18:25,409 - scanner.parser - INFO - Parsed 4 networks with 12 BSSIDs
+2025-03-29 18:18:25,409 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-29 18:18:25,543 - gui.main_window - INFO - Scan completed successfully: 4 networks found
+2025-03-29 18:18:55,313 - scanner.parser - INFO - Parsed 4 networks with 12 BSSIDs
+2025-03-29 18:18:55,313 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-29 18:18:55,442 - gui.main_window - INFO - Scan completed successfully: 4 networks found
+2025-03-29 18:19:25,292 - scanner.parser - INFO - Parsed 5 networks with 19 BSSIDs
+2025-03-29 18:19:25,292 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 18:19:25,435 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 18:19:55,303 - scanner.parser - INFO - Parsed 5 networks with 19 BSSIDs
+2025-03-29 18:19:55,303 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 18:19:55,494 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 18:20:25,301 - scanner.parser - INFO - Parsed 5 networks with 19 BSSIDs
+2025-03-29 18:20:25,301 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 18:20:25,453 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 18:40:56,034 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 18:40:56,067 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 18:40:56,263 - gui.main_window - INFO - Set light theme
+2025-03-29 18:40:56,263 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 18:40:56,638 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 18:40:56,638 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 18:40:56,775 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 18:41:22,958 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 18:43:38,317 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 18:43:38,342 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 18:43:38,500 - gui.main_window - INFO - Set light theme
+2025-03-29 18:43:38,500 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 18:43:38,807 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-29 18:43:38,807 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-29 18:43:38,939 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-29 18:43:40,791 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 19:00:48,510 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:00:48,539 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 19:00:48,539 - root - WARNING - Could not apply theme: 'surface'
+2025-03-29 19:00:48,540 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 19:00:48,540 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 19:00:48,704 - gui.main_window - INFO - Set light theme
+2025-03-29 19:00:48,705 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 19:00:49,101 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 19:00:49,101 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 19:00:49,292 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 19:00:53,683 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 19:06:29,324 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:06:29,356 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 19:06:29,361 - root - WARNING - Could not apply theme: setStyleSheet(self, sheet: Optional[str]): first argument of unbound method must have type 'QApplication'
+2025-03-29 19:06:29,361 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 19:06:29,361 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 19:06:29,524 - gui.main_window - INFO - Set light theme
+2025-03-29 19:06:29,524 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 19:06:29,868 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 19:06:29,868 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 19:06:30,057 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 19:06:31,780 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 19:13:30,657 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:13:30,681 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 19:13:30,691 - root - ERROR - Unhandled exception: setStyleSheet(self, sheet: Optional[str]): first argument of unbound method must have type 'QApplication'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 134, in main
+    apply_theme("dark")  # or read from settings
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\theme_manager.py", line 393, in apply_theme
+    QApplication.setStyleSheet(stylesheet)
+TypeError: setStyleSheet(self, sheet: Optional[str]): first argument of unbound method must have type 'QApplication'
+2025-03-29 19:15:27,451 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:15:27,476 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 19:15:27,482 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 19:15:27,490 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 19:15:27,490 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 19:15:27,500 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 19:15:27,500 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 19:15:27,505 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 19:15:27,510 - root - ERROR - Unhandled exception: type object 'Shape' has no attribute 'Sunken'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 186, in setup_ui
+    self.dashboard = DashboardView()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 32, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 45, in setup_ui
+    self.networks_card = Card("Networks")
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py", line 65, in __init__
+    self.separator.setFrameShadow(QFrame.Shape.Sunken)
+                                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Shape' has no attribute 'Sunken'
+2025-03-29 19:15:47,048 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:15:47,067 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 19:15:47,072 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 19:15:47,091 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 19:15:47,091 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 19:15:47,096 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 19:15:47,096 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 19:15:47,096 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 19:15:47,101 - root - ERROR - Unhandled exception: type object 'Shape' has no attribute 'Sunken'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 186, in setup_ui
+    self.dashboard = DashboardView()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 32, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 45, in setup_ui
+    self.networks_card = Card("Networks")
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py", line 65, in __init__
+    self.separator.setFrameShadow(QFrame.Shape.Sunken)
+                                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Shape' has no attribute 'Sunken'
+2025-03-29 19:19:57,321 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 19:19:57,345 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 19:19:57,349 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 19:19:57,356 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 19:19:57,356 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 19:19:57,362 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 19:19:57,362 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 19:19:57,370 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 19:19:57,370 - root - ERROR - Unhandled exception: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 185, in setup_ui
+    from gui.dashboard import DashboardView
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 12, in <module>
+    from gui.widgets.card import DashboardCard
+ImportError: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:35:02,141 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:35:02,163 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:35:02,168 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:35:02,173 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:35:02,173 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:35:02,173 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:35:02,173 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:35:02,173 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:35:02,178 - root - ERROR - Unhandled exception: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 185, in setup_ui
+    from gui.dashboard import DashboardView
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 12, in <module>
+    from gui.widgets.card import DashboardCard
+ImportError: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:36:02,956 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:36:02,979 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:36:02,983 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:36:03,002 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:36:03,004 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:36:03,007 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:36:03,007 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:36:03,013 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:36:03,013 - root - ERROR - Unhandled exception: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 185, in setup_ui
+    from gui.dashboard import DashboardView
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 12, in <module>
+    from gui.widgets.card import DashboardCard
+ImportError: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:37:17,641 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:37:17,669 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:37:17,674 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:37:17,699 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:37:17,699 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:37:17,707 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:37:17,707 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:37:17,736 - root - ERROR - Unhandled exception: type object 'Shadow' has no attribute 'HLine'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 186, in setup_ui
+    self.dashboard = DashboardView()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 32, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 45, in setup_ui
+    self.networks_card = DashboardCard("Networks")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py", line 64, in __init__
+    self.separator.setFrameShape(QFrame.Shadow.HLine)
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Shadow' has no attribute 'HLine'
+2025-03-29 22:37:29,455 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:37:29,481 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:37:29,483 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:37:29,508 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:37:29,508 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:37:29,511 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:37:29,511 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:37:29,518 - root - ERROR - Unhandled exception: type object 'Shadow' has no attribute 'StyledPanel'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 186, in setup_ui
+    self.dashboard = DashboardView()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 32, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 45, in setup_ui
+    self.networks_card = DashboardCard("Networks")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py", line 16, in __init__
+    self.setFrameShape(QFrame.Shadow.StyledPanel)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Shadow' has no attribute 'StyledPanel'
+2025-03-29 22:37:45,944 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:37:45,969 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:37:45,976 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:37:45,979 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:37:45,979 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:37:45,983 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:37:45,983 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:37:45,992 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:37:45,992 - root - ERROR - Unhandled exception: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 185, in setup_ui
+    from gui.dashboard import DashboardView
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 12, in <module>
+    from gui.widgets.card import DashboardCard
+ImportError: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:37:49,697 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:37:49,719 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:37:49,724 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:37:49,733 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:37:49,733 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:37:49,738 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:37:49,738 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:37:49,738 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:37:49,738 - root - ERROR - Unhandled exception: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 185, in setup_ui
+    from gui.dashboard import DashboardView
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 12, in <module>
+    from gui.widgets.card import DashboardCard
+ImportError: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:38:26,063 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:38:26,083 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:38:26,088 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:38:26,109 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:38:26,109 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:38:26,119 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:38:26,119 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:38:26,119 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:38:26,124 - root - ERROR - Unhandled exception: type object 'Shadow' has no attribute 'HLine'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 186, in setup_ui
+    self.dashboard = DashboardView()
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 32, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\dashboard.py", line 45, in setup_ui
+    self.networks_card = DashboardCard("Networks")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py", line 64, in __init__
+    self.separator.setFrameShape(QFrame.Shadow.HLine)
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Shadow' has no attribute 'HLine'
+2025-03-29 22:39:43,207 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:39:43,226 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:39:43,232 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:39:43,236 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:39:43,236 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:39:43,245 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:39:43,245 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:39:43,250 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:39:43,433 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:39:43,455 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:39:43,462 - gui.main_window - INFO - Set light theme
+2025-03-29 22:39:43,462 - root - ERROR - Unhandled exception: 'MainWindow' object has no attribute 'scan_progress_bar'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 157, in __init__
+    self.refresh_networks()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 369, in refresh_networks
+    self.scan_progress_bar.setValue(0)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'scan_progress_bar'
+2025-03-29 22:41:06,789 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:41:06,815 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:41:06,820 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:41:06,839 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:41:06,839 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:41:06,844 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:41:06,844 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:41:06,844 - gui.widgets - ERROR - Failed to import widget components: cannot import name 'DashboardCard' from 'gui.widgets.card' (C:\Users\Quicito\Desktop\wifi_analyzer\gui\widgets\card.py)
+2025-03-29 22:41:07,036 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:41:07,058 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:41:07,063 - gui.main_window - INFO - Set light theme
+2025-03-29 22:41:07,064 - root - ERROR - Unhandled exception: 'MainWindow' object has no attribute 'status_bar'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 153, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 157, in __init__
+    self.refresh_networks()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 378, in refresh_networks
+    self.status_bar.showMessage("Scanning for networks...")
+    ^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'status_bar'. Did you mean: 'statusBar'?
+2025-03-29 22:45:57,624 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:45:57,650 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:45:57,655 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:45:57,674 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:45:57,674 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:45:57,679 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:45:57,679 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:45:57,877 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:45:57,901 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:45:57,917 - gui.main_window - INFO - Set light theme
+2025-03-29 22:45:57,918 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:47:08,937 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:47:08,966 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:47:08,970 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:47:08,989 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:47:08,990 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:47:08,993 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:47:08,993 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:47:09,204 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:47:09,231 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:47:09,253 - gui.main_window - INFO - Set light theme
+2025-03-29 22:47:09,253 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:50:47,157 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:50:47,183 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:50:47,195 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:50:47,213 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:50:47,213 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:50:47,217 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:50:47,218 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:50:47,456 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:50:47,477 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:50:47,503 - gui.main_window - INFO - Set light theme
+2025-03-29 22:50:47,504 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:52:04,049 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:52:04,074 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:52:04,080 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:52:04,099 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:52:04,099 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:52:04,102 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:52:04,102 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:52:04,288 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:52:04,309 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:52:04,314 - gui.main_window - INFO - Set light theme
+2025-03-29 22:52:04,315 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:52:04,634 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:52:04,635 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:52:04,653 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 22:52:04,653 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:52:07,216 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 22:52:26,326 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:52:26,349 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:52:26,355 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:52:26,373 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:52:26,373 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:52:26,377 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:52:26,378 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:52:26,555 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:52:26,577 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:52:26,583 - gui.main_window - INFO - Set light theme
+2025-03-29 22:52:26,584 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:52:26,904 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:52:26,904 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:52:26,921 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 22:52:26,922 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:52:28,073 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 22:52:31,801 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:52:31,821 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:52:31,826 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:52:31,833 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:52:31,833 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:52:31,836 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:52:31,836 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:52:32,017 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:52:32,039 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:52:32,045 - gui.main_window - INFO - Set light theme
+2025-03-29 22:52:32,046 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:52:32,365 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:52:32,366 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:52:32,383 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 22:52:32,383 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:53:02,235 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:53:02,235 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:53:02,448 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:53:32,254 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:53:32,254 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:53:32,502 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:54:02,251 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:54:02,252 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:54:02,504 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:54:32,348 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:54:32,348 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:54:33,183 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:54:59,728 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 22:55:19,736 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 22:55:19,762 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 22:55:19,768 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 22:55:19,793 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 22:55:19,793 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 22:55:19,798 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 22:55:19,799 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 22:55:19,990 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 22:55:20,010 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 22:55:20,030 - gui.main_window - INFO - Set light theme
+2025-03-29 22:55:20,031 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 22:55:20,343 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:55:20,343 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:55:20,359 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 22:55:20,360 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 22:55:50,282 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-29 22:55:50,283 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-29 22:55:50,513 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-29 23:03:08,348 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 23:03:08,375 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 23:03:08,380 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 23:03:08,386 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 23:03:08,386 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 23:03:08,394 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 23:03:08,394 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 23:03:08,599 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 23:03:08,622 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 23:03:08,626 - gui.main_window - INFO - Set light theme
+2025-03-29 23:03:08,628 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 23:03:08,921 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:10,053 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:11,178 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:12,180 - scanner.windows_scanner - ERROR - Scan failed after 3 attempts
+2025-03-29 23:03:12,180 - gui.main_window - ERROR - Scan error: Scan failed after 3 attempts
+2025-03-29 23:03:20,713 - gui.main_window - ERROR - Scan failed: Scan failed after 3 attempts
+2025-03-29 23:03:38,787 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:39,922 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:41,099 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:03:42,100 - scanner.windows_scanner - ERROR - Scan failed after 3 attempts
+2025-03-29 23:03:42,102 - gui.main_window - ERROR - Scan error: Scan failed after 3 attempts
+2025-03-29 23:04:08,782 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:04:09,924 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:04:11,070 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:04:12,072 - scanner.windows_scanner - ERROR - Scan failed after 3 attempts
+2025-03-29 23:04:12,072 - gui.main_window - ERROR - Scan error: Scan failed after 3 attempts
+2025-03-29 23:04:30,983 - gui.main_window - ERROR - Scan failed: Scan failed after 3 attempts
+2025-03-29 23:04:33,232 - gui.main_window - ERROR - Scan failed: Scan failed after 3 attempts
+2025-03-29 23:04:38,479 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 23:05:35,947 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 23:05:35,969 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 23:05:35,974 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 23:05:35,992 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 23:05:35,992 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 23:05:35,995 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 23:05:35,995 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 23:05:36,168 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 23:05:36,188 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 23:05:36,192 - gui.main_window - INFO - Set light theme
+2025-03-29 23:05:36,192 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 23:05:36,447 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:05:37,580 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:05:38,708 - scanner.windows_scanner - ERROR - Unexpected error during scan: Command '['netsh', 'wlan', 'scan']' returned non-zero exit status 1.
+2025-03-29 23:05:39,710 - scanner.windows_scanner - ERROR - Scan failed after 3 attempts
+2025-03-29 23:05:39,711 - gui.main_window - ERROR - Scan error: Scan failed after 3 attempts
+2025-03-29 23:05:40,806 - gui.main_window - ERROR - Scan failed: Scan failed after 3 attempts
+2025-03-29 23:05:41,801 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-29 23:09:24,522 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-29 23:09:24,550 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-29 23:09:24,557 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-29 23:09:24,560 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-29 23:09:24,560 - root - INFO - WindowsWiFiScanner initialized
+2025-03-29 23:09:24,568 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-29 23:09:24,568 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-29 23:09:24,763 - gui.theme_manager - INFO - Applying theme: light
+2025-03-29 23:09:24,788 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-29 23:09:24,806 - gui.main_window - INFO - Set light theme
+2025-03-29 23:09:24,806 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-29 23:09:25,143 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-29 23:09:25,143 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-29 23:09:25,292 - scanner.parser - INFO - Parsed 5 networks with 16 BSSIDs
+2025-03-29 23:09:25,292 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 23:09:25,316 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 23:09:25,317 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 23:09:54,983 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-29 23:09:54,983 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-29 23:09:55,119 - scanner.parser - INFO - Parsed 5 networks with 16 BSSIDs
+2025-03-29 23:09:55,119 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 23:09:55,147 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-29 23:09:55,148 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 23:10:25,017 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-29 23:10:25,018 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-29 23:10:25,193 - scanner.parser - INFO - Parsed 5 networks with 16 BSSIDs
+2025-03-29 23:10:25,193 - scanner.windows_scanner - INFO - Scan completed: 5 networks found
+2025-03-29 23:10:25,448 - gui.main_window - INFO - Scan completed successfully: 5 networks found
+2025-03-29 23:10:33,867 - root - INFO - WiFi Analyzer shutting down with exit code 0

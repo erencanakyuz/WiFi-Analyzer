@@ -1,0 +1,347 @@
+2025-03-30 02:38:15,101 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 02:38:15,123 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 02:38:15,125 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 02:38:15,147 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 02:38:15,147 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 02:38:15,151 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 02:38:15,151 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 02:38:15,321 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 02:38:15,342 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 02:38:15,347 - gui.main_window - INFO - Set light theme
+2025-03-30 02:38:15,347 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 02:38:15,610 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 02:38:15,610 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 02:38:15,703 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 02:38:15,708 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 02:38:15,722 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 02:38:15,722 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 02:38:24,966 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 02:49:13,523 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 02:49:13,542 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 02:49:13,552 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 02:49:13,566 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 02:49:13,566 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 02:49:13,573 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 02:49:13,573 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 02:49:13,746 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 02:49:13,765 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 02:49:13,773 - gui.main_window - INFO - Set light theme
+2025-03-30 02:49:13,774 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 02:49:14,065 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 02:49:14,065 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 02:49:14,151 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 02:49:14,151 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 02:49:14,166 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 02:49:14,166 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 02:49:43,919 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 02:49:43,919 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 02:49:44,000 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 02:49:44,000 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 02:49:44,267 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 02:50:13,906 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 02:50:13,906 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 02:50:13,995 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 02:50:13,995 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 02:50:14,276 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 02:50:30,543 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 02:52:14,927 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 02:52:15,278 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 02:52:15,293 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 02:52:15,303 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 02:52:15,305 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 02:52:15,318 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 02:52:15,318 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 02:52:17,686 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 02:52:17,705 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 02:52:17,710 - gui.main_window - INFO - Set light theme
+2025-03-30 02:52:17,710 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 02:52:18,029 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 02:52:18,029 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 02:52:18,121 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 02:52:18,121 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 02:52:18,137 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 02:52:18,137 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 02:52:20,803 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 03:16:17,634 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:16:17,658 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:16:17,658 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:16:17,663 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:16:17,687 - root - ERROR - Unhandled exception: get_theme_colors() takes 0 positional arguments but 1 was given
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 132, in main
+    theme_colors = get_theme_colors(theme)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_theme_colors() takes 0 positional arguments but 1 was given
+2025-03-30 03:18:12,093 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:18:12,117 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:18:12,122 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:18:12,127 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:18:12,167 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 03:18:12,167 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 03:18:12,169 - root - ERROR - Unhandled exception: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 151, in main
+    main_window = MainWindow(scanner, theme_colors=theme_colors)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+2025-03-30 03:18:31,741 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:18:31,761 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:18:31,761 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:18:31,770 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:18:31,785 - root - ERROR - Unhandled exception: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 132, in main
+    theme_colors = get_theme_colors(theme)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\theme_manager.py", line 334, in get_theme_colors
+    return THEMES[theme_name]
+           ~~~~~~^^^^^^^^^^^^
+TypeError: unhashable type: 'dict'
+2025-03-30 03:19:42,697 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:19:42,719 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:19:42,724 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:19:42,729 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:19:42,748 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 03:19:42,748 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 03:19:42,748 - root - ERROR - Unhandled exception: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 152, in main
+    main_window = MainWindow(scanner, theme_colors=theme_colors)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+2025-03-30 03:20:17,270 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:20:17,290 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:20:17,290 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:20:17,299 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:20:17,317 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 03:20:17,317 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 03:20:17,317 - root - ERROR - Unhandled exception: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 152, in main
+    main_window = MainWindow(scanner, theme_colors=theme_colors)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MainWindow.__init__() got an unexpected keyword argument 'theme_colors'
+2025-03-30 03:22:00,151 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:22:00,171 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:22:00,176 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:22:00,181 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:22:00,187 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 03:22:00,187 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 03:22:00,191 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 03:22:00,191 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 03:22:00,370 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 03:22:00,371 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:22:00,396 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 03:22:00,416 - gui.main_window - INFO - Set light theme
+2025-03-30 03:22:00,416 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 03:22:00,794 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:22:00,794 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:22:00,881 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 03:22:00,881 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 03:22:00,901 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 03:22:00,901 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 03:22:30,585 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:22:30,620 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:22:30,783 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 03:22:30,788 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 03:22:31,053 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 03:23:00,575 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:23:00,575 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:23:00,667 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 03:23:00,667 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 03:23:00,940 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 03:23:30,641 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:23:30,641 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:23:30,783 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 03:23:30,786 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 03:23:31,114 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 03:24:00,571 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:24:00,571 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:24:00,657 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 03:24:00,657 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 03:24:00,972 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 03:34:07,970 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 03:34:07,995 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 03:34:07,995 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:34:07,999 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 03:34:08,023 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 03:34:08,023 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 03:34:08,027 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 03:34:08,027 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 03:34:08,227 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 03:34:08,227 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 03:34:08,255 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 03:34:08,275 - gui.main_window - INFO - Set light theme
+2025-03-30 03:34:08,280 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 03:34:08,636 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 03:34:08,636 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 03:34:08,755 - scanner.parser - INFO - Parsed 3 networks with 10 BSSIDs
+2025-03-30 03:34:08,755 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 03:34:08,771 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 03:34:08,771 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 03:34:22,182 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 04:01:32,297 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:01:32,329 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:01:32,329 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:01:32,338 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:01:32,368 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:01:32,368 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:01:32,373 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:01:32,373 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:01:32,579 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 04:01:32,580 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:01:32,605 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 04:01:32,609 - gui.main_window - INFO - Set light theme
+2025-03-30 04:01:32,609 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 04:01:32,991 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:01:32,991 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:01:33,106 - scanner.parser - INFO - Parsed 4 networks with 12 BSSIDs
+2025-03-30 04:01:33,106 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-30 04:02:00,852 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:02:00,883 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:02:00,883 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:02:00,890 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:02:00,924 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:02:00,924 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:02:00,930 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:02:00,930 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:02:01,122 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 04:02:01,122 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:02:01,144 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 04:02:01,147 - gui.main_window - INFO - Set light theme
+2025-03-30 04:02:01,147 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 04:02:01,456 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:02:01,456 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:02:01,586 - scanner.parser - INFO - Parsed 4 networks with 12 BSSIDs
+2025-03-30 04:02:01,586 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-30 04:03:32,742 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:03:32,769 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:03:32,769 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:03:32,776 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:03:32,805 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:03:32,805 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:03:32,811 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:03:32,811 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:03:32,832 - root - ERROR - Unhandled exception: name 'get_theme_colors' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\main.py", line 137, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 153, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\main_window.py", line 199, in setup_ui
+    self.network_table = NetworkTableView()
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\network_table.py", line 221, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\wifi_analyzer\gui\network_table.py", line 226, in setup_ui
+    theme = get_theme_colors()
+            ^^^^^^^^^^^^^^^^
+NameError: name 'get_theme_colors' is not defined
+2025-03-30 04:04:05,260 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:04:05,287 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:04:05,292 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:04:05,297 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:04:05,307 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:04:05,307 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:04:05,318 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:04:05,318 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:04:05,551 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 04:04:05,553 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:04:05,581 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 04:04:05,587 - gui.main_window - INFO - Set light theme
+2025-03-30 04:04:05,587 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 04:04:05,942 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:04:05,943 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:04:06,074 - scanner.parser - INFO - Parsed 3 networks with 9 BSSIDs
+2025-03-30 04:04:06,076 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:06:24,666 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:06:24,686 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:06:24,689 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:06:24,693 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:06:24,729 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:06:24,729 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:06:24,732 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:06:24,732 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:06:24,922 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 04:06:24,922 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:06:24,949 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 04:06:24,968 - gui.main_window - INFO - Set light theme
+2025-03-30 04:06:24,973 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 04:06:25,303 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:06:25,303 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:06:25,432 - scanner.parser - INFO - Parsed 3 networks with 11 BSSIDs
+2025-03-30 04:06:25,432 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:06:25,456 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 04:06:25,456 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:06:55,106 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:06:55,106 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:06:55,216 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-30 04:06:55,216 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:06:55,383 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:07:25,417 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:07:25,417 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:07:25,844 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-30 04:07:25,844 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:07:26,030 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:07:55,140 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:07:55,140 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:07:55,290 - scanner.parser - INFO - Parsed 3 networks with 10 BSSIDs
+2025-03-30 04:07:55,290 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:07:55,525 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:08:25,744 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:08:25,746 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:08:26,178 - scanner.parser - INFO - Parsed 3 networks with 10 BSSIDs
+2025-03-30 04:08:26,178 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:08:26,480 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:08:29,774 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 04:08:31,345 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 04:08:31,369 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 04:08:31,369 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:08:31,374 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 04:08:31,393 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 04:08:31,393 - root - INFO - WindowsWiFiScanner initialized
+2025-03-30 04:08:31,398 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 04:08:31,398 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 04:08:31,589 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 04:08:31,589 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 04:08:31,620 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 04:08:31,627 - gui.main_window - INFO - Set light theme
+2025-03-30 04:08:31,627 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 04:08:31,981 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:08:31,981 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:08:32,130 - scanner.parser - INFO - Parsed 3 networks with 10 BSSIDs
+2025-03-30 04:08:32,130 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 04:08:32,155 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 04:08:32,155 - gui.main_window - INFO - Scan completed successfully: 3 networks found
+2025-03-30 04:09:01,820 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:09:01,820 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:09:01,941 - scanner.parser - INFO - Parsed 2 networks with 6 BSSIDs
+2025-03-30 04:09:01,941 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 04:09:02,128 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 04:09:31,774 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:09:31,774 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:09:31,875 - scanner.parser - INFO - Parsed 2 networks with 6 BSSIDs
+2025-03-30 04:09:31,875 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 04:09:32,073 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 04:10:01,781 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:10:01,781 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:10:01,875 - scanner.parser - INFO - Parsed 2 networks with 6 BSSIDs
+2025-03-30 04:10:01,875 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 04:10:02,065 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 04:10:31,787 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:10:31,787 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:10:31,869 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 04:10:31,869 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 04:10:32,077 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 04:11:01,763 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:11:01,763 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:11:01,851 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 04:11:01,851 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 04:11:02,096 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 04:11:31,774 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 04:11:31,774 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 04:11:31,867 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 04:11:31,867 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 04:11:32,123 - gui.main_window - INFO - Scan completed successfully: 2 networks found
+2025-03-30 04:11:55,693 - root - INFO - WiFi Analyzer shutting down with exit code 0
