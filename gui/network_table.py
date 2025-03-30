@@ -245,13 +245,14 @@ class NetworkTableModel(QAbstractTableModel):
             network = self.networks[row]
             column_name = self.COLUMNS[column]
 
-            if column_name == 'Signal' and isinstance(network.signal_dbm, int):
-                signal = network.signal_dbm
-                quality = "Excellent" if signal >= -55 else \
-                          "Good" if signal >= -65 else \
-                          "Fair" if signal >= -75 else \
-                          "Poor"
-                return f"Signal Strength: {signal} dBm\nQuality: {quality}"
+            if column_name == 'Signal':
+                if network.strongest_signal is not None:
+                    signal = network.strongest_signal
+                    quality = "Excellent" if signal >= -55 else \
+                              "Good" if signal >= -65 else \
+                              "Fair" if signal >= -75 else \
+                              "Poor"
+                    return f"Signal Strength: {signal} dBm\nQuality: {quality}"
             elif column_name == 'Security':
                  return f"Security: {network.security_type}" # Example tooltip for Security
             elif column_name == 'SSID':
@@ -316,8 +317,8 @@ class NetworkTableModel(QAbstractTableModel):
                 elif column_name == 'BSSID':
                     return network.bssid
                 elif column_name == 'Signal':
-                    # Return the raw value, delegate handles display
-                    return network.signal_dbm
+                    # Return the strongest signal value
+                    return network.strongest_signal
                 elif column_name == 'Channel':
                     return network.channel
                 elif column_name == 'Band':
@@ -361,7 +362,7 @@ class NetworkTableModel(QAbstractTableModel):
         """Update the model with new network data."""
         logger.debug(f"Updating model with {len(networks)} networks.")
         self.beginResetModel()
-        self.networks = sorted(networks, key=lambda x: x.signal_dbm if isinstance(x.signal_dbm, int) else -999, reverse=True) # Pre-sort by signal
+        self.networks = sorted(networks, key=lambda x: x.strongest_signal if x.strongest_signal is not None else -999, reverse=True) # Pre-sort by strongest signal
         self.endResetModel()
 
 # ==================================================

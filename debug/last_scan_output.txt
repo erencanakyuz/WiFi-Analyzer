@@ -7,7 +7,7 @@ SSID 1 : Romansal 5GHZ
     Authentication          : WPA2-Personal
     Encryption              : CCMP 
     BSSID 1                 : ac:15:a2:26:3e:55
-         Signal             : 72%  
+         Signal             : 67%  
          Radio type         : 802.11ax
          Band               : 5 GHz
          Channel            : 48 
