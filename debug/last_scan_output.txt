@@ -1,64 +1,13 @@
  
 Interface name : Wi-Fi 
-There are 9 networks currently visible. 
+There are 1 networks currently visible. 
 
-SSID 1 : Başaran Home
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : f0:a7:31:d6:ac:97
-         Signal             : 67%  
-         Radio type         : 802.11ax
-         Band               : 5 GHz
-         Channel            : 36 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 6 12 24
-         Other rates (Mbps) : 9 18 36 48 54
-
-SSID 2 : 
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : be:f8:8b:9d:fa:dc
-         Signal             : 26%  
-         Radio type         : 802.11ax
-         Band               : 5 GHz
-         Channel            : 116 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 6 12 24
-         Other rates (Mbps) : 9 18 36 48 54
-    BSSID 2                 : f6:a7:31:d6:ac:97
-         Signal             : 67%  
-         Radio type         : 802.11ax
-         Band               : 5 GHz
-         Channel            : 36 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 6 12 24
-         Other rates (Mbps) : 9 18 36 48 54
-
-SSID 3 : Turksat_Kablonet_2.4_eQuZ
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : bc:f8:8b:ba:e9:23
-         Signal             : 38%  
-         Radio type         : 802.11ax
-         Band               : 2.4 GHz
-         Channel            : 6 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
-
-SSID 4 : Romansal 5GHZ
+SSID 1 : Romansal 5GHZ
     Network type            : Infrastructure
     Authentication          : WPA2-Personal
     Encryption              : CCMP 
     BSSID 1                 : ac:15:a2:26:3e:55
-         Signal             : 70%  
+         Signal             : 72%  
          Radio type         : 802.11ax
          Band               : 5 GHz
          Channel            : 48 
@@ -66,82 +15,4 @@ SSID 4 : Romansal 5GHZ
          QoS Map Supported     : 0
          Basic rates (Mbps) : 6 12 24
          Other rates (Mbps) : 9 18 36 48 54
-
-SSID 5 : SUPERONLINE_WiFi_93AB
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : da:10:9f:4b:8b:28
-         Signal             : 18%  
-         Radio type         : 802.11ax
-         Band               : 2.4 GHz
-         Channel            : 11 
-         Bss Load:
-             Connected Stations:         0
-             Channel Utilization:        104 (40 %)
-             Medium Available Capacity:  31250 (1000000 us/s)
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
-
-SSID 6 : Turksat_Kablonet_2.4_ssy2
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : bc:f8:8b:bd:95:bf
-         Signal             : 20%  
-         Radio type         : 802.11ax
-         Band               : 2.4 GHz
-         Channel            : 11 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
-
-SSID 7 : FiberHGW_ZTY93G
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : c8:98:28:32:cc:c9
-         Signal             : 22%  
-         Radio type         : 802.11ax
-         Band               : 2.4 GHz
-         Channel            : 9 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
-
-SSID 8 : VodafoneNet-KEFVW2
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : 38:88:1e:9d:c7:84
-         Signal             : 24%  
-         Radio type         : 802.11n
-         Band               : 2.4 GHz
-         Channel            : 2 
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
-
-SSID 9 : FTHSG
-    Network type            : Infrastructure
-    Authentication          : WPA2-Personal
-    Encryption              : CCMP 
-    BSSID 1                 : bc:f8:8b:ba:ea:3d
-         Signal             : 43%  
-         Radio type         : 802.11ax
-         Band               : 2.4 GHz
-         Channel            : 6 
-         Bss Load:
-             Connected Stations:         2
-             Channel Utilization:        0 (0 %)
-             Medium Available Capacity:  31250 (1000000 us/s)
-         QoS MSCS Supported    : 0
-         QoS Map Supported     : 0
-         Basic rates (Mbps) : 1 2 5.5 11
-         Other rates (Mbps) : 6 9 12 18 24 36 48 54
 

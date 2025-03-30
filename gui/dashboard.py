@@ -1,11 +1,20 @@
 """
 Dashboard view for WiFi analyzer.
 
-Provides a modern overview of the WiFi environment.
+Provides a modern overview of the WiFi environment with real-time statistics,
+including:
+- Total network count
+- Channel utilization for both 2.4GHz and 5GHz bands
+- Strongest network details
+- Interactive list of all detected networks
 """
+
 import logging
-from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel, 
-                            QScrollArea, QSizePolicy, QFrame)
+from typing import Dict, List, Optional, Tuple
+from PyQt6.QtWidgets import (
+    QWidget, QVBoxLayout, QHBoxLayout, QLabel, 
+    QScrollArea, QSizePolicy, QFrame
+)
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QFont
 
@@ -18,21 +27,42 @@ logger = logging.getLogger(__name__)
 
 class DashboardView(QWidget):
     """
-    Modern dashboard view for WiFi analyzer.
+    Modern dashboard view for WiFi network analysis.
+    
+    Displays a comprehensive overview of the WiFi environment with:
+    - Network statistics cards
+    - Channel utilization information
+    - Strongest network details with signal indicator
+    - Scrollable list of all detected networks
+    
+    Signals:
+        network_selected (WiFiNetwork): Emitted when a network is selected
+        refresh_requested (): Emitted when a manual refresh is requested
     """
-    # Signal emitted when a network is selected
-    network_selected = pyqtSignal(object)
-    # Signal emitted when refresh is requested
+    network_selected = pyqtSignal(WiFiNetwork)  # Typed signal
     refresh_requested = pyqtSignal()
     
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
+        """
+        Initialize the dashboard view.
         
-        self.networks = []
+        Args:
+            parent: Optional parent widget
+        """
+        super().__init__(parent)
+        self.networks: List[WiFiNetwork] = []
         self.setup_ui()
     
-    def setup_ui(self):
-        """Set up the user interface."""
+    def setup_ui(self) -> None:
+        """
+        Set up the user interface components.
+        
+        Creates:
+        - Network count summary card
+        - Channel utilization card
+        - Strongest network card
+        - Scrollable network list
+        """
         # Main layout
         main_layout = QVBoxLayout(self)
         main_layout.setSpacing(20)
@@ -124,85 +154,126 @@ class DashboardView(QWidget):
         networks_list_card.setContentWidget(networks_list_widget)
         main_layout.addWidget(networks_list_card, 1)
     
-    def set_networks(self, networks):
+    def set_networks(self, networks: List[WiFiNetwork]) -> None:
         """
         Update the dashboard with new network data.
         
         Args:
-            networks: List of WiFiNetwork objects
+            networks: List of WiFiNetwork objects to display
+            
+        Note:
+            Updates all dashboard components including:
+            - Network count
+            - Strongest network display
+            - Channel utilization statistics
+            - Network tile list
+            
+        Raises:
+            Exception: If there's an error updating any component
         """
-        self.networks = networks
-        
-        # Update networks count
-        self.networks_count.setText(str(len(networks)))
-        
-        # Update strongest network info
-        if networks:
-            # Find strongest network by signal strength
-            strongest = max(networks, key=lambda n: n.signal_dbm)
-            
-            # Update signal indicator
-            self.signal_indicator.setSignalWithAnimation(strongest.signal_dbm)
-            
-            # Update labels
-            self.strongest_ssid.setText(strongest.ssid if strongest.ssid else "<Hidden Network>")
-            self.strongest_details.setText(
-                f"Channel: {strongest.channel} • Band: {strongest.band} • "
-                f"Security: {strongest.security_type}"
-            )
-        else:
-            self.signal_indicator.setSignalWithAnimation(-100)  # Weakest signal
-            self.strongest_ssid.setText("No networks found")
+        try:
+            self.networks = networks
+            self._update_network_count(networks)
+            self._update_strongest_network(networks)
+            self._update_channel_stats(networks)
+            self._update_network_tiles(networks)
+        except Exception as e:
+            logger.error(f"Error updating dashboard: {e}")
+            self.networks_count.setText("Error")
+            self.strongest_ssid.setText("Error updating dashboard")
+            raise  # Re-raise for higher-level error handling
+    
+    def _update_network_count(self, networks: List[WiFiNetwork]) -> None:
+        """Update the network count display."""
+        try:
+            self.networks_count.setText(str(len(networks)))
+        except Exception as e:
+            logger.error(f"Error updating network count: {e}")
+            self.networks_count.setText("Error")
+
+    def _update_strongest_network(self, networks: List[WiFiNetwork]) -> None:
+        """Update the strongest network card display."""
+        try:
+            if networks:
+                strongest = max(networks, key=lambda n: n.signal_dbm)
+                self.signal_indicator.setSignalWithAnimation(strongest.signal_dbm)
+                self.strongest_ssid.setText(strongest.ssid if strongest.ssid else "<Hidden Network>")
+                self.strongest_details.setText(
+                    f"Channel: {strongest.channel} • Band: {strongest.band} • "
+                    f"Security: {strongest.security_type}"
+                )
+            else:
+                self.signal_indicator.setSignalWithAnimation(-100)
+                self.strongest_ssid.setText("No networks found")
+                self.strongest_details.setText("")
+        except Exception as e:
+            logger.error(f"Error updating strongest network: {e}")
+            self.strongest_ssid.setText("Error")
             self.strongest_details.setText("")
-        
-        # Update channel utilization
-        ch_24ghz = [n for n in networks if n.band == "2.4 GHz"]
-        ch_5ghz = [n for n in networks if n.band == "5 GHz"]
-        
-        if ch_24ghz:
-            channels_24 = {}
-            for net in ch_24ghz:
-                channels_24[net.channel] = channels_24.get(net.channel, 0) + 1
+
+    def _update_channel_stats(self, networks: List[WiFiNetwork]) -> None:
+        """Update channel utilization statistics."""
+        try:
+            ch_24ghz = [n for n in networks if n.band == "2.4 GHz"]
+            ch_5ghz = [n for n in networks if n.band == "5 GHz"]
             
-            most_crowded_24 = max(channels_24.items(), key=lambda x: x[1]) if channels_24 else (0, 0)
-            self.channel_24_label.setText(
-                f"2.4 GHz: {len(ch_24ghz)} networks, Channel {most_crowded_24[0]} most crowded ({most_crowded_24[1]} networks)"
+            self._update_band_stats(ch_24ghz, is_24ghz=True)
+            self._update_band_stats(ch_5ghz, is_24ghz=False)
+        except Exception as e:
+            logger.error(f"Error updating channel stats: {e}")
+            self.channel_24_label.setText("2.4 GHz: Error")
+            self.channel_5_label.setText("5 GHz: Error")
+
+    def _update_band_stats(self, networks: List[WiFiNetwork], is_24ghz: bool) -> None:
+        """Update statistics for a specific frequency band."""
+        label = self.channel_24_label if is_24ghz else self.channel_5_label
+        band = "2.4 GHz" if is_24ghz else "5 GHz"
+        
+        if networks:
+            channels: Dict[int, int] = {}
+            for net in networks:
+                channels[net.channel] = channels.get(net.channel, 0) + 1
+            
+            most_crowded = max(channels.items(), key=lambda x: x[1])
+            label.setText(
+                f"{band}: {len(networks)} networks, Channel {most_crowded[0]} "
+                f"most crowded ({most_crowded[1]} networks)"
             )
         else:
-            self.channel_24_label.setText("2.4 GHz: No networks found")
-        
-        if ch_5ghz:
-            channels_5 = {}
-            for net in ch_5ghz:
-                channels_5[net.channel] = channels_5.get(net.channel, 0) + 1
+            label.setText(f"{band}: No networks found")
+
+    def _update_network_tiles(self, networks: List[WiFiNetwork]) -> None:
+        """Update the network tiles display."""
+        try:
+            # Clear old tiles
+            self._clear_network_tiles()
             
-            most_crowded_5 = max(channels_5.items(), key=lambda x: x[1]) if channels_5 else (0, 0)
-            self.channel_5_label.setText(
-                f"5 GHz: {len(ch_5ghz)} networks, Channel {most_crowded_5[0]} most crowded ({most_crowded_5[1]} networks)"
-            )
-        else:
-            self.channel_5_label.setText("5 GHz: No networks found")
-        
-        # Clear old network tiles
-        for i in range(self.networks_container_layout.count()):
+            # Add new tiles
+            sorted_networks = sorted(networks, key=lambda n: n.signal_dbm, reverse=True)
+            for network in sorted_networks:
+                tile = NetworkTile(network, self)
+                tile.selected.connect(self._on_network_selected)
+                self.networks_container_layout.addWidget(tile)
+            
+            # Add stretch to push tiles to top
+            self.networks_container_layout.addStretch()
+        except Exception as e:
+            logger.error(f"Error updating network tiles: {e}")
+
+    def _clear_network_tiles(self) -> None:
+        """Clear all network tiles from the container."""
+        while self.networks_container_layout.count():
             item = self.networks_container_layout.takeAt(0)
             if item and item.widget():
                 item.widget().deleteLater()
+
+    def _on_network_selected(self, network: WiFiNetwork) -> None:
+        """
+        Handle network selection.
         
-        # Sort networks by signal strength (strongest first)
-        sorted_networks = sorted(networks, key=lambda n: n.signal_dbm, reverse=True)
-        
-        # Add tiles for networks
-        for network in sorted_networks:
-            tile = NetworkTile(network, self)
-            tile.selected.connect(self._on_network_selected)
-            self.networks_container_layout.addWidget(tile)
-        
-        # Add stretch to push tiles to top
-        self.networks_container_layout.addStretch()
-    
-    def _on_network_selected(self, network):
-        """Handle network selection."""
+        Args:
+            network: Selected WiFiNetwork object
+        """
         # Update UI to show selection
         for i in range(self.networks_container_layout.count() - 1):  # -1 to skip stretch
             widget = self.networks_container_layout.itemAt(i).widget()

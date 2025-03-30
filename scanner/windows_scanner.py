@@ -55,7 +55,17 @@ class WindowsWiFiScanner:
         self._last_scan_result = None
         self._scan_history = []
         self._lock = threading.Lock()
-        logger.info("Windows WiFi scanner initialized")
+        if not self.is_admin():
+            logger.warning(
+                "WiFi scanner initialized without admin privileges - some features may be limited:\n"
+                "- May not detect all available networks\n"
+                "- May not get complete signal strength information\n"
+                "- May not be able to force fresh scans\n"
+                "\n"
+                "For full functionality, please run the application as Administrator."
+            )
+        else:
+            logger.info("Windows WiFi scanner initialized with admin privileges")
     
     @staticmethod
     def is_admin() -> bool:

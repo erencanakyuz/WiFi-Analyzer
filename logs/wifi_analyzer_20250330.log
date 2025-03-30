@@ -345,3 +345,567 @@ NameError: name 'get_theme_colors' is not defined
 2025-03-30 04:11:31,867 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
 2025-03-30 04:11:32,123 - gui.main_window - INFO - Scan completed successfully: 2 networks found
 2025-03-30 04:11:55,693 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 17:23:04,869 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 17:23:05,174 - gui.theme_manager - INFO - Applying theme: dark
+2025-03-30 17:23:05,176 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 17:23:05,182 - gui.theme_manager - INFO - Applied 'dark' theme
+2025-03-30 17:23:05,188 - root - INFO - Applied dark theme successfully
+2025-03-30 17:23:05,189 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 17:23:05,189 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 17:23:05,207 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 17:23:05,207 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 17:23:05,447 - gui.theme_manager - INFO - Applying theme: light
+2025-03-30 17:23:05,447 - gui.theme_manager - WARNING - No custom fonts could be loaded, using system fallbacks
+2025-03-30 17:23:05,473 - gui.theme_manager - INFO - Applied 'light' theme
+2025-03-30 17:23:05,482 - gui.main_window - INFO - Set light theme
+2025-03-30 17:23:05,483 - gui.main_window - INFO - Auto-refresh enabled: scanning every 30.0 seconds
+2025-03-30 17:23:05,814 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 17:23:05,815 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 17:23:05,904 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 17:23:05,904 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 17:23:05,925 - gui.channel_graph - ERROR - Error updating channel graphs: Singular matrix
+2025-03-30 17:23:05,925 - gui.main_window - INFO - Scan completed successfully: 1 networks found
+2025-03-30 17:23:20,520 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 18:27:34,641 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:27:34,666 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 18:27:34,666 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 18:27:34,671 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:27:34,671 - root - INFO - Applied dark theme successfully
+2025-03-30 18:27:34,671 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:27:34,672 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:27:34,675 - root - ERROR - Unhandled exception: cannot import name 'create_shadow_effect' from 'gui.theme_manager' (C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\theme_manager.py)
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 260, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 289, in setup_ui
+    self.dashboard_view = DashboardView()
+                          ^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\dashboard.py", line 54, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\dashboard.py", line 75, in setup_ui
+    self.networks_card = DashboardCard("Networks")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\widgets\card.py", line 28, in __init__
+    from gui.theme_manager import create_shadow_effect
+ImportError: cannot import name 'create_shadow_effect' from 'gui.theme_manager' (C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\theme_manager.py)
+2025-03-30 18:31:04,333 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:31:04,354 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 18:31:04,355 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 18:31:04,360 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:31:04,360 - root - INFO - Applied dark theme successfully
+2025-03-30 18:31:04,361 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:31:04,361 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:31:04,431 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:31:04,431 - root - ERROR - Unhandled exception: 'WindowsWiFiScanner' object has no attribute 'scan_async'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 269, in __init__
+    self.start_scan()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 457, in start_scan
+    self.scanner.scan_async(self.on_scan_complete)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WindowsWiFiScanner' object has no attribute 'scan_async'
+2025-03-30 18:33:10,785 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:33:10,816 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 18:33:10,816 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 18:33:10,831 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:33:10,831 - root - INFO - Applied dark theme successfully
+2025-03-30 18:33:10,831 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:33:10,831 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:33:10,925 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:33:10,926 - gui.main_window - INFO - Main window initialized
+2025-03-30 18:33:11,202 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:33:11,203 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:33:11,330 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 18:33:11,330 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:11,504 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:40,922 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:33:41,065 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:33:41,066 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:33:41,154 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 18:33:41,155 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:41,361 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:50,084 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:33:50,226 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:33:50,226 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:33:50,316 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 18:33:50,316 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:50,526 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 18:33:52,198 - gui.main_window - INFO - Auto-refresh disabled
+2025-03-30 18:33:55,133 - gui.main_window - INFO - Auto-refresh enabled
+2025-03-30 18:37:15,894 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:37:15,916 - gui.widgets - WARNING - Could not load font Roboto-Regular, will use system fallback
+2025-03-30 18:37:15,916 - gui.widgets - WARNING - Could not load font Roboto-Bold, will use system fallback
+2025-03-30 18:37:15,921 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:37:15,921 - root - INFO - Applied dark theme successfully
+2025-03-30 18:37:15,921 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:37:15,921 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:37:15,975 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:37:15,975 - gui.main_window - INFO - Main window initialized
+2025-03-30 18:37:16,623 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:37:16,623 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:37:16,752 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 18:37:16,752 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 18:37:16,952 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 18:37:34,369 - gui.main_window - INFO - Auto-refresh disabled
+2025-03-30 18:37:35,882 - gui.main_window - INFO - Auto-refresh enabled
+2025-03-30 18:47:22,845 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:47:22,884 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 18:47:22,896 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 18:47:22,899 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:47:22,899 - root - INFO - Applied dark theme successfully
+2025-03-30 18:47:22,899 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:47:22,899 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:47:22,959 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:47:22,959 - gui.main_window - INFO - Main window initialized
+2025-03-30 18:47:23,361 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:47:23,363 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:47:23,517 - scanner.parser - INFO - Parsed 4 networks with 10 BSSIDs
+2025-03-30 18:47:23,517 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-30 18:47:23,695 - gui.main_window - INFO - Scan completed: 4 networks found
+2025-03-30 18:49:39,199 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:49:39,234 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 18:49:39,243 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 18:49:39,248 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:49:39,248 - root - INFO - Applied dark theme successfully
+2025-03-30 18:49:39,248 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:49:39,248 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:49:39,306 - gui.main_window - INFO - Starting network scan
+2025-03-30 18:49:39,306 - gui.main_window - INFO - Main window initialized
+2025-03-30 18:49:39,679 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 18:49:39,679 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 18:49:39,769 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 18:49:39,770 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 18:49:39,932 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 18:50:00,995 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 18:56:44,353 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 18:56:44,388 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 18:56:44,398 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 18:56:44,404 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 18:56:44,416 - root - INFO - Applied dark theme successfully
+2025-03-30 18:56:44,416 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 18:56:44,417 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 18:56:44,437 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 18:56:44,438 - root - ERROR - Unhandled exception: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 339, in setup_ui
+    self.network_table_view = NetworkTableView()
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 453, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 499, in setup_ui
+    self.setToolTipsVisible(True) # Ensure Qt attempts to show tooltips
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+2025-03-30 19:03:14,678 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:03:14,719 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:03:14,731 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:03:14,737 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:03:14,737 - root - INFO - Applied dark theme successfully
+2025-03-30 19:03:14,738 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 19:03:14,738 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:03:14,797 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:03:14,797 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:03:15,252 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:03:15,252 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:03:15,363 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:03:15,366 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:03:15,551 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:03:17,744 - gui.network_table - ERROR - Error painting signal strength: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 44, in paint
+    is_selected = option.state & QStyleOptionViewItem.StateFlag.Selected
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+2025-03-30 19:03:24,439 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:06:49,322 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:06:49,356 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:06:49,366 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:06:49,371 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:06:49,371 - root - INFO - Applied dark theme successfully
+2025-03-30 19:06:49,371 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 19:06:49,371 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:06:49,425 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:06:49,425 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:06:49,777 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:06:49,777 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:06:49,879 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:06:49,879 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:06:50,030 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:06:53,313 - gui.network_table - ERROR - Error painting signal strength: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 44, in paint
+    is_selected = option.state & QStyleOptionViewItem.StateFlag.Selected
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+2025-03-30 19:06:55,098 - gui.network_table - ERROR - Error painting signal strength: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 44, in paint
+    is_selected = option.state & QStyleOptionViewItem.StateFlag.Selected
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'QStyleOptionViewItem' has no attribute 'StateFlag'
+2025-03-30 19:06:58,349 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:07:26,947 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:07:26,980 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:07:26,990 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:07:26,994 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:07:26,994 - root - INFO - Applied dark theme successfully
+2025-03-30 19:07:26,994 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 19:07:26,995 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:07:27,014 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:07:27,016 - root - ERROR - Unhandled exception: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 339, in setup_ui
+    self.network_table_view = NetworkTableView()
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 453, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 499, in setup_ui
+    self.setToolTipsVisible(True) # Ensure Qt attempts to show tooltips
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+2025-03-30 19:26:45,950 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:26:45,987 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:26:46,002 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:26:46,007 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:26:46,008 - root - INFO - Applied dark theme successfully
+2025-03-30 19:26:46,008 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized
+2025-03-30 19:26:46,009 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:26:46,027 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:26:46,028 - root - ERROR - Unhandled exception: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 339, in setup_ui
+    self.network_table_view = NetworkTableView()
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 453, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 499, in setup_ui
+    self.setToolTipsVisible(True) # Ensure Qt attempts to show tooltips
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetworkTableView' object has no attribute 'setToolTipsVisible'
+2025-03-30 19:30:22,400 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:30:22,431 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:30:22,439 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:30:22,443 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:30:22,445 - root - INFO - Applied dark theme successfully
+2025-03-30 19:30:22,445 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 19:30:22,445 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:30:22,461 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:30:22,496 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:30:22,497 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:30:22,905 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:30:22,905 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:30:23,018 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:30:23,018 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:30:23,183 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:30:26,173 - gui.network_table - ERROR - Error painting signal strength: type object 'QStyleOptionViewItem' has no attribute 'State_Selected'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 112, in paint
+    is_selected = option.state & QStyleOptionViewItem.State_Selected
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'QStyleOptionViewItem' has no attribute 'State_Selected'
+2025-03-30 19:30:35,018 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:32:08,334 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:32:08,367 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:32:08,377 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:32:08,382 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:32:08,382 - root - INFO - Applied dark theme successfully
+2025-03-30 19:32:08,382 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 19:32:08,384 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:32:08,400 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:32:08,439 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:32:08,440 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:32:08,865 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:32:08,865 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:32:08,961 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:32:08,961 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:32:09,138 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:32:15,212 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:15,834 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:15,994 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:16,185 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:16,506 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:17,050 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:17,090 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:17,251 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:28,502 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:32:38,448 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:32:38,599 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:32:38,599 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:32:38,697 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 19:32:38,697 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 19:32:39,059 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 19:33:18,559 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:33:18,591 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:33:18,600 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:33:18,603 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:33:18,604 - root - INFO - Applied dark theme successfully
+2025-03-30 19:33:18,604 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 19:33:18,604 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 19:33:18,620 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:33:18,659 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:33:18,659 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:33:19,025 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:33:19,026 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:33:19,149 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 19:33:19,150 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 19:33:19,318 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 19:33:26,248 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,252 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,603 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,607 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,761 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,897 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,929 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,931 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:26,970 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:27,010 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:27,012 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:27,388 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:27,393 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,259 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,262 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,368 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,373 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,562 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,578 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,594 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,597 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,657 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,739 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:28,742 - gui.network_table - ERROR - Error painting signal strength: name 'QStyle' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\network_table.py", line 113, in paint
+    is_selected = option.state & QStyle.StateFlag.State_Selected
+                                 ^^^^^^
+NameError: name 'QStyle' is not defined
+2025-03-30 19:33:48,664 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:33:48,849 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:33:54,626 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:33:54,756 - scanner.parser - INFO - Parsed 2 networks with 2 BSSIDs
+2025-03-30 19:33:54,762 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 19:33:54,967 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 19:34:18,663 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:34:18,894 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:34:18,904 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:34:19,025 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:34:19,031 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:34:19,278 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:34:48,672 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:34:48,878 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:34:48,887 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:34:49,010 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:34:49,018 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:34:49,267 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:35:18,663 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:35:18,903 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:35:18,912 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:35:19,086 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:35:19,095 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:35:19,484 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:35:45,488 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:35:51,310 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:35:51,343 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:35:51,351 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:35:51,357 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:35:51,360 - root - INFO - Applied dark theme successfully
+2025-03-30 19:35:51,360 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 19:35:51,360 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 19:35:51,377 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:35:51,412 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:35:51,412 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:35:51,749 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:35:51,751 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:35:51,847 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:35:51,847 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:35:52,005 - gui.main_window - INFO - Scan completed: 1 networks found

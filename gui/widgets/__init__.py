@@ -9,6 +9,7 @@ import os
 import logging
 from pathlib import Path
 from PyQt6.QtGui import QFontDatabase, QFont
+from PyQt6.QtWidgets import QApplication
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -16,9 +17,14 @@ logger = logging.getLogger(__name__)
 # Try to load custom fonts
 def load_fonts():
     """Attempt to load custom fonts with fallback to system fonts."""
+    # First check if QApplication exists
+    if not QApplication.instance():
+        logger.warning("QApplication not created yet - deferring font loading")
+        return QFont('Arial', 10)  # Return a default font
+        
     font_paths = {
-        'Roboto-Regular': [':/fonts/Roboto-Regular.ttf', 'fonts/Roboto-Regular.ttf'],
-        'Roboto-Bold': [':/fonts/Roboto-Bold.ttf', 'fonts/Roboto-Bold.ttf']
+        'Roboto-Regular': [':/fonts/Roboto-VariableFont_wdth,wght.ttf', 'fonts/Roboto-VariableFont_wdth,wght.ttf'],
+        'Roboto-Italic': [':/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf', 'fonts/Roboto-Italic-VariableFont_wdth,wght.ttf']
     }
     
     loaded_fonts = {}

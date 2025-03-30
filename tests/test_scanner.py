@@ -199,10 +199,13 @@ class TestWiFiNetwork(unittest.TestCase):
         # Create a network
         network = WiFiNetwork(
             ssid="TestSSID",
-            bssid="00:11:22:33:44:55",
-            signal_dbm=-70,
-            channel=6,
-            band="2.4 GHz",
+            bssids=[NetworkBSSID(
+                bssid="00:11:22:33:44:55",
+                signal_percent=70,
+                signal_dbm=-70,
+                channel=6,
+                band="2.4 GHz"
+            )],
             security_type="WPA2"
         )
         
@@ -227,19 +230,25 @@ class TestWiFiNetwork(unittest.TestCase):
         # Create two networks with the same BSSID but different properties
         network1 = WiFiNetwork(
             ssid="TestSSID",
-            bssid="00:11:22:33:44:55",
-            signal_dbm=-70,
-            channel=6,
-            band="2.4 GHz",
+            bssids=[NetworkBSSID(
+                bssid="00:11:22:33:44:55",
+                signal_percent=70,
+                signal_dbm=-70,
+                channel=6,
+                band="2.4 GHz"
+            )],
             security_type="WPA2"
         )
         
         network2 = WiFiNetwork(
             ssid="DifferentSSID",
-            bssid="00:11:22:33:44:55",  # Same BSSID
-            signal_dbm=-65,
-            channel=6,
-            band="2.4 GHz",
+            bssids=[NetworkBSSID(
+                bssid="00:11:22:33:44:55",  # Same BSSID
+                signal_percent=75,
+                signal_dbm=-65,
+                channel=6,
+                band="2.4 GHz"
+            )],
             security_type="WPA2"
         )
         
@@ -249,10 +258,13 @@ class TestWiFiNetwork(unittest.TestCase):
         # Create a network with a different BSSID
         network3 = WiFiNetwork(
             ssid="TestSSID",
-            bssid="AA:BB:CC:DD:EE:FF",  # Different BSSID
-            signal_dbm=-70,
-            channel=6,
-            band="2.4 GHz",
+            bssids=[NetworkBSSID(
+                bssid="AA:BB:CC:DD:EE:FF",  # Different BSSID
+                signal_percent=70,
+                signal_dbm=-70,
+                channel=6,
+                band="2.4 GHz"
+            )],
             security_type="WPA2"
         )
         

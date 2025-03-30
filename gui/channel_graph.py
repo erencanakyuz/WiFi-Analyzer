@@ -3,8 +3,16 @@ Channel Graph Module
 
 This module provides visualization components for displaying WiFi channel usage
 and congestion information using Matplotlib.
+
+Components:
+- ChannelGraphCanvas: Bar chart visualization of channel usage
+- WaterfallGraphCanvas: Time-based signal strength visualization
+- ChannelGraphWidget: Main widget combining both visualizations
 """
+from __future__ import annotations
+
 import logging
+from typing import Dict, List, Optional, Union, Any, Tuple
 import numpy as np
 import matplotlib
 # Set the backend before importing pyplot
@@ -13,20 +21,42 @@ matplotlib.use('QtAgg')  # This works with both PyQt5 and PyQt6
 from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.artist import Artist
+from matplotlib.text import Annotation
+from matplotlib.container import BarContainer
+from matplotlib.collections import LineCollection
 from matplotlib.animation import FuncAnimation
+from matplotlib.axes import Axes
+from matplotlib.colorbar import Colorbar
 from PyQt6.QtCore import Qt, QTimer, pyqtSignal
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QComboBox, QLabel, QFrame
+from PyQt6.QtWidgets import (
+    QWidget, QVBoxLayout, QHBoxLayout, QPushButton, 
+    QComboBox, QLabel, QFrame
+)
 
-from utils.channel_analyzer import ChannelAnalyzer, CHANNELS_2_4GHZ, CHANNELS_5GHZ, NON_OVERLAPPING_2_4GHZ, DFS_CHANNELS
+from utils.channel_analyzer import (
+    ChannelAnalyzer, CHANNELS_2_4GHZ, CHANNELS_5GHZ, 
+    NON_OVERLAPPING_2_4GHZ, DFS_CHANNELS
+)
+from scanner.models import WiFiNetwork, NetworkBSSID   # Alias for compatibility
 
 logger = logging.getLogger(__name__)
+
+# Type aliases
+VisualizationData = Dict[str, Dict[str, Union[List[int], List[float], int]]]
 
 class ChannelGraphCanvas(FigureCanvas):
     """
     Canvas for rendering channel graphs using Matplotlib.
     """
     
-    def __init__(self, parent=None, width=5, height=4, dpi=100):
+    def __init__(
+        self, 
+        parent: Optional[QWidget] = None, 
+        width: int = 5, 
+        height: int = 4, 
+        dpi: int = 100
+    ) -> None:
         """
         Initialize the channel graph canvas.
         
@@ -34,7 +64,7 @@ class ChannelGraphCanvas(FigureCanvas):
             parent: Parent widget
             width: Width of the figure in inches
             height: Height of the figure in inches
-            dpi: Dots per inch
+            dpi: Dots per inch (dots per inch)
         """
         self.fig = Figure(figsize=(width, height), dpi=dpi, tight_layout=True)
         self.axes = self.fig.add_subplot(111)
@@ -52,69 +82,97 @@ class ChannelGraphCanvas(FigureCanvas):
         self.current_band = '2.4GHz'
         self.network_data = None
         
-    def update_graph(self, visualization_data, band='2.4GHz'):
+    def update_graph(self, visualization_data: VisualizationData, band: str = '2.4GHz') -> None:
         """
         Update the graph with new visualization data.
         
         Args:
             visualization_data: Data for visualization from ChannelAnalyzer
             band: Frequency band to display ('2.4GHz' or '5GHz')
+            
+        Raises:
+            KeyError: If required data is missing from visualization_data
+            ValueError: If data arrays have inconsistent lengths
         """
-        self.current_band = band
-        self.network_data = visualization_data[band]
-        
-        # Clear previous graph
-        self.axes.clear()
-        
-        # Get data for the current band
-        channels = self.network_data['channels']
-        network_counts = self.network_data['network_counts']
-        congestion_scores = self.network_data['congestion_scores']
-        recommended_channel = self.network_data['recommended_channel']
-        
-        # Create bar chart for network counts
-        bars = self.axes.bar(channels, network_counts, alpha=0.7, color='steelblue')
-        self.bar_containers['networks'] = bars
-        
-        # Create a second y-axis for congestion scores
-        ax2 = self.axes.twinx()
-        congestion_line = ax2.plot(channels, congestion_scores, 'r-', marker='o', label='Congestion Score')
-        
-        # Highlight recommended channel
-        if recommended_channel in channels:
-            index = channels.index(recommended_channel)
-            self.recommended_channel_line = self.axes.axvline(
-                x=recommended_channel, color='green', linestyle='--', alpha=0.7,
-                label=f'Recommended: CH {recommended_channel}'
-            )
-        
-        # Highlight special channels
-        if band == '2.4GHz':
-            # Highlight non-overlapping channels
-            for ch in NON_OVERLAPPING_2_4GHZ:
-                self.axes.axvline(x=ch, color='gray', linestyle=':', alpha=0.3)
-        else:
-            # Highlight DFS channels
-            for i, ch in enumerate(channels):
-                if ch in DFS_CHANNELS:
-                    bars[i].set_color('lightsteelblue')
-                    self.axes.text(ch, network_counts[i] + 0.1, 'DFS', 
-                                 ha='center', va='bottom', fontsize=8, alpha=0.7)
-        
+        try:
+            self.current_band = band
+            self.network_data = visualization_data[band]
+            
+            # Get data for the current band
+            channels = self.network_data['channels']
+            network_counts = self.network_data['network_counts']
+            congestion_scores = self.network_data['congestion_scores']
+            recommended_channel = self.network_data['recommended_channel']
+            
+            # Validate data arrays
+            if len(network_counts) != len(channels) or len(congestion_scores) != len(channels):
+                raise ValueError("Data arrays must have consistent lengths")
+            
+            # Clear previous graph
+            self.axes.clear()
+            
+            # Create bar chart for network counts
+            bars = self.axes.bar(channels, network_counts, alpha=0.7, color='steelblue')
+            self.bar_containers['networks'] = bars
+            
+            # Create a second y-axis for congestion scores
+            ax2 = self.axes.twinx()
+            congestion_line = ax2.plot(channels, congestion_scores, 'r-', marker='o', 
+                                     label='Congestion Score')
+            
+            # Highlight recommended channel
+            if recommended_channel in channels:
+                self.recommended_channel_line = self.axes.axvline(
+                    x=recommended_channel, color='green', linestyle='--', alpha=0.7,
+                    label=f'Recommended: CH {recommended_channel}'
+                )
+            
+            # Highlight special channels
+            if band == '2.4GHz':
+                for ch in NON_OVERLAPPING_2_4GHZ:
+                    self.axes.axvline(x=ch, color='gray', linestyle=':', alpha=0.3)
+            else:
+                for i, ch in enumerate(channels):
+                    if ch in DFS_CHANNELS:
+                        bars[i].set_color('lightsteelblue')
+                        self.axes.text(ch, network_counts[i] + 0.1, 'DFS', 
+                                     ha='center', va='bottom', fontsize=8, alpha=0.7)
+            
+            # Set up graph labels and styling
+            self._configure_graph_appearance(ax2, channels, network_counts)
+            
+            # Update canvas
+            self.draw()
+            
+        except KeyError as e:
+            logger.error(f"Missing required data in visualization_data: {e}")
+            raise
+        except ValueError as e:
+            logger.error(f"Invalid data format: {e}")
+            raise
+        except Exception as e:
+            logger.error(f"Error updating graph: {e}")
+            raise
+            
+    def _configure_graph_appearance(self, ax2: Axes, channels: List[int], 
+                                  network_counts: List[int]) -> None:
+        """Configure graph labels, title, and styling."""
         # Set labels and title
         self.axes.set_xlabel('Channel')
         self.axes.set_ylabel('Number of Networks')
         ax2.set_ylabel('Congestion Score')
         
-        title = f'{band} WiFi Channel Usage'
+        title = f'{self.current_band} WiFi Channel Usage'
         self.axes.set_title(title)
         
         # Set x-axis to show integer channel numbers
         self.axes.set_xticks(channels)
         
         # Set y-axis limits with some padding
-        max_networks = max(network_counts) if network_counts else 1
-        self.axes.set_ylim(0, max_networks * 1.2)
+        max_networks = max(network_counts) if network_counts else 0
+        # Ensure we have a minimum range to avoid identical ylims
+        y_max = max(max_networks * 1.2, 1)  # At least 1 when max_networks is 0
+        self.axes.set_ylim(0, y_max)
         ax2.set_ylim(0, 100)  # Congestion score is 0-100
         
         # Add legend
@@ -122,11 +180,18 @@ class ChannelGraphCanvas(FigureCanvas):
         lines2, labels2 = ax2.get_legend_handles_labels()
         self.axes.legend(lines + lines2, labels + labels2, loc='upper right')
         
-        # Update canvas
-        self.draw()
-    
-    def _on_hover(self, event):
-        """Handle mouse hover event to show channel details."""
+
+    def _on_hover(self, event: matplotlib.backend_bases.MouseEvent) -> None:
+        """
+        Handle mouse hover event to show channel details.
+        
+        Args:
+            event: Mouse event containing coordinates and axis information
+            
+        Note:
+            Updates the hover annotation with channel details when mouse
+            moves over the graph. Hides annotation when mouse leaves axes.
+        """
         if not event.inaxes:
             if self.hover_annotation:
                 self.hover_annotation.set_visible(False)
@@ -183,7 +248,6 @@ class ChannelGraphCanvas(FigureCanvas):
         
         self.draw_idle()
 
-
 class WaterfallGraphCanvas(FigureCanvas):
     """
     Canvas for rendering waterfall charts to show signal strength over time.
@@ -212,24 +276,28 @@ class WaterfallGraphCanvas(FigureCanvas):
         self.im = None
         self.colorbar = None
         
-    def initialize_data(self, channels):
+    def initialize_data(self, channels: List[int]) -> None:
         """
         Initialize the waterfall data structure for a set of channels.
         
         Args:
-            channels: List of channel numbers
+            channels: List of channel numbers to monitor
         """
         self.current_channels = channels
         self.history_data = np.zeros((self.history_depth, len(channels)))
         self.history_data.fill(np.nan)  # Fill with NaN to indicate no data
     
-    def update_waterfall(self, signal_data, channels):
+    def update_waterfall(self, signal_data: List[float], channels: List[int]) -> None:
         """
         Update the waterfall chart with new signal data.
         
         Args:
-            signal_data: List of signal strengths by channel
-            channels: List of channel numbers
+            signal_data: List of signal strengths by channel (in dBm)
+            channels: List of channel numbers to display
+            
+        Note:
+            Updates the waterfall display showing signal strength history over time.
+            Newest data is shown at the top of the chart.
         """
         # Initialize data if needed or if channels changed
         if self.history_data is None or self.current_channels != channels:
@@ -281,7 +349,6 @@ class WaterfallGraphCanvas(FigureCanvas):
         # Update canvas
         self.draw()
 
-
 class ChannelGraphWidget(QWidget):
     """
     Widget for displaying WiFi channel graphs.
@@ -290,8 +357,14 @@ class ChannelGraphWidget(QWidget):
     # Signal emitted when refresh is requested
     refresh_requested = pyqtSignal()
     
-    def __init__(self, analyzer, parent=None):
-        """Initialize the channel graph widget."""
+    def __init__(self, analyzer: ChannelAnalyzer, parent: Optional[QWidget] = None) -> None:
+        """
+        Initialize the channel graph widget.
+        
+        Args:
+            analyzer: Channel analyzer instance for processing network data
+            parent: Optional parent widget
+        """
         super().__init__(parent)
         
         # Store the channel analyzer
@@ -359,12 +432,16 @@ class ChannelGraphWidget(QWidget):
         """Stop auto-refresh timer."""
         self.refresh_timer.stop()
     
-    def _on_band_changed(self, index):
+    def _on_band_changed(self, index: int) -> None:
         """
         Handle band selection change.
         
         Args:
-            index: Index of the selected item
+            index: Index of the selected item in band combo box
+            
+        Note:
+            Updates both channel and waterfall graphs with data
+            for the newly selected frequency band.
         """
         self.current_band = self.band_combo.currentData()
         
@@ -386,14 +463,27 @@ class ChannelGraphWidget(QWidget):
         # Emit signal to request fresh network data
         self.refresh_requested.emit()
     
-    def update_graphs(self, networks):
+    def update_graphs(self, networks: List[WiFiNetwork]) -> None:
         """
         Update graphs with new network data.
         
         Args:
-            networks: List of network dictionaries
+            networks: List of WiFiNetwork objects to analyze and display
+            
+        Raises:
+            Exception: If there's an error processing network data
+            or updating the graphs
+            
+        Note:
+            Updates both the channel usage graph and signal strength
+            waterfall chart with the new network data.
         """
         try:
+            # Handle empty network list case
+            if not networks:
+                logger.warning("No networks to analyze")
+                return
+                
             # Convert networks to the format expected by channel_analyzer
             analyzer_networks = []
             for network in networks:
@@ -438,13 +528,20 @@ class ChannelGraphWidget(QWidget):
             self.waterfall_graph.update_waterfall(signals, channels)
             
         except Exception as e:
+            if "Singular matrix" in str(e):
+                logger.warning("Insufficient data for channel analysis - this is normal with few networks")
+                return
             logger.error(f"Error updating channel graphs: {str(e)}")
     
-    def take_snapshot(self):
+    def take_snapshot(self) -> Figure:
         """
         Take a snapshot of the current graph.
         
         Returns:
-            Figure object that can be saved as an image
+            matplotlib.figure.Figure: The current channel graph figure
+            that can be saved as an image
+            
+        Note:
+            Returns only the channel graph figure, not the waterfall graph.
         """
         return self.channel_graph.fig

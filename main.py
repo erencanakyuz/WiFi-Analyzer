@@ -22,6 +22,7 @@ sys.path.insert(0, str(app_dir))
 # Import required application modules
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import QSettings, Qt
+from PyQt6.QtGui import QFont
 
 from config.settings import (
     APP_NAME, APP_VERSION, ORGANIZATION_NAME,
@@ -32,8 +33,13 @@ from scanner.windows_scanner import WindowsWiFiScanner
 from gui.theme_manager import apply_theme, get_theme_colors
 
 
-def setup_logging():
-    """Configure the application logging system with rotation to prevent log file growth."""
+def setup_logging() -> None:
+    """
+    Configure the application logging system with rotation to prevent log file growth.
+    
+    Sets up both console and file logging handlers with appropriate formatters
+    and rotation settings to manage log file sizes.
+    """
     # Create logs directory if it doesn't exist
     log_dir = Path(app_dir, "logs")
     log_dir.mkdir(exist_ok=True)
@@ -68,8 +74,13 @@ def setup_logging():
     logging.debug(f"Log file: {log_path}")
 
 
-def parse_arguments():
-    """Parse command line arguments."""
+def parse_arguments() -> argparse.Namespace:
+    """
+    Parse command line arguments.
+    
+    Returns:
+        argparse.Namespace: Parsed command line arguments
+    """
     parser = argparse.ArgumentParser(description=f"{APP_NAME} v{APP_VERSION}")
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     parser.add_argument('--no-scan', action='store_true', help='Skip initial network scan')
@@ -77,34 +88,23 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def check_windows_platform():
-    """Check that application is running on a Windows platform."""
+def check_windows_platform() -> None:
+    """
+    Check that application is running on a Windows platform.
+    
+    Raises:
+        SystemExit: If not running on Windows
+    """
     if sys.platform != 'win32':
         logging.error("This application is designed for Windows operating systems only.")
         print("Error: This application requires Windows to run.")
         sys.exit(1)
 
 
-def check_admin_permissions():
-    """Check if application has the necessary permissions and warn if not."""
-    # This is a simple check, not fool-proof
-    try:
-        # Try to access a directory that typically requires admin permissions
-        test_path = os.path.join(os.environ.get('WINDIR', r'C:\Windows'), 'Temp')
-        test_file = os.path.join(test_path, f"{APP_NAME}_admin_test.tmp")
-        
-        with open(test_file, 'w') as f:
-            f.write("admin test")
-        os.remove(test_file)
-        
-        logging.debug("Application has sufficient permissions")
-    except (IOError, PermissionError):
-        logging.warning("Application may need elevated permissions for some features")
-        print("Warning: Some features may require running as administrator")
-
-
-def main():
-    """Main application entry point."""
+def main() -> int:
+    """
+    Main application entry point.
+    """
     # Parse command line arguments
     args = parse_arguments()
     
@@ -113,25 +113,50 @@ def main():
     
     # Platform-specific checks
     check_windows_platform()
-    check_admin_permissions()
     
-    # Set application properties
+    # Create the QApplication instance first
+    app = QApplication(sys.argv)
+    
+    # Now set application properties (after QApplication creation)
     QSettings.setDefaultFormat(QSettings.Format.IniFormat)
     QApplication.setApplicationName(APP_NAME)
     QApplication.setApplicationVersion(APP_VERSION)
     QApplication.setOrganizationName(ORGANIZATION_NAME)
     
-    # Create the QApplication instance
-    app = QApplication(sys.argv)
+    # Load fonts AFTER creating QApplication
+    try:
+        from gui.widgets import load_fonts
+        app_font = load_fonts()
+        app.setFont(app_font)
+    except Exception as e:
+        logging.warning(f"Could not load custom fonts: {e}")
+        app.setFont(QFont("Segoe UI", 10))
     
     try:
-        # Apply modern theme from theme_manager
-        theme_name = "dark"  # or get from settings
-        theme = apply_theme(theme_name)
+        # Get theme preference from settings
+        settings = QSettings()
+        theme_name = settings.value("app/theme", "dark")
+        
+        try:
+            theme = apply_theme(theme_name)
+            logging.info(f"Applied {theme_name} theme successfully")
+        except Exception as e:
+            logging.error(f"Failed to apply {theme_name} theme: {e}")
+            # Fallback to light theme
+            theme = apply_theme("light")
+            logging.info("Falling back to light theme")
 
-        # Initialize scanner
-        scanner = WindowsWiFiScanner()
-        logging.info("WindowsWiFiScanner initialized")
+        try:
+            # Initialize scanner with proper error handling
+            scanner = WindowsWiFiScanner()
+            if not scanner.is_admin():
+                logging.warning("WiFi scanner initialized without admin privileges - some features may be limited")
+            else:
+                logging.info("WindowsWiFiScanner initialized with admin privileges")
+        except Exception as e:
+            logging.exception("Failed to initialize WiFi scanner")
+            print(f"Error: Could not initialize WiFi scanner: {e}")
+            return 1
         
         # Create main window without passing theme_colors
         main_window = MainWindow(scanner)
