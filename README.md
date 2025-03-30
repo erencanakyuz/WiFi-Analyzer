@@ -5,9 +5,14 @@ A comprehensive desktop Pyhton Windows application for analyzing WiFi networks, 
 ## Overview
 
 WiFi Analyzer scans for nearby wireless networks and provides detailed information and analytics to help users optimize their WiFi setup. The application features a modern PyQt-based GUI with interactive visualizations of WiFi channels, signal strength, and network characteristics.
+##VERSION 1 FOR UI
 ![Ekran görüntüsü 2025-03-30 032252](https://github.com/user-attachments/assets/c8e912a5-9cbc-4bd8-a614-427b93bef4a1)
+##VERSION 2 FOR UI
 ![Ekran görüntüsü 2025-03-30 053543](https://github.com/user-attachments/assets/5cfbaa80-7f91-4bff-982d-a524dc702273)
+##VERSION 3 FOR GRAPH
 ![Ekran görüntüsü 2025-03-30 051938](https://github.com/user-attachments/assets/775d76b7-cf9b-4800-ad9b-3699a92719ed)
+##VERSION 4 FOR GRAPH
+![image](https://github.com/user-attachments/assets/c5683093-052c-497f-8c1d-de4d64b0100e)
 
 ## Features
 
