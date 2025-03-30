@@ -959,3 +959,39 @@ NameError: name 'QStyle' is not defined
 2025-03-30 19:52:04,170 - gui.main_window - INFO - Auto-refresh disabled
 2025-03-30 19:52:04,727 - gui.main_window - INFO - Auto-refresh enabled
 2025-03-30 19:52:06,184 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:54:23,519 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:54:23,547 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:54:23,556 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:54:23,561 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:54:23,561 - root - INFO - Applied dark theme successfully
+2025-03-30 19:54:23,561 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 19:54:23,561 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 19:54:23,581 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:54:23,615 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:54:23,615 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:54:23,961 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:54:23,961 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:54:24,058 - scanner.parser - INFO - Parsed 1 networks with 2 BSSIDs
+2025-03-30 19:54:24,058 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:54:24,204 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 19:54:31,074 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 19:57:42,678 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 19:57:42,713 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 19:57:42,717 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 19:57:42,726 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 19:57:42,727 - root - INFO - Applied dark theme successfully
+2025-03-30 19:57:42,728 - scanner.windows_scanner - WARNING - WiFi scanner initialized without admin privileges - some features may be limited:
+- May not detect all available networks
+- May not get complete signal strength information
+- May not be able to force fresh scans
+
+For full functionality, please run the application as Administrator.
+2025-03-30 19:57:42,728 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 19:57:42,747 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 19:57:42,784 - gui.main_window - INFO - Starting network scan
+2025-03-30 19:57:42,785 - gui.main_window - INFO - Main window initialized
+2025-03-30 19:57:43,119 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 19:57:43,119 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 19:57:43,217 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 19:57:43,217 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 19:57:43,362 - gui.main_window - INFO - Scan completed: 1 networks found

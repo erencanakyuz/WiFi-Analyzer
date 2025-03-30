@@ -159,9 +159,9 @@ class ThemeManager:
     def apply_theme(self, theme_name: str) -> None:
         """
         Apply a theme to the application.
-        
+
         Args:
-            theme_name: Name of the theme to apply ('light', 'dark', or 'high_contrast')
+            theme_name: Name of the theme to apply
             
         Raises:
             ValueError: If theme_name is not valid
@@ -195,6 +195,9 @@ class ThemeManager:
             
             # Apply stylesheet for custom widgets
             self._apply_custom_styles(theme)
+            
+            # Notify observers of theme change
+            ThemeObservable.notify_observers(theme_name)
             
             logger.info(f"Applied {theme_name} theme")
             

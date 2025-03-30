@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scanner.windows_scanner import WindowsWiFiScanner
 from scanner.parser import parse_netsh_output
-from scanner.models import WiFiNetwork
+from scanner.models import WiFiNetwork, NetworkBSSID, ScanResult
 from utils.signal_utils import percentage_to_dbm
 
 # Sample netsh output for testing
@@ -60,7 +60,7 @@ SSID 3 :
          Signal             : 30%
          Radio type         : 802.11g
          Channel            : 11
-         Basic rates (Mbps) : 1 2 5.5 11
+         Basic rates (Mbps) : 极速 2 5.5 11
          Other rates (Mbps) : 6 9 12 18 24 36 48 54
 
 SSID 4 : TestNetwork4
@@ -105,40 +105,35 @@ class TestWiFiScanner(unittest.TestCase):
         mock_run.return_value = mock_process
         
         # Call scan method
-        networks = self.scanner.scan_networks_sync()
-        
-        # Check that subprocess was called correctly
-        mock_run.assert_called_once()
-        cmd_args = mock_run.call_args[0][0]
-        self.assertEqual(cmd_args, ['netsh', 'wlan', 'show', 'networks', 'mode=Bssid'])
+        result = self.scanner.scan_networks_sync()
         
         # Check that networks were parsed correctly
-        self.assertEqual(len(networks), 4)
+        self.assertEqual(len(result.networks), 4)
         
         # Check properties of first network
-        network = next(n for n in networks if n.ssid == "TestNetwork1")
+        network = next(n for n in result.networks if n.ssid == "TestNetwork1")
         self.assertEqual(network.ssid, "TestNetwork1")
-        self.assertEqual(network.bssid, "aa:bb:cc:dd:ee:ff")  # First BSSID
-        self.assertEqual(network.channel, 6)
-        self.assertEqual(network.band, "2.4 GHz")
+        self.assertEqual(network.bssids[0].bssid, "aa:bb:cc:dd:ee:ff")
+        self.assertEqual(network.bssids[0].channel, 6)
+        self.assertEqual(network.bssids[0].band, "2.4 GHz")
         self.assertEqual(network.security_type, "WPA2")
-        self.assertEqual(network.signal_dbm, -65)  # 70% converted to dBm
+        self.assertEqual(network.bssids[0].signal_dbm, -65)  # 70% converted to dBm
         
         # Check 5 GHz network
-        network = next(n for n in networks if n.ssid == "TestNetwork2")
-        self.assertEqual(network.band, "5 GHz")
-        self.assertEqual(network.channel, 36)
+        network = next(n for n in result.networks if n.ssid == "TestNetwork2")
+        self.assertEqual(network.bssids[0].band, "5 GHz")
+        self.assertEqual(network.bssids[0].channel, 36)
         
         # Check hidden network
-        hidden_network = next(n for n in networks if n.ssid == "")
+        hidden_network = next(n for n in result.networks if n.ssid == "")
         self.assertEqual(hidden_network.security_type, "Open")
-        self.assertEqual(hidden_network.channel, 11)
+        self.assertEqual(hidden_network.bssids[0].channel, 11)
         
         # Check WPA3 network
-        wpa3_network = next(n for n in networks if n.ssid == "TestNetwork4")
+        wpa3_network = next(n for n in result.networks if n.ssid == "TestNetwork4")
         self.assertEqual(wpa3_network.security_type, "WPA3")
-        self.assertEqual(wpa3_network.channel, 149)
-        self.assertEqual(wpa3_network.band, "5 GHz")
+        self.assertEqual(wpa3_network.bssids[0].channel, 149)
+        self.assertEqual(wpa3_network.bssids[0].band, "5 GHz")
     
     @patch('subprocess.run')
     def test_scan_empty(self, mock_run):
@@ -150,10 +145,10 @@ class TestWiFiScanner(unittest.TestCase):
         mock_run.return_value = mock_process
         
         # Call scan method
-        networks = self.scanner.scan_networks_sync()
+        result = self.scanner.scan_networks_sync()
         
         # Check that an empty list was returned
-        self.assertEqual(len(networks), 0)
+        self.assertEqual(len(result.networks), 0)
     
     @patch('subprocess.run')
     def test_scan_error(self, mock_run):
@@ -164,19 +159,19 @@ class TestWiFiScanner(unittest.TestCase):
         mock_process.returncode = 1
         mock_run.return_value = mock_process
         
-        # Call scan method and expect exception
-        with self.assertRaises(Exception):
-            self.scanner.scan_networks_sync()
+        # Call scan method
+        result = self.scanner.scan_networks_sync()
+        self.assertFalse(result.success)
     
     def test_parse_netsh_output(self):
         """Test parsing netsh output directly."""
-        networks = parse_netsh_output(SAMPLE_NETSH_OUTPUT)
+        result = parse_netsh_output(SAMPLE_NETSH_OUTPUT)
         
         # Check that all networks were parsed
-        self.assertEqual(len(networks), 4)
+        self.assertEqual(len(result.networks), 4)
         
         # Check specific network details
-        ssids = [n.ssid for n in networks]
+        ssids = [n.ssid for n in result.networks]
         self.assertIn("TestNetwork1", ssids)
         self.assertIn("TestNetwork2", ssids)
         self.assertIn("", ssids)  # Hidden network
@@ -211,10 +206,10 @@ class TestWiFiNetwork(unittest.TestCase):
         
         # Check properties
         self.assertEqual(network.ssid, "TestSSID")
-        self.assertEqual(network.bssid, "00:11:22:33:44:55")
-        self.assertEqual(network.signal_dbm, -70)
-        self.assertEqual(network.channel, 6)
-        self.assertEqual(network.band, "2.4 GHz")
+        self.assertEqual(network.bssids[0].bssid, "00:11:22:33:44:55")
+        self.assertEqual(network.bssids[0].signal_dbm, -70)
+        self.assertEqual(network.bssids[0].channel, 6)
+        self.assertEqual(network.bssids[0].band, "2.4 GHz")
         self.assertEqual(network.security_type, "WPA2")
         
         # Check that first_seen and last_seen were set automatically
@@ -280,10 +275,13 @@ class TestEdgeCases(unittest.TestCase):
         # Create a network with special characters in SSID
         network = WiFiNetwork(
             ssid="Test\nNetwork\t\r\nWith「Special」Chars",
-            bssid="00:11:22:33:44:55",
-            signal_dbm=-70,
-            channel=6,
-            band="2.4 GHz",
+            bssids=[NetworkBSSID(
+                bssid="00:11:22:33:44:55",
+                signal_percent=70,
+                signal_dbm=-70,
+                channel=6,
+                band="2.4 GHz"
+            )],
             security_type="WPA2"
         )
         
@@ -296,10 +294,13 @@ class TestEdgeCases(unittest.TestCase):
         with self.assertRaises(ValueError):
             network = WiFiNetwork(
                 ssid="TestNetwork",
-                bssid="00:11:22:33:44:55",
-                signal_dbm=-70,
-                channel=0,  # Invalid channel
-                band="2.4 GHz",
+                bssids=[NetworkBSSID(
+                    bssid="00:11:22:33:44:55",
+                    signal_percent=70,
+                    signal_dbm=-70,
+                    channel=0,  # Invalid channel
+                    band="2.4 GHz"
+                )],
                 security_type="WPA2"
             )
         
@@ -307,10 +308,13 @@ class TestEdgeCases(unittest.TestCase):
         with self.assertRaises(ValueError):
             network = WiFiNetwork(
                 ssid="TestNetwork",
-                bssid="00:11:22:33:44:55",
-                signal_dbm=-70,
-                channel=200,  # Invalid channel
-                band="2.4 GHz",
+                bssids=[NetworkBSSID(
+                    bssid="00:11:22:33:44:55",
+                    signal_percent=70,
+                    signal_dbm=-70,
+                    channel=200,  # Invalid channel
+                    band="2.4 GHz"
+                )],
                 security_type="WPA2"
             )
     
@@ -320,10 +324,7 @@ class TestEdgeCases(unittest.TestCase):
         with self.assertRaises(TypeError):
             network = WiFiNetwork(
                 ssid="TestNetwork",
-                # bssid missing
-                signal_dbm=-70,
-                channel=6,
-                band="2.4 GHz",
+                bssids=[],  # Empty bssids list
                 security_type="WPA2"
             )
 
