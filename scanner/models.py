@@ -106,20 +106,45 @@ class WiFiNetwork:
         return max(bssid.signal_dbm for bssid in self.bssids)
     
     @property
-    def primary_channel(self) -> Optional[int]:
-        """Return the channel of the BSSID with the strongest signal."""
+    def signal_dbm(self):
+        """Get the strongest signal strength among all BSSIDs."""
         if not self.bssids:
-            return None
-        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
-        return strongest.channel
+            return -100  # Default very weak signal if no BSSIDs
+        return max(bssid.signal_dbm for bssid in self.bssids)
     
     @property
-    def primary_band(self) -> Optional[str]:
-        """Return the frequency band of the BSSID with the strongest signal."""
+    def channel(self):
+        """Get the channel of the BSSID with the strongest signal."""
         if not self.bssids:
-            return None
+            return 0
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
+        return strongest.channel
+        
+    @property
+    def band(self):
+        """Get the frequency band of the BSSID with the strongest signal."""
+        if not self.bssids:
+            return "Unknown"
         strongest = max(self.bssids, key=lambda b: b.signal_dbm)
         return strongest.band
+    
+    @property
+    def primary_channel(self):
+        """Alias for channel property."""
+        return self.channel
+        
+    @property
+    def primary_band(self):
+        """Alias for band property."""
+        return self.band
+
+    @property
+    def bssid(self):
+        """Get the BSSID of the strongest signal."""
+        if not self.bssids:
+            return ""
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
+        return strongest.bssid
     
     def update_last_seen(self):
         """Update the last_seen timestamp to current time."""

@@ -315,7 +315,7 @@ class NetworkTableModel(QAbstractTableModel):
                 if column_name == 'SSID':
                     return network.ssid if network.ssid else '<Hidden Network>'
                 elif column_name == 'BSSID':
-                    return network.bssid
+                    return network.bssid if hasattr(network, 'bssid') else network.bssids[0].bssid if network.bssids else ""
                 elif column_name == 'Signal':
                     # Return the strongest signal value
                     return network.strongest_signal
@@ -347,8 +347,8 @@ class NetworkTableModel(QAbstractTableModel):
         elif role == Qt.ItemDataRole.UserRole: # Often used for sorting data types
             column_name = self.COLUMNS[col]
             if column_name == 'Signal':
-                # Return integer or a very small number if not an int to sort correctly
-                return network.signal_dbm if isinstance(network.signal_dbm, int) else -999
+                # Modify the data method to access signal_dbm from the first BSSID
+                return network.bssids[0].signal_dbm if network.bssids and isinstance(network.bssids[0].signal_dbm, int) else -999
             elif column_name == 'Channel':
                 return network.channel if isinstance(network.channel, int) else 0
             # For other columns, returning the display data is usually fine for sorting

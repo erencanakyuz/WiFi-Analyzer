@@ -9,6 +9,8 @@ import logging
 from typing import Dict, List, Tuple, Optional
 import statistics
 
+from scanner.models import WiFiNetwork
+
 logger = logging.getLogger(__name__)
 
 # Channel width in MHz for 2.4 GHz
@@ -73,14 +75,14 @@ class ChannelAnalyzer:
                     signal_dbm = bssid.signal_dbm
                     band = bssid.band
                     
-                    if channel and signal_dbm:
-                        if band == '2.4 GHz' and channel in CHANNELS_2_4GHZ:
+                    if channel and signal_dbm is not None:
+                        if band.strip() == '2.4 GHz' and channel in CHANNELS_2_4GHZ:
                             self.channel_usage['2.4GHz'][channel].append({
                                 'ssid': network.ssid,
                                 'bssid': bssid.bssid,
                                 'signal_dbm': signal_dbm
                             })
-                        elif band == '5 GHz' and channel in CHANNELS_5GHZ:
+                        elif band.strip() == '5 GHz' and channel in CHANNELS_5GHZ:
                             self.channel_usage['5GHz'][channel].append({
                                 'ssid': network.ssid,
                                 'bssid': bssid.bssid,

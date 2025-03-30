@@ -1,0 +1,342 @@
+[
+  {
+    "ssid": "Romansal 5GHZ",
+    "bssid": "ac:15:a2:26:3e:55:",
+    "signal": -66,
+    "freq": 5240000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Romansal",
+    "bssid": "ac:15:a2:26:3e:54:",
+    "signal": -59,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Turksat_Kablonet_2.4_fRyQ",
+    "bssid": "bc:f8:8b:bd:fc:19:",
+    "signal": -83,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Turksat_Kablonet_2.4_ycdC",
+    "bssid": "bc:f8:8b:ba:ea:b5:",
+    "signal": -82,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "f6:a7:31:d6:ac:97:",
+    "signal": -69,
+    "freq": 5180000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "62:83:e7:45:b1:18:",
+    "signal": -87,
+    "freq": 2447000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "be:f8:8b:9d:fa:dc:",
+    "signal": -80,
+    "freq": 5580000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "f6:a7:31:d6:ac:96:",
+    "signal": -69,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "52:91:e3:40:81:38:",
+    "signal": -60,
+    "freq": 2422000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "52:91:e3:b0:81:38:",
+    "signal": -85,
+    "freq": 5320000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "",
+    "bssid": "52:91:e3:50:81:38:",
+    "signal": -60,
+    "freq": 2422000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "TP-Link_49A8",
+    "bssid": "b4:b0:24:c3:49:a8:",
+    "signal": -82,
+    "freq": 2447000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_ZTNZC4_2.4GHz",
+    "bssid": "14:09:b4:c4:10:03:",
+    "signal": -79,
+    "freq": 2412000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_TP813A",
+    "bssid": "50:91:e3:90:81:38:",
+    "signal": -62,
+    "freq": 2422000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_TP813A",
+    "bssid": "50:91:e3:90:81:39:",
+    "signal": -85,
+    "freq": 5320000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "TURKSAT-KABLONET-D5F2-2.4G",
+    "bssid": "18:48:59:06:1f:7c:",
+    "signal": -75,
+    "freq": 2472000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Ba\u00c5\u009faran Home",
+    "bssid": "f0:a7:31:d6:ac:97:",
+    "signal": -76,
+    "freq": 5180000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Ba\u00c5\u009faran Home",
+    "bssid": "f0:a7:31:d6:81:5f:",
+    "signal": -89,
+    "freq": 5180000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Ba\u00c5\u009faran Home",
+    "bssid": "f0:a7:31:d6:ac:96:",
+    "signal": -68,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_ZTCEN4_2.4GHz",
+    "bssid": "c0:51:5c:b5:38:bc:",
+    "signal": -76,
+    "freq": 2427000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_ZTHKR6_2.4GHz",
+    "bssid": "c0:51:5c:b4:e6:1e:",
+    "signal": -74,
+    "freq": 2422000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "SUPERONLINE_Wi-Fi_3BB9",
+    "bssid": "74:fe:ce:df:3b:b9:",
+    "signal": -88,
+    "freq": 2412000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "TURKSAT-KABLONET-D5F2-2.4G_EXT",
+    "bssid": "6c:5a:b0:dd:e2:ed:",
+    "signal": -89,
+    "freq": 2472000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "TURKSAT-KABLONET-0EA0-2.4G",
+    "bssid": "8c:de:f9:4a:49:e8:",
+    "signal": -74,
+    "freq": 2472000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "TURKSAT-KABLONET-0EA0-2.4G",
+    "bssid": "18:48:59:13:2f:e2:",
+    "signal": -81,
+    "freq": 2472000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Turksat_Kablonet_2.4_eQuZ",
+    "bssid": "bc:f8:8b:ba:e9:23:",
+    "signal": -82,
+    "freq": 2462000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FTHSG",
+    "bssid": "bc:f8:8b:ba:ea:3d:",
+    "signal": -82,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Romansal",
+    "bssid": "ac:15:a2:26:3e:54:",
+    "signal": -59,
+    "freq": 2437000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Romansal 5GHZ",
+    "bssid": "ac:15:a2:26:3e:55:",
+    "signal": -66,
+    "freq": 5240000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Comart",
+    "bssid": "dc:d9:16:07:8c:af:",
+    "signal": -85,
+    "freq": 2462000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Turksat_Kablonet_2.4_shed",
+    "bssid": "bc:f8:8b:bd:fa:db:",
+    "signal": -69,
+    "freq": 2412000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_ZT4UY2_2.4GHz",
+    "bssid": "e0:b6:68:ee:dc:39:",
+    "signal": -77,
+    "freq": 2457000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "Turksat_Kablonet_5_shed",
+    "bssid": "bc:f8:8b:5d:fa:dc:",
+    "signal": -82,
+    "freq": 5580000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  },
+  {
+    "ssid": "FiberHGW_TP5E6E_2.4GHz",
+    "bssid": "6c:e8:73:55:d2:87:",
+    "signal": -80,
+    "freq": 2412000,
+    "akm": [
+      4
+    ],
+    "channel": 0
+  }
+]

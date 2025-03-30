@@ -1309,3 +1309,1524 @@ AttributeError: 'ChannelAnalyzer' object has no attribute 'analyze_networks'
 2025-03-30 22:35:47,246 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
 2025-03-30 22:35:47,247 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
 2025-03-30 22:35:47,540 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 22:36:17,009 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:36:17,211 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:36:17,212 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:36:17,343 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-30 22:36:17,344 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 22:36:17,724 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 22:36:47,003 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:36:47,161 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:36:47,162 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:36:47,247 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:36:47,248 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:36:47,596 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:37:17,017 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:37:17,453 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:37:17,455 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:37:17,659 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:37:17,659 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:37:18,348 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:37:47,023 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:37:47,225 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:37:47,226 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:37:47,323 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:37:47,326 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:37:47,819 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:38:17,032 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:38:17,179 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:38:17,179 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:38:17,260 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:38:17,260 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:38:17,640 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:38:47,037 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:38:47,206 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:38:47,208 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:38:47,307 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:38:47,307 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:38:47,868 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:17,034 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:17,186 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:17,186 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:17,283 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:17,283 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:17,706 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:20,175 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:20,314 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:20,314 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:20,404 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:20,404 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:20,898 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:22,230 - gui.main_window - INFO - Auto-refresh disabled
+2025-03-30 22:39:50,486 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:50,628 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:50,628 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:50,713 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:50,713 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:51,185 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:51,190 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:51,329 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:51,329 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:51,411 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:51,411 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:51,925 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:52,519 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:52,653 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:52,653 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:52,735 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:52,735 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:53,225 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:53,227 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:53,358 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:53,358 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:53,435 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:53,436 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:53,940 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:54,893 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:39:55,023 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:39:55,023 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:39:55,101 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:39:55,101 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:55,630 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:39:55,975 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 22:40:00,361 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:40:00,397 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:40:00,410 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:40:00,414 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:40:00,414 - root - INFO - Applied dark theme successfully
+2025-03-30 22:40:00,414 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:40:00,414 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:40:00,433 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:40:00,693 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:00,695 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:40:01,038 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:01,043 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:01,135 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:01,135 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:01,315 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:06,806 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:06,964 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:06,964 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:07,046 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:07,051 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:07,296 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:08,687 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:08,825 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:08,825 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:08,911 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:08,911 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:09,176 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:11,190 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:11,326 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:11,331 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:11,408 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:11,408 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:11,650 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:19,072 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:19,214 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:19,219 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:19,310 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:19,310 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:19,641 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:30,691 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:40:30,843 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:40:30,848 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:40:30,934 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:40:30,939 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:40:31,296 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:52:09,744 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:52:09,773 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:52:09,784 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:52:09,789 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:52:09,790 - root - INFO - Applied dark theme successfully
+2025-03-30 22:52:09,917 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:09,923 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:09,923 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:09,925 - root - WARNING - WiFi scanner initialized without admin privileges - some features may be limited
+2025-03-30 22:52:09,943 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:52:10,202 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:52:10,204 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:52:10,359 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 22:52:12,590 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,590 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:52:12,592 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:52:12,592 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:52:12,592 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,593 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,593 - pywifi - INFO - 	signal: -70
+2025-03-30 22:52:12,593 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,594 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:52:12,594 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:52:12,594 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,594 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,595 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,595 - pywifi - INFO - 	signal: -52
+2025-03-30 22:52:12,595 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,595 - pywifi - INFO - 	bssid: 6c:e8:73:55:d2:87:
+2025-03-30 22:52:12,595 - pywifi - INFO - 	ssid: FiberHGW_TP5E6E_2.4GHz
+2025-03-30 22:52:12,596 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,596 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,596 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,596 - pywifi - INFO - 	signal: -80
+2025-03-30 22:52:12,596 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,596 - pywifi - INFO - 	bssid: c0:51:5c:b4:e6:1e:
+2025-03-30 22:52:12,598 - pywifi - INFO - 	ssid: FiberHGW_ZTHKR6_2.4GHz
+2025-03-30 22:52:12,598 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:12,598 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,598 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,599 - pywifi - INFO - 	signal: -77
+2025-03-30 22:52:12,599 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,599 - pywifi - INFO - 	bssid: 6c:5a:b0:dd:e2:ed:
+2025-03-30 22:52:12,600 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-D5F2-2.4G_EXT
+2025-03-30 22:52:12,600 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:12,600 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,601 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,601 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:12,601 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,601 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 22:52:12,601 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:52:12,602 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:12,602 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,602 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,602 - pywifi - INFO - 	signal: -78
+2025-03-30 22:52:12,602 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,603 - pywifi - INFO - 	bssid: 18:48:59:13:2f:e2:
+2025-03-30 22:52:12,603 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:52:12,603 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:12,603 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,604 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,604 - pywifi - INFO - 	signal: -79
+2025-03-30 22:52:12,605 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,605 - pywifi - INFO - 	bssid: 00:5f:67:e4:7c:ca:
+2025-03-30 22:52:12,605 - pywifi - INFO - 	ssid: -huzur-
+2025-03-30 22:52:12,606 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,607 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,607 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,608 - pywifi - INFO - 	signal: -84
+2025-03-30 22:52:12,608 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,608 - pywifi - INFO - 	bssid: bc:f8:8b:bc:b9:93:
+2025-03-30 22:52:12,609 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_7UHP
+2025-03-30 22:52:12,609 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,610 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,610 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,610 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:12,611 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,611 - pywifi - INFO - 	bssid: bc:f8:8b:ba:ec:05:
+2025-03-30 22:52:12,611 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_Z26F
+2025-03-30 22:52:12,612 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:12,612 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,614 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,614 - pywifi - INFO - 	signal: -86
+2025-03-30 22:52:12,614 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,615 - pywifi - INFO - 	bssid: be:f8:8b:9d:fa:dc:
+2025-03-30 22:52:12,615 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,615 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:52:12,616 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,616 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,617 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:12,618 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,618 - pywifi - INFO - 	bssid: ae:15:a2:56:3e:54:
+2025-03-30 22:52:12,619 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,619 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,619 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,619 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,620 - pywifi - INFO - 	signal: -53
+2025-03-30 22:52:12,620 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,620 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5e:
+2025-03-30 22:52:12,620 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,621 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,621 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,621 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,622 - pywifi - INFO - 	signal: -69
+2025-03-30 22:52:12,622 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,622 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5f:
+2025-03-30 22:52:12,623 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,624 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:12,624 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,624 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,624 - pywifi - INFO - 	signal: -87
+2025-03-30 22:52:12,625 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,625 - pywifi - INFO - 	bssid: 52:91:e3:b0:81:38:
+2025-03-30 22:52:12,625 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,625 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:12,625 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,626 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,626 - pywifi - INFO - 	signal: -84
+2025-03-30 22:52:12,626 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,626 - pywifi - INFO - 	bssid: 52:91:e3:a0:81:38:
+2025-03-30 22:52:12,626 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,627 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:12,627 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,629 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,629 - pywifi - INFO - 	signal: -83
+2025-03-30 22:52:12,629 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,629 - pywifi - INFO - 	bssid: f6:a7:31:d6:ac:96:
+2025-03-30 22:52:12,630 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:12,630 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,631 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,631 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,631 - pywifi - INFO - 	signal: -65
+2025-03-30 22:52:12,631 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,632 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:52:12,632 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:52:12,633 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:52:12,633 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,633 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,634 - pywifi - INFO - 	signal: -70
+2025-03-30 22:52:12,634 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,634 - pywifi - INFO - 	bssid: e0:b6:68:ee:dc:39:
+2025-03-30 22:52:12,634 - pywifi - INFO - 	ssid: FiberHGW_ZT4UY2_2.4GHz
+2025-03-30 22:52:12,634 - pywifi - INFO - 	freq: 2457000
+2025-03-30 22:52:12,635 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,635 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,635 - pywifi - INFO - 	signal: -78
+2025-03-30 22:52:12,636 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,636 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 22:52:12,636 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 22:52:12,636 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,636 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,637 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,637 - pywifi - INFO - 	signal: -77
+2025-03-30 22:52:12,638 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,638 - pywifi - INFO - 	bssid: bc:f8:8b:ba:eb:6f:
+2025-03-30 22:52:12,638 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_YeX6
+2025-03-30 22:52:12,638 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,639 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,639 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,639 - pywifi - INFO - 	signal: -76
+2025-03-30 22:52:12,639 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,639 - pywifi - INFO - 	bssid: 38:88:1e:9d:c7:84:
+2025-03-30 22:52:12,639 - pywifi - INFO - 	ssid: VodafoneNet-KEFVW2
+2025-03-30 22:52:12,640 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,640 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,640 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,640 - pywifi - INFO - 	signal: -82
+2025-03-30 22:52:12,640 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,640 - pywifi - INFO - 	bssid: bc:f8:8b:ba:e9:23:
+2025-03-30 22:52:12,642 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_eQuZ
+2025-03-30 22:52:12,642 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:12,642 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,642 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,643 - pywifi - INFO - 	signal: -81
+2025-03-30 22:52:12,643 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,644 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 22:52:12,653 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:12,653 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,653 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,653 - pywifi - INFO - 	signal: -87
+2025-03-30 22:52:12,653 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,654 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 22:52:12,655 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:12,655 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,656 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,656 - pywifi - INFO - 	signal: -73
+2025-03-30 22:52:12,656 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,657 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 22:52:12,659 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,660 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,660 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,660 - pywifi - INFO - 	signal: -65
+2025-03-30 22:52:12,660 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,660 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5e:
+2025-03-30 22:52:12,663 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,663 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,664 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,664 - pywifi - INFO - 	signal: -67
+2025-03-30 22:52:12,664 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,664 - pywifi - INFO - 	bssid: bc:f8:8b:bb:a1:7f:
+2025-03-30 22:52:12,665 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_FuPt
+2025-03-30 22:52:12,665 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:12,665 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,665 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,665 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:12,665 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,665 - pywifi - INFO - 	bssid: b4:e2:65:02:a5:f2:
+2025-03-30 22:52:12,667 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-2.4G-6SN7
+2025-03-30 22:52:12,667 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:12,667 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,667 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,668 - pywifi - INFO - 	signal: -75
+2025-03-30 22:52:12,668 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,668 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 22:52:12,668 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:52:12,669 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:12,669 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,669 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,670 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:12,670 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,670 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 22:52:12,670 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:52:12,671 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:12,671 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,671 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,672 - pywifi - INFO - 	signal: -68
+2025-03-30 22:52:12,672 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,672 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:52:12,672 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:52:12,673 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:12,673 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,673 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,673 - pywifi - INFO - 	signal: -52
+2025-03-30 22:52:12,674 - pywifi - INFO - Find bss:
+2025-03-30 22:52:12,674 - pywifi - INFO - 	bssid: bc:f8:8b:5d:fa:dc:
+2025-03-30 22:52:12,674 - pywifi - INFO - 	ssid: Turksat_Kablonet_5_shed
+2025-03-30 22:52:12,674 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:52:12,674 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:12,674 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:12,675 - pywifi - INFO - 	signal: -86
+2025-03-30 22:52:12,675 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,675 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,675 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,675 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,675 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,677 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,677 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,677 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,678 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,678 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,679 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,679 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,679 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,679 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,680 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,680 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,680 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,680 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,680 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,681 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,681 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,681 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,681 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,681 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,682 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,682 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,682 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,682 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,682 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,683 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,683 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,684 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,684 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:12,687 - scanner.wifi_scanner - INFO - Scan completed: 0 networks found
+2025-03-30 22:52:12,874 - gui.main_window - INFO - Scan completed: 0 networks found
+2025-03-30 22:52:54,762 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:52:54,789 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:52:54,798 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:52:54,802 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:52:54,803 - root - INFO - Applied dark theme successfully
+2025-03-30 22:52:54,810 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:54,816 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:54,818 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:52:54,818 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-30 22:52:54,833 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:52:55,080 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:52:55,082 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:52:55,225 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 22:52:57,467 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,468 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:52:57,468 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:52:57,469 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:52:57,469 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,469 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,469 - pywifi - INFO - 	signal: -69
+2025-03-30 22:52:57,470 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,470 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:52:57,470 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:52:57,470 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,470 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,470 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,470 - pywifi - INFO - 	signal: -56
+2025-03-30 22:52:57,470 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,470 - pywifi - INFO - 	bssid: 6c:e8:73:55:d2:87:
+2025-03-30 22:52:57,470 - pywifi - INFO - 	ssid: FiberHGW_TP5E6E_2.4GHz
+2025-03-30 22:52:57,470 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,472 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,472 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,472 - pywifi - INFO - 	signal: -79
+2025-03-30 22:52:57,472 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,472 - pywifi - INFO - 	bssid: c0:51:5c:b4:e6:1e:
+2025-03-30 22:52:57,472 - pywifi - INFO - 	ssid: FiberHGW_ZTHKR6_2.4GHz
+2025-03-30 22:52:57,472 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:57,472 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,473 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,473 - pywifi - INFO - 	signal: -80
+2025-03-30 22:52:57,473 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,473 - pywifi - INFO - 	bssid: 6c:5a:b0:dd:e2:ed:
+2025-03-30 22:52:57,473 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-D5F2-2.4G_EXT
+2025-03-30 22:52:57,473 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:57,473 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,474 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,474 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:57,474 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,474 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 22:52:57,474 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:52:57,474 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:57,475 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,475 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,475 - pywifi - INFO - 	signal: -75
+2025-03-30 22:52:57,475 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,475 - pywifi - INFO - 	bssid: 18:48:59:13:2f:e2:
+2025-03-30 22:52:57,475 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:52:57,476 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:52:57,476 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,476 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,476 - pywifi - INFO - 	signal: -71
+2025-03-30 22:52:57,476 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,477 - pywifi - INFO - 	bssid: bc:f8:8b:bd:90:3d:
+2025-03-30 22:52:57,477 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_kRSS
+2025-03-30 22:52:57,477 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,477 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,479 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,479 - pywifi - INFO - 	signal: -88
+2025-03-30 22:52:57,479 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,479 - pywifi - INFO - 	bssid: 94:28:6f:20:95:61:
+2025-03-30 22:52:57,480 - pywifi - INFO - 	ssid: FiberHGW_ZTUC2T_2.4GHz
+2025-03-30 22:52:57,480 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,480 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,480 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,480 - pywifi - INFO - 	signal: -87
+2025-03-30 22:52:57,480 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,480 - pywifi - INFO - 	bssid: 00:5f:67:e4:7c:ca:
+2025-03-30 22:52:57,480 - pywifi - INFO - 	ssid: -huzur-
+2025-03-30 22:52:57,481 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,481 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,481 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,482 - pywifi - INFO - 	signal: -84
+2025-03-30 22:52:57,482 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,482 - pywifi - INFO - 	bssid: bc:f8:8b:bc:b9:93:
+2025-03-30 22:52:57,483 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_7UHP
+2025-03-30 22:52:57,483 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,483 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,484 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,484 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:57,484 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,484 - pywifi - INFO - 	bssid: bc:f8:8b:ba:ec:05:
+2025-03-30 22:52:57,484 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_Z26F
+2025-03-30 22:52:57,485 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:57,485 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,485 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,485 - pywifi - INFO - 	signal: -86
+2025-03-30 22:52:57,485 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,485 - pywifi - INFO - 	bssid: be:f8:8b:9d:fa:dc:
+2025-03-30 22:52:57,485 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,485 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:52:57,485 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,485 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,486 - pywifi - INFO - 	signal: -77
+2025-03-30 22:52:57,486 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,486 - pywifi - INFO - 	bssid: ae:15:a2:56:3e:54:
+2025-03-30 22:52:57,486 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,486 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,486 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,487 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,487 - pywifi - INFO - 	signal: -56
+2025-03-30 22:52:57,487 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,487 - pywifi - INFO - 	bssid: 52:91:e3:40:81:38:
+2025-03-30 22:52:57,487 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,487 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:57,488 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,488 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,488 - pywifi - INFO - 	signal: -58
+2025-03-30 22:52:57,488 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,488 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5e:
+2025-03-30 22:52:57,488 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,489 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,489 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,489 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,489 - pywifi - INFO - 	signal: -72
+2025-03-30 22:52:57,490 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,490 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5f:
+2025-03-30 22:52:57,490 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,490 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:57,491 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,491 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,493 - pywifi - INFO - 	signal: -87
+2025-03-30 22:52:57,493 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,493 - pywifi - INFO - 	bssid: 52:91:e3:50:81:38:
+2025-03-30 22:52:57,493 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,494 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:57,494 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,494 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,494 - pywifi - INFO - 	signal: -59
+2025-03-30 22:52:57,494 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,494 - pywifi - INFO - 	bssid: 52:91:e3:b0:81:38:
+2025-03-30 22:52:57,494 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,494 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:57,495 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,495 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,495 - pywifi - INFO - 	signal: -80
+2025-03-30 22:52:57,495 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,495 - pywifi - INFO - 	bssid: 52:91:e3:a0:81:38:
+2025-03-30 22:52:57,496 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,496 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:57,496 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,496 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,496 - pywifi - INFO - 	signal: -83
+2025-03-30 22:52:57,497 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,497 - pywifi - INFO - 	bssid: f6:a7:31:d6:ac:96:
+2025-03-30 22:52:57,497 - pywifi - INFO - 	ssid: 
+2025-03-30 22:52:57,498 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,498 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,498 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,498 - pywifi - INFO - 	signal: -65
+2025-03-30 22:52:57,498 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,498 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:52:57,499 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:52:57,499 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:52:57,499 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,499 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,499 - pywifi - INFO - 	signal: -69
+2025-03-30 22:52:57,499 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,499 - pywifi - INFO - 	bssid: e0:b6:68:ee:dc:39:
+2025-03-30 22:52:57,499 - pywifi - INFO - 	ssid: FiberHGW_ZT4UY2_2.4GHz
+2025-03-30 22:52:57,500 - pywifi - INFO - 	freq: 2457000
+2025-03-30 22:52:57,500 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,500 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,500 - pywifi - INFO - 	signal: -78
+2025-03-30 22:52:57,500 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,501 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 22:52:57,501 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 22:52:57,501 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,501 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,501 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,501 - pywifi - INFO - 	signal: -72
+2025-03-30 22:52:57,501 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,502 - pywifi - INFO - 	bssid: bc:f8:8b:ba:eb:6f:
+2025-03-30 22:52:57,502 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_YeX6
+2025-03-30 22:52:57,502 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,503 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,503 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,503 - pywifi - INFO - 	signal: -76
+2025-03-30 22:52:57,503 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,503 - pywifi - INFO - 	bssid: 38:88:1e:9d:c7:84:
+2025-03-30 22:52:57,504 - pywifi - INFO - 	ssid: VodafoneNet-KEFVW2
+2025-03-30 22:52:57,504 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,504 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,504 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,504 - pywifi - INFO - 	signal: -84
+2025-03-30 22:52:57,505 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,505 - pywifi - INFO - 	bssid: bc:f8:8b:ba:e9:23:
+2025-03-30 22:52:57,505 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_eQuZ
+2025-03-30 22:52:57,505 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:57,505 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,505 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,505 - pywifi - INFO - 	signal: -82
+2025-03-30 22:52:57,505 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,506 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 22:52:57,507 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:57,507 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,508 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,508 - pywifi - INFO - 	signal: -88
+2025-03-30 22:52:57,508 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,508 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 22:52:57,524 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:52:57,524 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,524 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,525 - pywifi - INFO - 	signal: -74
+2025-03-30 22:52:57,525 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,525 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 22:52:57,527 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,527 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,527 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,527 - pywifi - INFO - 	signal: -56
+2025-03-30 22:52:57,527 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,527 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5e:
+2025-03-30 22:52:57,528 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,528 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,529 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,529 - pywifi - INFO - 	signal: -69
+2025-03-30 22:52:57,529 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,529 - pywifi - INFO - 	bssid: bc:f8:8b:bb:a1:7f:
+2025-03-30 22:52:57,530 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_FuPt
+2025-03-30 22:52:57,530 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:52:57,530 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,530 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,530 - pywifi - INFO - 	signal: -85
+2025-03-30 22:52:57,530 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,530 - pywifi - INFO - 	bssid: b4:e2:65:02:a5:f2:
+2025-03-30 22:52:57,530 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-2.4G-6SN7
+2025-03-30 22:52:57,530 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:52:57,532 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,532 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,532 - pywifi - INFO - 	signal: -75
+2025-03-30 22:52:57,533 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,533 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 22:52:57,533 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:52:57,534 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:52:57,534 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,534 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,534 - pywifi - INFO - 	signal: -80
+2025-03-30 22:52:57,535 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,535 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 22:52:57,535 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:52:57,535 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:52:57,535 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,536 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,536 - pywifi - INFO - 	signal: -57
+2025-03-30 22:52:57,536 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,536 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:52:57,537 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:52:57,539 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:52:57,540 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,540 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,540 - pywifi - INFO - 	signal: -56
+2025-03-30 22:52:57,540 - pywifi - INFO - Find bss:
+2025-03-30 22:52:57,540 - pywifi - INFO - 	bssid: bc:f8:8b:5d:fa:dc:
+2025-03-30 22:52:57,540 - pywifi - INFO - 	ssid: Turksat_Kablonet_5_shed
+2025-03-30 22:52:57,540 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:52:57,540 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:52:57,540 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:52:57,542 - pywifi - INFO - 	signal: -79
+2025-03-30 22:52:57,542 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,542 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,542 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,543 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,543 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,543 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,543 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,543 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,544 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,544 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,544 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,544 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,545 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,545 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,545 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,545 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,546 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,546 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,546 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,546 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,546 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,547 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,547 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,548 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,549 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,550 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,551 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,551 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,551 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,551 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,551 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:52:57,553 - scanner.wifi_scanner - INFO - Scan completed: 0 networks found
+2025-03-30 22:52:57,732 - gui.main_window - INFO - Scan completed: 0 networks found
+2025-03-30 22:53:25,088 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:53:25,094 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 22:53:27,373 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,374 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:53:27,376 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:53:27,376 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:53:27,376 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,376 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,377 - pywifi - INFO - 	signal: -70
+2025-03-30 22:53:27,377 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,377 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:53:27,377 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:53:27,377 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,377 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,378 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,378 - pywifi - INFO - 	signal: -52
+2025-03-30 22:53:27,378 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,378 - pywifi - INFO - 	bssid: 6c:e8:73:55:d2:87:
+2025-03-30 22:53:27,380 - pywifi - INFO - 	ssid: FiberHGW_TP5E6E_2.4GHz
+2025-03-30 22:53:27,380 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,380 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,380 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,380 - pywifi - INFO - 	signal: -81
+2025-03-30 22:53:27,381 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,381 - pywifi - INFO - 	bssid: c0:51:5c:b4:e6:1e:
+2025-03-30 22:53:27,381 - pywifi - INFO - 	ssid: FiberHGW_ZTHKR6_2.4GHz
+2025-03-30 22:53:27,381 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:53:27,381 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,381 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,382 - pywifi - INFO - 	signal: -73
+2025-03-30 22:53:27,382 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,382 - pywifi - INFO - 	bssid: 6c:5a:b0:dd:e2:ed:
+2025-03-30 22:53:27,382 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-D5F2-2.4G_EXT
+2025-03-30 22:53:27,382 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:53:27,383 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,383 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,383 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,383 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,383 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 22:53:27,383 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:53:27,384 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:53:27,384 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,385 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,385 - pywifi - INFO - 	signal: -78
+2025-03-30 22:53:27,385 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,385 - pywifi - INFO - 	bssid: 18:48:59:13:2f:e2:
+2025-03-30 22:53:27,385 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:53:27,386 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:53:27,386 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,386 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,386 - pywifi - INFO - 	signal: -73
+2025-03-30 22:53:27,386 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,386 - pywifi - INFO - 	bssid: bc:f8:8b:bd:90:3d:
+2025-03-30 22:53:27,386 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_kRSS
+2025-03-30 22:53:27,386 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,386 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,388 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,388 - pywifi - INFO - 	signal: -88
+2025-03-30 22:53:27,388 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,388 - pywifi - INFO - 	bssid: 94:28:6f:20:95:61:
+2025-03-30 22:53:27,388 - pywifi - INFO - 	ssid: FiberHGW_ZTUC2T_2.4GHz
+2025-03-30 22:53:27,388 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,388 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,389 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,389 - pywifi - INFO - 	signal: -87
+2025-03-30 22:53:27,389 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,389 - pywifi - INFO - 	bssid: 00:5f:67:e4:7c:ca:
+2025-03-30 22:53:27,389 - pywifi - INFO - 	ssid: -huzur-
+2025-03-30 22:53:27,390 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,390 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,390 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,390 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,390 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,391 - pywifi - INFO - 	bssid: bc:f8:8b:bc:b9:93:
+2025-03-30 22:53:27,391 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_7UHP
+2025-03-30 22:53:27,391 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,391 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,391 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,391 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,392 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,392 - pywifi - INFO - 	bssid: bc:f8:8b:ba:ec:05:
+2025-03-30 22:53:27,393 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_Z26F
+2025-03-30 22:53:27,393 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:53:27,393 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,393 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,393 - pywifi - INFO - 	signal: -86
+2025-03-30 22:53:27,394 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,394 - pywifi - INFO - 	bssid: be:f8:8b:9d:fa:dc:
+2025-03-30 22:53:27,394 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,394 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:53:27,394 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,394 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,394 - pywifi - INFO - 	signal: -86
+2025-03-30 22:53:27,395 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,396 - pywifi - INFO - 	bssid: ae:15:a2:56:3e:54:
+2025-03-30 22:53:27,397 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,397 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,397 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,397 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,398 - pywifi - INFO - 	signal: -56
+2025-03-30 22:53:27,398 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,398 - pywifi - INFO - 	bssid: 52:91:e3:40:81:38:
+2025-03-30 22:53:27,398 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,399 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:53:27,400 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,400 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,401 - pywifi - INFO - 	signal: -64
+2025-03-30 22:53:27,401 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,401 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5e:
+2025-03-30 22:53:27,401 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,401 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,401 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,402 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,402 - pywifi - INFO - 	signal: -72
+2025-03-30 22:53:27,403 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,403 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5f:
+2025-03-30 22:53:27,403 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,403 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:53:27,403 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,404 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,404 - pywifi - INFO - 	signal: -87
+2025-03-30 22:53:27,404 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,405 - pywifi - INFO - 	bssid: 52:91:e3:50:81:38:
+2025-03-30 22:53:27,405 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,405 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:53:27,406 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,406 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,406 - pywifi - INFO - 	signal: -65
+2025-03-30 22:53:27,406 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,406 - pywifi - INFO - 	bssid: 52:91:e3:b0:81:38:
+2025-03-30 22:53:27,407 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,407 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:53:27,407 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,407 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,407 - pywifi - INFO - 	signal: -80
+2025-03-30 22:53:27,407 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,408 - pywifi - INFO - 	bssid: 52:91:e3:a0:81:38:
+2025-03-30 22:53:27,408 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,408 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:53:27,408 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,408 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,409 - pywifi - INFO - 	signal: -83
+2025-03-30 22:53:27,409 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,409 - pywifi - INFO - 	bssid: f6:a7:31:d6:ac:96:
+2025-03-30 22:53:27,409 - pywifi - INFO - 	ssid: 
+2025-03-30 22:53:27,409 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,410 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,412 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,413 - pywifi - INFO - 	signal: -65
+2025-03-30 22:53:27,413 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,414 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:53:27,414 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:53:27,414 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:53:27,414 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,415 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,415 - pywifi - INFO - 	signal: -70
+2025-03-30 22:53:27,415 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,415 - pywifi - INFO - 	bssid: e0:b6:68:ee:dc:39:
+2025-03-30 22:53:27,415 - pywifi - INFO - 	ssid: FiberHGW_ZT4UY2_2.4GHz
+2025-03-30 22:53:27,416 - pywifi - INFO - 	freq: 2457000
+2025-03-30 22:53:27,416 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,416 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,416 - pywifi - INFO - 	signal: -77
+2025-03-30 22:53:27,416 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,416 - pywifi - INFO - 	bssid: bc:f8:8b:ba:ea:b5:
+2025-03-30 22:53:27,417 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_ycdC
+2025-03-30 22:53:27,417 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,417 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,417 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,417 - pywifi - INFO - 	signal: -82
+2025-03-30 22:53:27,417 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,417 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 22:53:27,418 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 22:53:27,418 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,418 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,418 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,418 - pywifi - INFO - 	signal: -78
+2025-03-30 22:53:27,419 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,419 - pywifi - INFO - 	bssid: bc:f8:8b:ba:eb:6f:
+2025-03-30 22:53:27,419 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_YeX6
+2025-03-30 22:53:27,419 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,420 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,420 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,420 - pywifi - INFO - 	signal: -76
+2025-03-30 22:53:27,420 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,420 - pywifi - INFO - 	bssid: 38:88:1e:9d:c7:84:
+2025-03-30 22:53:27,421 - pywifi - INFO - 	ssid: VodafoneNet-KEFVW2
+2025-03-30 22:53:27,421 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,422 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,422 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,422 - pywifi - INFO - 	signal: -81
+2025-03-30 22:53:27,422 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,423 - pywifi - INFO - 	bssid: bc:f8:8b:ba:e9:23:
+2025-03-30 22:53:27,423 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_eQuZ
+2025-03-30 22:53:27,423 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:53:27,423 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,424 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,424 - pywifi - INFO - 	signal: -82
+2025-03-30 22:53:27,424 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,424 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 22:53:27,425 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:53:27,430 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,430 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,431 - pywifi - INFO - 	signal: -88
+2025-03-30 22:53:27,431 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,431 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 22:53:27,433 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:53:27,433 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,433 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,434 - pywifi - INFO - 	signal: -73
+2025-03-30 22:53:27,434 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,434 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 22:53:27,435 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,435 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,435 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,435 - pywifi - INFO - 	signal: -67
+2025-03-30 22:53:27,437 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,437 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5e:
+2025-03-30 22:53:27,439 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,439 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,439 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,439 - pywifi - INFO - 	signal: -69
+2025-03-30 22:53:27,440 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,440 - pywifi - INFO - 	bssid: bc:f8:8b:bb:a1:7f:
+2025-03-30 22:53:27,440 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_FuPt
+2025-03-30 22:53:27,441 - pywifi - INFO - 	freq: 2462000
+2025-03-30 22:53:27,441 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,441 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,441 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,442 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,442 - pywifi - INFO - 	bssid: bc:f8:8b:bd:96:13:
+2025-03-30 22:53:27,442 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_XFZE
+2025-03-30 22:53:27,443 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,444 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,444 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,444 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,444 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,445 - pywifi - INFO - 	bssid: b4:e2:65:02:a5:f2:
+2025-03-30 22:53:27,445 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-2.4G-6SN7
+2025-03-30 22:53:27,445 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:53:27,445 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,445 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,445 - pywifi - INFO - 	signal: -78
+2025-03-30 22:53:27,447 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,447 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 22:53:27,447 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:53:27,448 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:53:27,448 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,448 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,448 - pywifi - INFO - 	signal: -85
+2025-03-30 22:53:27,449 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,449 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 22:53:27,449 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:53:27,449 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:53:27,449 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,449 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,450 - pywifi - INFO - 	signal: -62
+2025-03-30 22:53:27,450 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,450 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:53:27,450 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:53:27,450 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:53:27,450 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,451 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,451 - pywifi - INFO - 	signal: -52
+2025-03-30 22:53:27,451 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,451 - pywifi - INFO - 	bssid: 6c:e8:73:f3:b0:e8:
+2025-03-30 22:53:27,451 - pywifi - INFO - 	ssid: FiberHGW_TP8A86_2.4GHz
+2025-03-30 22:53:27,452 - pywifi - INFO - 	freq: 2417000
+2025-03-30 22:53:27,452 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,452 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,452 - pywifi - INFO - 	signal: -81
+2025-03-30 22:53:27,452 - pywifi - INFO - Find bss:
+2025-03-30 22:53:27,452 - pywifi - INFO - 	bssid: bc:f8:8b:5d:fa:dc:
+2025-03-30 22:53:27,452 - pywifi - INFO - 	ssid: Turksat_Kablonet_5_shed
+2025-03-30 22:53:27,452 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:53:27,452 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:53:27,453 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:53:27,453 - pywifi - INFO - 	signal: -88
+2025-03-30 22:53:27,453 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,454 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,454 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,454 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,454 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,454 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,455 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,456 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,456 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,456 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,456 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,456 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,457 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,457 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,457 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,457 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,457 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,459 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,460 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,460 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,460 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,460 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,461 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,461 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,461 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,462 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,462 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,462 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,462 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,462 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,463 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,463 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,463 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,463 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,464 - scanner.wifi_scanner - WARNING - Error processing network: module 'pywifi.const' has no attribute 'AKM_TYPE_SAE'
+2025-03-30 22:53:27,465 - scanner.wifi_scanner - INFO - Scan completed: 0 networks found
+2025-03-30 22:53:27,720 - gui.main_window - INFO - Scan completed: 0 networks found
+2025-03-30 22:53:47,720 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 22:56:21,028 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:56:21,058 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:56:21,069 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:56:21,073 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:56:21,075 - root - INFO - Applied dark theme successfully
+2025-03-30 22:56:21,083 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:56:21,091 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:56:21,092 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 22:56:21,093 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-30 22:56:21,110 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:56:21,364 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:56:21,366 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:56:21,507 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 22:56:23,653 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,655 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:56:23,655 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:56:23,655 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:56:23,655 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,656 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,656 - pywifi - INFO - 	signal: -69
+2025-03-30 22:56:23,656 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,656 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:56:23,656 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:56:23,657 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:56:23,657 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,657 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,657 - pywifi - INFO - 	signal: -56
+2025-03-30 22:56:23,657 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,657 - pywifi - INFO - 	bssid: 6c:5a:b0:dd:e2:ed:
+2025-03-30 22:56:23,657 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-D5F2-2.4G_EXT
+2025-03-30 22:56:23,657 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:56:23,658 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,658 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,658 - pywifi - INFO - 	signal: -87
+2025-03-30 22:56:23,658 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,658 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 22:56:23,658 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:56:23,658 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:56:23,658 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,659 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,659 - pywifi - INFO - 	signal: -76
+2025-03-30 22:56:23,659 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,659 - pywifi - INFO - 	bssid: 18:48:59:13:2f:e2:
+2025-03-30 22:56:23,659 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 22:56:23,659 - pywifi - INFO - 	freq: 2472000
+2025-03-30 22:56:23,659 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,660 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,660 - pywifi - INFO - 	signal: -76
+2025-03-30 22:56:23,660 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,660 - pywifi - INFO - 	bssid: 62:83:e7:45:b1:18:
+2025-03-30 22:56:23,661 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,661 - pywifi - INFO - 	freq: 2447000
+2025-03-30 22:56:23,661 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,661 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,661 - pywifi - INFO - 	signal: -87
+2025-03-30 22:56:23,662 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,662 - pywifi - INFO - 	bssid: be:f8:8b:9d:fa:dc:
+2025-03-30 22:56:23,663 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,663 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:56:23,663 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,663 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,663 - pywifi - INFO - 	signal: -79
+2025-03-30 22:56:23,663 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,663 - pywifi - INFO - 	bssid: 62:83:e7:55:b1:18:
+2025-03-30 22:56:23,664 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,664 - pywifi - INFO - 	freq: 2447000
+2025-03-30 22:56:23,664 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,664 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,664 - pywifi - INFO - 	signal: -89
+2025-03-30 22:56:23,664 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,664 - pywifi - INFO - 	bssid: 52:91:e3:40:81:38:
+2025-03-30 22:56:23,665 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,665 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:56:23,665 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,665 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,665 - pywifi - INFO - 	signal: -56
+2025-03-30 22:56:23,665 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,665 - pywifi - INFO - 	bssid: 52:91:e3:50:81:38:
+2025-03-30 22:56:23,665 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,665 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:56:23,668 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,668 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,668 - pywifi - INFO - 	signal: -57
+2025-03-30 22:56:23,668 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,668 - pywifi - INFO - 	bssid: f6:a7:31:d6:ac:96:
+2025-03-30 22:56:23,669 - pywifi - INFO - 	ssid: 
+2025-03-30 22:56:23,669 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:56:23,669 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,669 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,669 - pywifi - INFO - 	signal: -59
+2025-03-30 22:56:23,670 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,670 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 22:56:23,670 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 22:56:23,670 - pywifi - INFO - 	freq: 5240000
+2025-03-30 22:56:23,670 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,670 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,670 - pywifi - INFO - 	signal: -69
+2025-03-30 22:56:23,670 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,671 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 22:56:23,671 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 22:56:23,671 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:56:23,671 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,671 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,671 - pywifi - INFO - 	signal: -67
+2025-03-30 22:56:23,671 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,671 - pywifi - INFO - 	bssid: bc:f8:8b:ba:eb:6f:
+2025-03-30 22:56:23,671 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_YeX6
+2025-03-30 22:56:23,671 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:56:23,671 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,671 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,671 - pywifi - INFO - 	signal: -78
+2025-03-30 22:56:23,671 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,672 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 22:56:23,675 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:56:23,675 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,675 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,675 - pywifi - INFO - 	signal: -87
+2025-03-30 22:56:23,675 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,676 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 22:56:23,677 - pywifi - INFO - 	freq: 5180000
+2025-03-30 22:56:23,678 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,678 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,678 - pywifi - INFO - 	signal: -74
+2025-03-30 22:56:23,678 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,678 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 22:56:23,679 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:56:23,679 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,680 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,680 - pywifi - INFO - 	signal: -58
+2025-03-30 22:56:23,680 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,680 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5e:
+2025-03-30 22:56:23,685 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:56:23,685 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,685 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,685 - pywifi - INFO - 	signal: -69
+2025-03-30 22:56:23,685 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,686 - pywifi - INFO - 	bssid: b4:e2:65:02:a5:f2:
+2025-03-30 22:56:23,686 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-2.4G-6SN7
+2025-03-30 22:56:23,686 - pywifi - INFO - 	freq: 2412000
+2025-03-30 22:56:23,686 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,686 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,686 - pywifi - INFO - 	signal: -86
+2025-03-30 22:56:23,686 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,687 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 22:56:23,687 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:56:23,687 - pywifi - INFO - 	freq: 5320000
+2025-03-30 22:56:23,687 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,687 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,687 - pywifi - INFO - 	signal: -80
+2025-03-30 22:56:23,687 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,688 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 22:56:23,688 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 22:56:23,688 - pywifi - INFO - 	freq: 2422000
+2025-03-30 22:56:23,688 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,688 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,688 - pywifi - INFO - 	signal: -57
+2025-03-30 22:56:23,688 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,689 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 22:56:23,689 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 22:56:23,689 - pywifi - INFO - 	freq: 2437000
+2025-03-30 22:56:23,689 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,689 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,690 - pywifi - INFO - 	signal: -56
+2025-03-30 22:56:23,690 - pywifi - INFO - Find bss:
+2025-03-30 22:56:23,690 - pywifi - INFO - 	bssid: bc:f8:8b:5d:fa:dc:
+2025-03-30 22:56:23,690 - pywifi - INFO - 	ssid: Turksat_Kablonet_5_shed
+2025-03-30 22:56:23,690 - pywifi - INFO - 	freq: 5580000
+2025-03-30 22:56:23,691 - pywifi - INFO - 	auth: [0]
+2025-03-30 22:56:23,691 - pywifi - INFO - 	akm: [4]
+2025-03-30 22:56:23,691 - pywifi - INFO - 	signal: -80
+2025-03-30 22:56:23,692 - scanner.wifi_scanner - INFO - Scan completed: 11 networks found
+2025-03-30 23:02:17,452 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 23:02:17,486 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 23:02:17,496 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 23:02:17,503 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 23:02:17,504 - root - INFO - Applied dark theme successfully
+2025-03-30 23:02:17,513 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:02:17,522 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:02:17,522 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:02:17,522 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-30 23:02:17,540 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 23:02:17,802 - gui.main_window - INFO - Starting network scan
+2025-03-30 23:02:17,803 - gui.main_window - INFO - Main window initialized
+2025-03-30 23:02:17,944 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 23:02:20,105 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,106 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 23:02:20,107 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 23:02:20,107 - pywifi - INFO - 	freq: 5240000
+2025-03-30 23:02:20,107 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,107 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,107 - pywifi - INFO - 	signal: -68
+2025-03-30 23:02:20,107 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,107 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 23:02:20,107 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 23:02:20,108 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:02:20,108 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,108 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,108 - pywifi - INFO - 	signal: -55
+2025-03-30 23:02:20,108 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,109 - pywifi - INFO - 	bssid: 6c:e8:73:55:d2:87:
+2025-03-30 23:02:20,109 - pywifi - INFO - 	ssid: FiberHGW_TP5E6E_2.4GHz
+2025-03-30 23:02:20,109 - pywifi - INFO - 	freq: 2412000
+2025-03-30 23:02:20,109 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,110 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,110 - pywifi - INFO - 	signal: -82
+2025-03-30 23:02:20,110 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,111 - pywifi - INFO - 	bssid: 6c:5a:b0:dd:e2:ed:
+2025-03-30 23:02:20,111 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-D5F2-2.4G_EXT
+2025-03-30 23:02:20,111 - pywifi - INFO - 	freq: 2472000
+2025-03-30 23:02:20,112 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,113 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,113 - pywifi - INFO - 	signal: -88
+2025-03-30 23:02:20,113 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,113 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 23:02:20,113 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 23:02:20,114 - pywifi - INFO - 	freq: 2472000
+2025-03-30 23:02:20,114 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,114 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,114 - pywifi - INFO - 	signal: -74
+2025-03-30 23:02:20,115 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,115 - pywifi - INFO - 	bssid: 00:5f:67:e4:7c:ca:
+2025-03-30 23:02:20,115 - pywifi - INFO - 	ssid: -huzur-
+2025-03-30 23:02:20,115 - pywifi - INFO - 	freq: 2412000
+2025-03-30 23:02:20,115 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,116 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,116 - pywifi - INFO - 	signal: -87
+2025-03-30 23:02:20,116 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,116 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 23:02:20,116 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 23:02:20,118 - pywifi - INFO - 	freq: 5240000
+2025-03-30 23:02:20,118 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,118 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,118 - pywifi - INFO - 	signal: -68
+2025-03-30 23:02:20,119 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,119 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 23:02:20,119 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 23:02:20,119 - pywifi - INFO - 	freq: 2412000
+2025-03-30 23:02:20,119 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,119 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,119 - pywifi - INFO - 	signal: -74
+2025-03-30 23:02:20,120 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,120 - pywifi - INFO - 	bssid: bc:f8:8b:ba:e9:23:
+2025-03-30 23:02:20,120 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_eQuZ
+2025-03-30 23:02:20,120 - pywifi - INFO - 	freq: 2462000
+2025-03-30 23:02:20,120 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,120 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,120 - pywifi - INFO - 	signal: -82
+2025-03-30 23:02:20,120 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,120 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 23:02:20,124 - pywifi - INFO - 	freq: 5180000
+2025-03-30 23:02:20,124 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,124 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,127 - pywifi - INFO - 	signal: -87
+2025-03-30 23:02:20,128 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,128 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 23:02:20,129 - pywifi - INFO - 	freq: 5180000
+2025-03-30 23:02:20,129 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,130 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,130 - pywifi - INFO - 	signal: -74
+2025-03-30 23:02:20,130 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,130 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 23:02:20,132 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:02:20,133 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,133 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,133 - pywifi - INFO - 	signal: -56
+2025-03-30 23:02:20,133 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,133 - pywifi - INFO - 	bssid: 52:91:e3:50:81:38:
+2025-03-30 23:02:20,133 - pywifi - INFO - 	ssid: 
+2025-03-30 23:02:20,134 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:02:20,134 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,134 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,134 - pywifi - INFO - 	signal: -58
+2025-03-30 23:02:20,134 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,134 - pywifi - INFO - 	bssid: 52:91:e3:a0:81:38:
+2025-03-30 23:02:20,134 - pywifi - INFO - 	ssid: 
+2025-03-30 23:02:20,135 - pywifi - INFO - 	freq: 5320000
+2025-03-30 23:02:20,135 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,135 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,135 - pywifi - INFO - 	signal: -79
+2025-03-30 23:02:20,135 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,135 - pywifi - INFO - 	bssid: f6:a7:31:d6:ac:96:
+2025-03-30 23:02:20,135 - pywifi - INFO - 	ssid: 
+2025-03-30 23:02:20,135 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:02:20,136 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,136 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,136 - pywifi - INFO - 	signal: -56
+2025-03-30 23:02:20,136 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,136 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 23:02:20,136 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 23:02:20,136 - pywifi - INFO - 	freq: 5320000
+2025-03-30 23:02:20,137 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,137 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,137 - pywifi - INFO - 	signal: -80
+2025-03-30 23:02:20,137 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,137 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 23:02:20,139 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 23:02:20,139 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:02:20,139 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,139 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,140 - pywifi - INFO - 	signal: -59
+2025-03-30 23:02:20,140 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,140 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 23:02:20,140 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 23:02:20,140 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:02:20,141 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,142 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,142 - pywifi - INFO - 	signal: -55
+2025-03-30 23:02:20,142 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,142 - pywifi - INFO - 	bssid: dc:d9:16:07:8c:af:
+2025-03-30 23:02:20,143 - pywifi - INFO - 	ssid: Comart
+2025-03-30 23:02:20,143 - pywifi - INFO - 	freq: 2462000
+2025-03-30 23:02:20,143 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,143 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,143 - pywifi - INFO - 	signal: -81
+2025-03-30 23:02:20,144 - pywifi - INFO - Find bss:
+2025-03-30 23:02:20,144 - pywifi - INFO - 	bssid: bc:f8:8b:5d:fa:dc:
+2025-03-30 23:02:20,144 - pywifi - INFO - 	ssid: Turksat_Kablonet_5_shed
+2025-03-30 23:02:20,144 - pywifi - INFO - 	freq: 5580000
+2025-03-30 23:02:20,144 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:02:20,144 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:02:20,145 - pywifi - INFO - 	signal: -82
+2025-03-30 23:02:20,146 - scanner.wifi_scanner - INFO - Scan completed: 13 networks found
+2025-03-30 23:02:20,147 - gui.dashboard - ERROR - Error updating strongest network: 'WiFiNetwork' object has no attribute 'signal_dbm'
+2025-03-30 23:02:20,148 - gui.dashboard - ERROR - Error updating channel stats: 'WiFiNetwork' object has no attribute 'band'
+2025-03-30 23:02:20,148 - gui.dashboard - ERROR - Error updating network tiles: 'WiFiNetwork' object has no attribute 'signal_dbm'
+2025-03-30 23:02:20,305 - gui.channel_graph - ERROR - Error updating graphs: 'WiFiNetwork' object has no attribute 'band'
+2025-03-30 23:05:19,543 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 23:05:19,573 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 23:05:19,583 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 23:05:19,587 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 23:05:19,588 - root - INFO - Applied dark theme successfully
+2025-03-30 23:05:19,596 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:05:19,604 - pywifi - INFO - Get interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:05:19,604 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-30 23:05:19,604 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-30 23:05:19,623 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 23:05:19,877 - gui.main_window - INFO - Starting network scan
+2025-03-30 23:05:19,879 - gui.main_window - INFO - Main window initialized
+2025-03-30 23:05:20,020 - pywifi - INFO - iface 'Intel(R) Wi-Fi 6 AX201 160MHz' scans
+2025-03-30 23:05:22,188 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,188 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 23:05:22,189 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 23:05:22,189 - pywifi - INFO - 	freq: 5240000
+2025-03-30 23:05:22,189 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,189 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,189 - pywifi - INFO - 	signal: -68
+2025-03-30 23:05:22,189 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,189 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 23:05:22,190 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 23:05:22,190 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:05:22,190 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,190 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,190 - pywifi - INFO - 	signal: -56
+2025-03-30 23:05:22,190 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,190 - pywifi - INFO - 	bssid: c0:51:5c:b4:e6:1e:
+2025-03-30 23:05:22,190 - pywifi - INFO - 	ssid: FiberHGW_ZTHKR6_2.4GHz
+2025-03-30 23:05:22,190 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:05:22,192 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,192 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,192 - pywifi - INFO - 	signal: -75
+2025-03-30 23:05:22,192 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,192 - pywifi - INFO - 	bssid: 8c:de:f9:4a:49:e8:
+2025-03-30 23:05:22,192 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 23:05:22,193 - pywifi - INFO - 	freq: 2472000
+2025-03-30 23:05:22,193 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,193 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,193 - pywifi - INFO - 	signal: -73
+2025-03-30 23:05:22,194 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,194 - pywifi - INFO - 	bssid: 18:48:59:13:2f:e2:
+2025-03-30 23:05:22,194 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-0EA0-2.4G
+2025-03-30 23:05:22,194 - pywifi - INFO - 	freq: 2472000
+2025-03-30 23:05:22,194 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,194 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,194 - pywifi - INFO - 	signal: -78
+2025-03-30 23:05:22,195 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,195 - pywifi - INFO - 	bssid: f6:a7:31:d6:81:5f:
+2025-03-30 23:05:22,195 - pywifi - INFO - 	ssid: 
+2025-03-30 23:05:22,195 - pywifi - INFO - 	freq: 5180000
+2025-03-30 23:05:22,195 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,195 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,195 - pywifi - INFO - 	signal: -87
+2025-03-30 23:05:22,196 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,196 - pywifi - INFO - 	bssid: b6:b0:24:23:49:a8:
+2025-03-30 23:05:22,196 - pywifi - INFO - 	ssid: 
+2025-03-30 23:05:22,196 - pywifi - INFO - 	freq: 2447000
+2025-03-30 23:05:22,196 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,196 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,196 - pywifi - INFO - 	signal: -86
+2025-03-30 23:05:22,197 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,197 - pywifi - INFO - 	bssid: 52:91:e3:40:81:38:
+2025-03-30 23:05:22,197 - pywifi - INFO - 	ssid: 
+2025-03-30 23:05:22,197 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:05:22,197 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,197 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,197 - pywifi - INFO - 	signal: -58
+2025-03-30 23:05:22,198 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,198 - pywifi - INFO - 	bssid: 52:91:e3:50:81:38:
+2025-03-30 23:05:22,198 - pywifi - INFO - 	ssid: 
+2025-03-30 23:05:22,198 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:05:22,198 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,198 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,198 - pywifi - INFO - 	signal: -58
+2025-03-30 23:05:22,198 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,198 - pywifi - INFO - 	bssid: c0:51:5c:b5:38:bc:
+2025-03-30 23:05:22,200 - pywifi - INFO - 	ssid: FiberHGW_ZTCEN4_2.4GHz
+2025-03-30 23:05:22,200 - pywifi - INFO - 	freq: 2427000
+2025-03-30 23:05:22,200 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,200 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,200 - pywifi - INFO - 	signal: -73
+2025-03-30 23:05:22,202 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,203 - pywifi - INFO - 	bssid: c0:51:5c:b4:ae:56:
+2025-03-30 23:05:22,203 - pywifi - INFO - 	ssid: FiberHGW_ZTFD57_2.4GHz
+2025-03-30 23:05:22,203 - pywifi - INFO - 	freq: 2457000
+2025-03-30 23:05:22,203 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,203 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,203 - pywifi - INFO - 	signal: -81
+2025-03-30 23:05:22,203 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,203 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:55:
+2025-03-30 23:05:22,204 - pywifi - INFO - 	ssid: Romansal 5GHZ
+2025-03-30 23:05:22,204 - pywifi - INFO - 	freq: 5240000
+2025-03-30 23:05:22,204 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,204 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,204 - pywifi - INFO - 	signal: -68
+2025-03-30 23:05:22,205 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,205 - pywifi - INFO - 	bssid: bc:f8:8b:bd:fa:db:
+2025-03-30 23:05:22,205 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_shed
+2025-03-30 23:05:22,206 - pywifi - INFO - 	freq: 2412000
+2025-03-30 23:05:22,206 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,206 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,206 - pywifi - INFO - 	signal: -71
+2025-03-30 23:05:22,206 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,207 - pywifi - INFO - 	bssid: bc:f8:8b:bd:95:9b:
+2025-03-30 23:05:22,207 - pywifi - INFO - 	ssid: Turksat_Kablonet_2.4_efKK
+2025-03-30 23:05:22,207 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:05:22,207 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,207 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,207 - pywifi - INFO - 	signal: -86
+2025-03-30 23:05:22,207 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,208 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:5f:
+2025-03-30 23:05:22,210 - pywifi - INFO - 	freq: 5180000
+2025-03-30 23:05:22,210 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,210 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,210 - pywifi - INFO - 	signal: -87
+2025-03-30 23:05:22,210 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,210 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:97:
+2025-03-30 23:05:22,214 - pywifi - INFO - 	freq: 5180000
+2025-03-30 23:05:22,214 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,214 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,214 - pywifi - INFO - 	signal: -74
+2025-03-30 23:05:22,214 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,214 - pywifi - INFO - 	bssid: f0:a7:31:d6:ac:96:
+2025-03-30 23:05:22,217 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:05:22,217 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,217 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,219 - pywifi - INFO - 	signal: -57
+2025-03-30 23:05:22,219 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,219 - pywifi - INFO - 	bssid: f0:a7:31:d6:81:96:
+2025-03-30 23:05:22,220 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:05:22,220 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,221 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,221 - pywifi - INFO - 	signal: -88
+2025-03-30 23:05:22,221 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,221 - pywifi - INFO - 	bssid: b4:e2:65:02:a5:f2:
+2025-03-30 23:05:22,221 - pywifi - INFO - 	ssid: TURKSAT-KABLONET-2.4G-6SN7
+2025-03-30 23:05:22,222 - pywifi - INFO - 	freq: 2412000
+2025-03-30 23:05:22,222 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,222 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,222 - pywifi - INFO - 	signal: -67
+2025-03-30 23:05:22,222 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,222 - pywifi - INFO - 	bssid: 50:91:e3:90:81:39:
+2025-03-30 23:05:22,222 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 23:05:22,222 - pywifi - INFO - 	freq: 5320000
+2025-03-30 23:05:22,222 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,222 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,224 - pywifi - INFO - 	signal: -78
+2025-03-30 23:05:22,224 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,224 - pywifi - INFO - 	bssid: 50:91:e3:90:81:38:
+2025-03-30 23:05:22,224 - pywifi - INFO - 	ssid: FiberHGW_TP813A
+2025-03-30 23:05:22,224 - pywifi - INFO - 	freq: 2422000
+2025-03-30 23:05:22,225 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,225 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,225 - pywifi - INFO - 	signal: -60
+2025-03-30 23:05:22,225 - pywifi - INFO - Find bss:
+2025-03-30 23:05:22,225 - pywifi - INFO - 	bssid: ac:15:a2:26:3e:54:
+2025-03-30 23:05:22,225 - pywifi - INFO - 	ssid: Romansal
+2025-03-30 23:05:22,226 - pywifi - INFO - 	freq: 2437000
+2025-03-30 23:05:22,226 - pywifi - INFO - 	auth: [0]
+2025-03-30 23:05:22,226 - pywifi - INFO - 	akm: [4]
+2025-03-30 23:05:22,226 - pywifi - INFO - 	signal: -56
+2025-03-30 23:05:22,227 - scanner.wifi_scanner - INFO - Scan completed: 12 networks found
+2025-03-30 23:05:22,230 - gui.dashboard - ERROR - Error updating channel stats: 'WiFiNetwork' object has no attribute 'band'
+2025-03-30 23:05:22,230 - gui.dashboard - ERROR - Error updating network tiles: 'WiFiNetwork' object has no attribute 'signal_dbm'
+2025-03-30 23:05:22,378 - gui.channel_graph - ERROR - Error updating graphs: 'WiFiNetwork' object has no attribute 'band'

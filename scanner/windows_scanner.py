@@ -1,20 +1,19 @@
 """
-WiFi scanner implementation for Windows using netsh commands.
+WiFi scanner implementation using pywifi library instead of netsh commands.
 """
 
-import subprocess
 import time
 import threading
 import logging
-from typing import List, Dict, Optional, Callable, Tuple
-import sys
-import ctypes
-import tempfile
+from typing import List, Dict, Optional, Callable
 from pathlib import Path
+import json
+
+import pywifi
+from pywifi import PyWiFi, const
 from PyQt6.QtCore import QThread, pyqtSignal
 
 from .models import WiFiNetwork, NetworkBSSID, ScanResult
-from .parser import create_scan_result
 from config.settings import MAX_SCAN_RETRIES, SCAN_TIMEOUT_SECONDS
 
 # Define application directory for debug files
@@ -33,9 +32,9 @@ class AdapterDisabledError(ScannerError):
     pass
 
 
-class WindowsWiFiScanner:
+class WiFiScanner:
     """
-    A class to scan for WiFi networks on Windows using the netsh command.
+    A class to scan for WiFi networks using the pywifi library.
     
     Attributes:
         _scanning (bool): Flag indicating if scan is in progress
@@ -55,40 +54,20 @@ class WindowsWiFiScanner:
         self._last_scan_result = None
         self._scan_history = []
         self._lock = threading.Lock()
-        if not self.is_admin():
-            logger.warning(
-                "WiFi scanner initialized without admin privileges - some features may be limited:\n"
-                "- May not detect all available networks\n"
-                "- May not get complete signal strength information\n"
-                "- May not be able to force fresh scans\n"
-                "\n"
-                "For full functionality, please run the application as Administrator."
-            )
-        else:
-            logger.info("Windows WiFi scanner initialized with admin privileges")
-    
-    @staticmethod
-    def is_admin() -> bool:
-        """
-        Check if the application is running with admin privileges.
         
-        Returns:
-            bool: True if running as admin, False otherwise
-        """
+        # Initialize pywifi
         try:
-            return ctypes.windll.shell32.IsUserAnAdmin() != 0
-        except:
-            return False
-    
-    @staticmethod
-    def elevate_privileges():
-        """
-        Attempt to restart the application with admin privileges.
-        """
-        if not WindowsWiFiScanner.is_admin():
-            # Re-run the program with admin rights
-            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-            sys.exit(0)
+            self.wifi = PyWiFi()
+            self.iface = self.wifi.interfaces()[0]  # Get the first wireless interface
+            logger.info(f"WiFi scanner initialized using interface: {self.iface.name()}")
+        except Exception as e:
+            logger.error(f"Error initializing WiFi interface: {e}")
+            raise ScannerError(f"Could not initialize WiFi interface: {e}")
+
+    def is_scanning(self) -> bool:
+        """Check if a scan is currently in progress."""
+        with self._lock:
+            return self._scanning
     
     def _check_wifi_adapter(self):
         """
@@ -98,34 +77,22 @@ class WindowsWiFiScanner:
             AdapterDisabledError: If adapter is disabled or not available
         """
         try:
-            result = subprocess.run(
-                ['netsh', 'wlan', 'show', 'interfaces'],
-                capture_output=True,
-                text=True,
-                timeout=SCAN_TIMEOUT_SECONDS
-            )
-            
-            if "There is no wireless interface on the system" in result.stdout:
+            # Check if we have a valid interface
+            if not self.iface:
                 raise AdapterDisabledError("No wireless interface found on this system")
             
-            if "The Wireless AutoConfig Service (wlansvc) is not running" in result.stdout:
-                raise AdapterDisabledError("Wireless service is not running")
+            # Check if the interface is active
+            status = self.iface.status()
+            if status == const.IFACE_DISCONNECTED:
+                logger.info("WiFi interface is disconnected but available")
+            elif status == const.IFACE_INACTIVE:
+                raise AdapterDisabledError("WiFi interface is inactive")
                 
-            if "Hardware switch is off" in result.stdout or "Hardware radio status : Not ready" in result.stdout:
-                raise AdapterDisabledError("WiFi hardware switch is turned off")
-                
-            # Check if any interface is in "connected" state
-            if "State" in result.stdout and "disconnected" not in result.stdout.lower():
-                return True
+            return True
             
-        except subprocess.TimeoutExpired:
-            raise ScannerError("Command timed out while checking WiFi adapter")
-        except subprocess.SubprocessError as e:
-            if "Access denied" in str(e):
-                logger.error("Permission denied when checking adapter status")
-                if not self.is_admin():
-                    raise ScannerError("Admin privileges required to check WiFi adapter")
-            raise ScannerError(f"Error checking WiFi adapter: {str(e)}")
+        except Exception as e:
+            logger.error(f"Error checking WiFi adapter: {e}")
+            raise AdapterDisabledError(f"Error checking WiFi adapter: {e}")
     
     def scan_networks_sync(self) -> ScanResult:
         """
@@ -143,54 +110,27 @@ class WindowsWiFiScanner:
                 self._check_wifi_adapter()
                 logger.debug("WiFi adapter is enabled")
                 
-                # Try to force a rescan but don't fail if it doesn't work
-                try:
-                    logger.debug("Attempting to trigger fresh scan")
-                    scan_result = subprocess.run(
-                        ['netsh', 'wlan', 'scan'],
-                        capture_output=True,
-                        text=True,
-                        timeout=SCAN_TIMEOUT_SECONDS
-                    )
-                    
-                    if scan_result.returncode != 0:
-                        logger.warning(f"Initial scan command failed with code {scan_result.returncode}, but continuing")
-                        logger.warning(f"Error output: {scan_result.stderr}")
-                    else:
-                        # Short pause to allow scan to complete
-                        time.sleep(1)
-                except Exception as e:
-                    logger.warning(f"Initial scan command failed: {str(e)}, but continuing with existing scan data")
+                # Scan for networks
+                logger.debug("Scanning for networks")
+                self.iface.scan()
                 
-                # Execute network scan command to get available networks
-                logger.debug("Running netsh command to scan WiFi networks")
-                result = subprocess.run(
-                    ['netsh', 'wlan', 'show', 'networks', 'mode=Bssid'],
-                    capture_output=True,
-                    text=True,
-                    timeout=SCAN_TIMEOUT_SECONDS
+                # Get scan results (wait a bit to ensure scan completes)
+                time.sleep(2)
+                networks = self.iface.scan_results()
+                
+                # Convert to our data model
+                wifi_networks = self._convert_scan_results(networks)
+                
+                # Create successful scan result
+                scan_result = ScanResult(
+                    timestamp=time.time(),
+                    networks=wifi_networks,
+                    success=True,
+                    error_message=""
                 )
                 
-                if result.returncode != 0:
-                    logger.error(f"netsh command failed with return code {result.returncode}")
-                    logger.error(f"Command output: {result.stderr}")
-                    raise ScannerError(f"Scan command failed with return code {result.returncode}")
-                
-                # Log raw output for debugging
-                logger.debug(f"netsh command completed successfully")
-                logger.debug(f"Raw output length: {len(result.stdout)} characters")
-                
-                # Save output to file for inspection
-                debug_dir = Path(app_dir, "debug")
-                debug_dir.mkdir(exist_ok=True)
-                output_path = debug_dir / "last_scan_output.txt"
-                with open(output_path, "w") as f:
-                    f.write(result.stdout)
-                logger.debug(f"Raw netsh output saved to {output_path}")
-                
-                # Parse the output into structured data
-                logger.debug("Parsing netsh output")
-                scan_result = create_scan_result(result.stdout)
+                # Save debug info
+                self._save_debug_info(networks)
                 
                 # Store results and update timestamp
                 with self._lock:
@@ -202,13 +142,10 @@ class WindowsWiFiScanner:
                         self._scan_history.pop(0)
                 
                 logger.info(f"Scan completed: {len(scan_result.networks)} networks found")
-                if len(scan_result.networks) == 0:
-                    logger.warning("No networks found - this may indicate a problem with WiFi or parsing")
-                    
                 return scan_result
                 
             except AdapterDisabledError as e:
-                # Don't retry for disabled adapter - it won't change on retry
+                # Don't retry for disabled adapter
                 logger.error(f"WiFi adapter is disabled: {str(e)}")
                 scan_result = ScanResult(
                     timestamp=time.time(),
@@ -220,35 +157,10 @@ class WindowsWiFiScanner:
                     self._last_scan_result = scan_result
                 return scan_result
                 
-            except subprocess.TimeoutExpired:
-                logger.warning(f"Scan timed out (attempt {retry_count+1})")
+            except Exception as e:
+                logger.warning(f"Scan error (attempt {retry_count+1}): {str(e)}")
                 retry_count += 1
                 time.sleep(1)  # Wait before retrying
-                
-            except ScannerError as e:
-                if "Access denied" in str(e) and not self.is_admin():
-                    # Permission issue
-                    error_message = "Admin privileges required to scan networks"
-                    logger.error(error_message)
-                    scan_result = ScanResult(
-                        timestamp=time.time(),
-                        networks=[],
-                        success=False,
-                        error_message=error_message
-                    )
-                    with self._lock:
-                        self._last_scan_result = scan_result
-                    return scan_result
-                else:
-                    # Other scanner error, try again
-                    logger.warning(f"Scan error (attempt {retry_count+1}): {str(e)}")
-                    retry_count += 1
-                    time.sleep(1)
-            
-            except Exception as e:
-                logger.error(f"Unexpected error during scan: {str(e)}")
-                retry_count += 1
-                time.sleep(1)
         
         # If we get here, all retries failed
         error_message = f"Scan failed after {MAX_SCAN_RETRIES} attempts"
@@ -263,115 +175,211 @@ class WindowsWiFiScanner:
             self._last_scan_result = scan_result
         return scan_result
     
-    def scan_networks_async(self, callback: Optional[Callable[[ScanResult], None]] = None) -> None:
+    def _save_debug_info(self, networks):
+        """Save debug information about the scan."""
+        try:
+            debug_dir = Path(app_dir, "debug")
+            debug_dir.mkdir(exist_ok=True)
+            
+            # Convert scan results to a serializable format
+            debug_data = []
+            for network in networks:
+                debug_data.append({
+                    'ssid': network.ssid,
+                    'bssid': network.bssid,
+                    'signal': network.signal,
+                    'freq': network.freq,
+                    'akm': [akm for akm in network.akm],
+                    'channel': self._frequency_to_channel(network.freq),
+                })
+            
+            # Save as JSON
+            output_path = debug_dir / "last_scan_output.json"
+            with open(output_path, "w") as f:
+                json.dump(debug_data, f, indent=2)
+            
+            logger.debug(f"Debug data saved to {output_path}")
+            
+        except Exception as e:
+            logger.warning(f"Failed to save debug info: {e}")
+    
+    def _frequency_to_channel(self, freq):
+        """Convert frequency to channel number."""
+        if freq >= 2412 and freq <= 2484:
+            # 2.4 GHz band
+            if freq == 2484:
+                return 14
+            return (freq - 2412) // 5 + 1
+        elif freq >= 5160 and freq <= 5885:
+            # 5 GHz band
+            return (freq - 5160) // 5 + 32
+        else:
+            # Unknown band
+            return 0
+    
+    def _channel_width_to_text(self, width):
+        """Convert channel width constant to text."""
+        if width == const.AKM_TYPE_NONE:
+            return "Unknown"
+        elif width == const.AKM_TYPE_WPA:
+            return "WPA"
+        elif width == const.AKM_TYPE_WPA2:
+            return "WPA2"
+        elif width == const.AKM_TYPE_WPA2PSK:
+            return "WPA2-PSK"
+        else:
+            return f"Other ({width})"
+
+    def _band_from_frequency(self, freq):
+        """Determine band from frequency."""
+        if 2412 <= freq <= 2484:
+            return "2.4 GHz"
+        elif 5160 <= freq <= 5885:
+            return "5 GHz"
+        else:
+            return "Unknown"
+    
+    def _signal_percentage(self, signal_dbm):
+        """Convert signal dBm to percentage (0-100)."""
+        # Signal is usually between -100 dBm (weak) and -30 dBm (strong)
+        if signal_dbm >= -50:
+            return 100
+        elif signal_dbm <= -100:
+            return 0
+        return 2 * (signal_dbm + 100)
+    
+    def _convert_scan_results(self, networks) -> List[WiFiNetwork]:
         """
-        Start an asynchronous WiFi scan.
+        Convert pywifi scan results to our WiFiNetwork model.
         
         Args:
-            callback: Function to call when scan completes.
-                     Will receive the ScanResult object.
+            networks: List of pywifi networks
+            
+        Returns:
+            List of WiFiNetwork objects
+        """
+        wifi_networks = {}
+        
+        for network in networks:
+            try:
+                ssid = network.ssid
+                bssid = network.bssid
+                signal_dbm = network.signal
+                freq = network.freq
+                channel = self._frequency_to_channel(freq)
+                band = self._band_from_frequency(freq)
+                
+                # Security type detection
+                security_type = "Open"
+                if network.akm:
+                    if const.AKM_TYPE_WPA2PSK in network.akm:
+                        security_type = "WPA2-Personal"
+                    elif const.AKM_TYPE_WPA2 in network.akm:
+                        security_type = "WPA2-Enterprise"
+                    elif const.AKM_TYPE_WPAPSK in network.akm:
+                        security_type = "WPA-Personal"
+                    elif const.AKM_TYPE_WPA in network.akm:
+                        security_type = "WPA-Enterprise"
+                    else:
+                        security_type = "Secured"
+                
+                # Create NetworkBSSID object
+                network_bssid = NetworkBSSID(
+                    bssid=bssid,
+                    signal_percent=self._signal_percentage(signal_dbm),
+                    signal_dbm=signal_dbm,
+                    channel=channel,
+                    band=band,
+                    encryption=security_type
+                )
+                
+                # Group by SSID for WiFiNetwork objects
+                if ssid not in wifi_networks:
+                    wifi_networks[ssid] = WiFiNetwork(
+                        ssid=ssid if ssid else None,  # Handle hidden networks
+                        bssids=[],
+                        security_type=security_type
+                    )
+                
+                wifi_networks[ssid].bssids.append(network_bssid)
+                
+            except Exception as e:
+                logger.warning(f"Error processing network: {e}")
+                continue
+        
+        # Create list from the dictionary values
+        return list(wifi_networks.values())
+    
+    def scan_networks_async(self, callback: Optional[Callable[[ScanResult], None]] = None) -> None:
+        """
+        Perform an asynchronous WiFi scan.
+        
+        Args:
+            callback: Function to call with the scan result when complete
         """
         if self._scanning:
-            logger.warning("Scan already in progress, ignoring new request")
+            logger.warning("Scan already in progress, ignoring request")
             return
         
-        self._callback = callback
-        self._scanning = True
+        with self._lock:
+            self._scanning = True
+            self._callback = callback
         
-        def _scan_thread_func():
+        def scan_thread():
             try:
-                scan_result = self.scan_networks_sync()
+                result = self.scan_networks_sync()
+                if self._callback:
+                    self._callback(result)
             finally:
-                self._scanning = False
-                if callback:
-                    callback(scan_result)
+                with self._lock:
+                    self._scanning = False
+                    self._callback = None
         
-        self._scan_thread = threading.Thread(target=_scan_thread_func)
+        self._scan_thread = threading.Thread(target=scan_thread)
         self._scan_thread.daemon = True
         self._scan_thread.start()
-        logger.debug("Async scan started")
     
-    def is_scanning(self) -> bool:
-        """Check if a scan is currently in progress."""
-        return self._scanning
-    
-    def get_last_scan_result(self) -> Optional[ScanResult]:
-        """
-        Get the most recent scan result.
-        
-        Returns:
-            Optional[ScanResult]: The last scan result, or None if no scan has been performed
-        """
-        with self._lock:
-            return self._last_scan_result
-    
-    def get_scan_history(self) -> List[ScanResult]:
-        """
-        Get the scan history.
-        
-        Returns:
-            List[ScanResult]: List of historical scan results
-        """
-        with self._lock:
-            return self._scan_history.copy()
+    # Add alias for compatibility with previous code
+    def scan_async(self, callback: Optional[Callable[[ScanResult], None]] = None) -> None:
+        """Alias for scan_networks_async for backward compatibility."""
+        return self.scan_networks_async(callback)
 
 
 class ScanWorker(QThread):
     """
-    Worker thread for performing WiFi scanning in the background.
-    """
-    scan_complete = pyqtSignal(object, bool, str)
-    scan_progress = pyqtSignal(int)
+    Worker thread for scanning WiFi networks.
     
-    def __init__(self, scanner):
+    This class allows scanning to be performed in a separate thread
+    to avoid blocking the UI.
+    """
+    
+    scan_complete = pyqtSignal(object)  # Emits ScanResult
+    
+    def __init__(self, scanner: WiFiScanner):
+        """
+        Initialize the scan worker.
+        
+        Args:
+            scanner: WiFiScanner instance
+        """
         super().__init__()
         self.scanner = scanner
         self.is_running = False
     
     def run(self):
-        """Execute the scan operation in a separate thread."""
+        """Run the scan operation."""
         self.is_running = True
         try:
-            # Emit initial progress
-            self.scan_progress.emit(10)
-            logger.debug("Starting network scan in worker thread")
-            
-            # Try scan_networks_sync first, fall back to scan_networks if needed
-            try:
-                if hasattr(self.scanner, 'scan_networks_sync'):
-                    scan_result = self.scanner.scan_networks_sync()
-                    success = scan_result.success
-                    error = scan_result.error_message
-                    networks = scan_result.networks
-                else:
-                    # Fall back to the original method
-                    networks = self.scanner.scan_networks()
-                    success = True
-                    error = ""
-                    # Create a ScanResult for consistency
-                    scan_result = ScanResult(
-                        timestamp=time.time(),
-                        networks=networks,
-                        success=True,
-                        error_message=""
-                    )
-            except Exception as e:
-                raise e
-            
-            self.scan_progress.emit(90)
-            
-            # Emit results
-            self.scan_complete.emit(scan_result, success, error)
-            self.scan_progress.emit(100)
-            
+            result = self.scanner.scan_networks_sync()
+            self.scan_complete.emit(result)
         except Exception as e:
-            logger.error(f"Scan failed with exception: {str(e)}", exc_info=True)
-            self.scan_complete.emit([], False, str(e))
-            self.scan_progress.emit(100)
+            logger.error(f"Error in scan worker: {e}", exc_info=True)
+            result = ScanResult(
+                timestamp=time.time(),
+                networks=[],
+                success=False,
+                error_message=str(e)
+            )
+            self.scan_complete.emit(result)
         finally:
             self.is_running = False
-    
-    def stop(self):
-        """Stop the worker thread."""
-        self.is_running = False
-        self.wait()

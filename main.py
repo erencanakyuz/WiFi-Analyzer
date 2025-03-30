@@ -29,7 +29,7 @@ from config.settings import (
     LOG_LEVEL, LOG_ROTATION_SIZE, LOG_ROTATION_COUNT
 )
 from gui.main_window import MainWindow
-from scanner.windows_scanner import WindowsWiFiScanner
+from scanner.wifi_scanner import WiFiScanner  # instead of WindowsWiFiScanner
 from gui.theme_manager import apply_theme, get_theme_colors
 
 
@@ -148,11 +148,11 @@ def main() -> int:
 
         try:
             # Initialize scanner with proper error handling
-            scanner = WindowsWiFiScanner()
+            scanner = WiFiScanner()
             if not scanner.is_admin():
                 logging.warning("WiFi scanner initialized without admin privileges - some features may be limited")
             else:
-                logging.info("WindowsWiFiScanner initialized with admin privileges")
+                logging.info("WiFiScanner initialized with admin privileges")
         except Exception as e:
             logging.exception("Failed to initialize WiFi scanner")
             print(f"Error: Could not initialize WiFi scanner: {e}")

@@ -56,7 +56,7 @@ from gui.theme_manager import apply_theme
 
 # Application imports - Core functionality
 from scanner.models import WiFiNetwork, ScanResult, NetworkBSSID
-from scanner.windows_scanner import WindowsWiFiScanner
+from scanner.wifi_scanner import WiFiScanner, ScanWorker
 from utils.channel_analyzer import (
     ChannelAnalyzer, CHANNELS_2_4GHZ, CHANNELS_5GHZ, 
     NON_OVERLAPPING_2_4GHZ, DFS_CHANNELS
@@ -281,7 +281,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
     menu, toolbar, status bar, and tabbed interface for different views.
     """
     
-    def __init__(self, scanner: WindowsWiFiScanner):
+    def __init__(self, scanner: WiFiScanner):
         """
         Initialize the main window.
         
@@ -606,7 +606,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         # Implementation for saving settings
         pass
     
-    def closeEvent(self, event: QCloseEvent):
-        """Handle window close event."""
-        self.save_settings()
-        event.accept()
+def closeEvent(self, event: QCloseEvent):
+    """Handle window close event."""
+    self.save_settings()
+    event.accept()

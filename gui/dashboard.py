@@ -195,11 +195,11 @@ class DashboardView(QWidget):
         """Update the strongest network card display."""
         try:
             if networks:
-                strongest = max(networks, key=lambda n: n.signal_dbm)
-                self.signal_indicator.setSignalWithAnimation(strongest.signal_dbm)
+                strongest = max(networks, key=lambda n: n.bssids[0].signal_dbm if n.bssids else -100)
+                self.signal_indicator.setSignalWithAnimation(strongest.bssids[0].signal_dbm if strongest.bssids else -100)
                 self.strongest_ssid.setText(strongest.ssid if strongest.ssid else "<Hidden Network>")
                 self.strongest_details.setText(
-                    f"Channel: {strongest.channel} • Band: {strongest.band} • "
+                    f"Channel: {strongest.primary_channel} • Band: {strongest.primary_band} • "
                     f"Security: {strongest.security_type}"
                 )
             else:
