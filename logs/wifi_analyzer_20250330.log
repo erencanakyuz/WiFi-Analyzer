@@ -1135,3 +1135,177 @@ For full functionality, please run the application as Administrator.
 2025-03-30 20:27:22,123 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
 2025-03-30 20:27:22,284 - gui.main_window - INFO - Scan completed: 1 networks found
 2025-03-30 20:27:42,509 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 22:15:05,773 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:15:05,804 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:15:05,814 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:15:05,819 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:15:05,819 - root - INFO - Applied dark theme successfully
+2025-03-30 22:15:05,820 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:15:05,820 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:15:05,839 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:15:05,877 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:15:05,878 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:15:06,255 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:15:06,257 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:15:06,353 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:15:06,354 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:15:06,517 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:15:18,983 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:15:19,185 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:15:19,191 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:15:19,335 - scanner.parser - INFO - Parsed 3 networks with 12 BSSIDs
+2025-03-30 22:15:19,348 - scanner.windows_scanner - INFO - Scan completed: 3 networks found
+2025-03-30 22:15:19,532 - gui.main_window - INFO - Scan completed: 3 networks found
+2025-03-30 22:15:22,133 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-30 22:18:50,489 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:18:50,518 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:18:50,530 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:18:50,535 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:18:50,535 - root - INFO - Applied dark theme successfully
+2025-03-30 22:18:50,535 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:18:50,536 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:18:50,554 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:18:52,832 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:18:52,833 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:18:53,165 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:18:53,166 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:18:53,265 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:18:53,267 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:18:54,816 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:22,830 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:19:22,975 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:19:22,976 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:19:23,061 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:19:23,062 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:23,090 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:42,814 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:19:42,964 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:19:42,965 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:19:43,050 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:19:43,051 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:43,092 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:47,822 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:19:47,959 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:19:47,960 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:19:48,044 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:19:48,044 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:48,073 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:52,821 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:19:52,969 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:19:52,970 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:19:53,060 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:19:53,061 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:53,088 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:57,814 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:19:57,961 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:19:57,963 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:19:58,052 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:19:58,053 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:19:58,082 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:02,813 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:20:02,969 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:20:02,969 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:20:03,054 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:20:03,054 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:03,084 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:07,815 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:20:07,959 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:20:07,960 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:20:08,053 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:20:08,053 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:08,082 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:12,828 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:20:12,951 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:20:12,951 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:20:13,031 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:20:13,032 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:13,059 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:17,828 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:20:17,959 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:20:17,959 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:20:18,041 - scanner.parser - INFO - Parsed 1 networks with 1 BSSIDs
+2025-03-30 22:20:18,043 - scanner.windows_scanner - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:18,068 - gui.main_window - INFO - Scan completed: 1 networks found
+2025-03-30 22:20:22,826 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:20:22,828 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:31:33,691 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:31:33,724 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:31:33,733 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:31:33,738 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:31:33,739 - root - INFO - Applied dark theme successfully
+2025-03-30 22:31:33,739 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:31:33,740 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:31:33,757 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:31:33,784 - gui.channel_graph - ERROR - Error updating graphs: 'ChannelAnalyzer' object has no attribute 'analyze_networks'
+2025-03-30 22:31:33,784 - root - ERROR - Unhandled exception: 'ChannelAnalyzer' object has no attribute 'analyze_networks'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 162, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 344, in setup_ui
+    self.channel_graph = ChannelGraphWidget(self.channel_analyzer)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 791, in __init__
+    self._update_graphs([])
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 837, in _update_graphs
+    visualization_data = self.channel_analyzer.analyze_networks(networks)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChannelAnalyzer' object has no attribute 'analyze_networks'
+2025-03-30 22:32:46,151 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:32:46,190 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:32:46,202 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:32:46,209 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:32:46,209 - root - INFO - Applied dark theme successfully
+2025-03-30 22:32:46,209 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:32:46,210 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:32:46,231 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:32:46,562 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:32:46,564 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:32:47,038 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:32:47,039 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:32:47,164 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 22:32:47,166 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 22:33:32,317 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:33:32,359 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:33:32,371 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:33:32,376 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:33:32,377 - root - INFO - Applied dark theme successfully
+2025-03-30 22:33:32,378 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:33:32,381 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:33:32,405 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:33:32,743 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:33:32,745 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:33:33,228 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:33:33,229 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:33:33,353 - scanner.parser - INFO - Parsed 2 networks with 3 BSSIDs
+2025-03-30 22:33:33,355 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 22:33:33,358 - gui.channel_graph - ERROR - Error updating graphs: 'WiFiNetwork' object has no attribute 'get'
+2025-03-30 22:35:16,585 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-30 22:35:16,627 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-30 22:35:16,640 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-30 22:35:16,647 - gui.theme_manager - INFO - Applied dark theme
+2025-03-30 22:35:16,647 - root - INFO - Applied dark theme successfully
+2025-03-30 22:35:16,649 - scanner.windows_scanner - INFO - Windows WiFi scanner initialized with admin privileges
+2025-03-30 22:35:16,649 - root - INFO - WindowsWiFiScanner initialized with admin privileges
+2025-03-30 22:35:16,674 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-30 22:35:17,003 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:35:17,004 - gui.main_window - INFO - Main window initialized
+2025-03-30 22:35:17,477 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:35:17,478 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:35:17,613 - scanner.parser - INFO - Parsed 4 networks with 9 BSSIDs
+2025-03-30 22:35:17,615 - scanner.windows_scanner - INFO - Scan completed: 4 networks found
+2025-03-30 22:35:17,850 - gui.main_window - INFO - Scan completed: 4 networks found
+2025-03-30 22:35:36,959 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:35:37,109 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:35:37,109 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:35:37,197 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-30 22:35:37,198 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 22:35:37,493 - gui.main_window - INFO - Scan completed: 2 networks found
+2025-03-30 22:35:47,002 - gui.main_window - INFO - Starting network scan
+2025-03-30 22:35:47,152 - scanner.windows_scanner - WARNING - Initial scan command failed with code 1, but continuing
+2025-03-30 22:35:47,153 - scanner.windows_scanner - WARNING - Error output: 
+2025-03-30 22:35:47,246 - scanner.parser - INFO - Parsed 2 networks with 4 BSSIDs
+2025-03-30 22:35:47,247 - scanner.windows_scanner - INFO - Scan completed: 2 networks found
+2025-03-30 22:35:47,540 - gui.main_window - INFO - Scan completed: 2 networks found

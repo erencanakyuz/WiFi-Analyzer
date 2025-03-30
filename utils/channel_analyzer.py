@@ -49,12 +49,12 @@ class ChannelAnalyzer:
         """Initialize the channel analyzer."""
         self.channel_usage = {}  # Tracks networks per channel
     
-    def analyze_channel_usage(self, networks: List[Dict]) -> Dict:
+    def analyze_channel_usage(self, networks: List['WiFiNetwork']) -> Dict:
         """
         Analyze channel usage based on networks list.
         
         Args:
-            networks: List of network dictionaries with channel and signal information
+            networks: List of WiFiNetwork objects
             
         Returns:
             Dictionary with channel usage analysis
@@ -68,23 +68,22 @@ class ChannelAnalyzer:
         # Count networks per channel
         for network in networks:
             try:
-                # Extract BSSID info (assuming networks have multiple BSSIDs)
-                for bssid_info in network.get('bssids', []):
-                    channel = bssid_info.get('channel')
-                    signal_dbm = bssid_info.get('signal_dbm')
-                    band = bssid_info.get('band')
+                for bssid in network.bssids:
+                    channel = bssid.channel
+                    signal_dbm = bssid.signal_dbm
+                    band = bssid.band
                     
                     if channel and signal_dbm:
                         if band == '2.4 GHz' and channel in CHANNELS_2_4GHZ:
                             self.channel_usage['2.4GHz'][channel].append({
-                                'ssid': network.get('ssid', 'Unknown'),
-                                'bssid': bssid_info.get('bssid', 'Unknown'),
+                                'ssid': network.ssid,
+                                'bssid': bssid.bssid,
                                 'signal_dbm': signal_dbm
                             })
                         elif band == '5 GHz' and channel in CHANNELS_5GHZ:
                             self.channel_usage['5GHz'][channel].append({
-                                'ssid': network.get('ssid', 'Unknown'),
-                                'bssid': bssid_info.get('bssid', 'Unknown'),
+                                'ssid': network.ssid,
+                                'bssid': bssid.bssid,
                                 'signal_dbm': signal_dbm
                             })
             except (KeyError, TypeError) as e:
