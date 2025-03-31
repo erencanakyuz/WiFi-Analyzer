@@ -263,6 +263,8 @@ class WiFiScanner:
         for network in networks:
             try:
                 ssid = network.ssid
+                display_ssid = ssid if ssid else "<Hidden Network>"
+                
                 bssid = network.bssid
                 signal_dbm = network.signal
                 freq = network.freq
@@ -270,8 +272,10 @@ class WiFiScanner:
                 band = self._band_from_frequency(freq)
                 
                 # Security type detection
-                security_type = "Open"
-                if network.akm:
+                # --- Prioritize AUTH_ALG_OPEN and AKM_TYPE_NONE for Open networks ---
+                if network.auth and const.AUTH_ALG_OPEN in network.auth and (not network.akm or const.AKM_TYPE_NONE in network.akm):
+                    security_type = "Open"
+                elif network.akm:
                     if const.AKM_TYPE_WPA2PSK in network.akm:
                         security_type = "WPA2-Personal"
                     elif const.AKM_TYPE_WPA2 in network.akm:
@@ -294,14 +298,22 @@ class WiFiScanner:
                 )
                 
                 # Group by SSID for WiFiNetwork objects
-                if ssid not in wifi_networks:
-                    wifi_networks[ssid] = WiFiNetwork(
-                        ssid=ssid if ssid else None,  # Handle hidden networks
+                grouping_key = ssid if ssid else bssid # Use BSSID as key for hidden networks
+                if grouping_key not in wifi_networks:
+                    # Create new network entry using display_ssid
+                    wifi_networks[grouping_key] = WiFiNetwork(
+                        ssid=display_ssid, 
                         bssids=[],
-                        security_type=security_type
+                        security_type=security_type # Use initial security type
                     )
                 
-                wifi_networks[ssid].bssids.append(network_bssid)
+                # Append BSSID using the grouping_key
+                wifi_networks[grouping_key].bssids.append(network_bssid)
+                # Ensure the security type is updated if a BSSID provides more info
+                # If the current BSSID has a stronger security than 'Open' 
+                # and the grouped network currently shows 'Open', update it.
+                if security_type != "Open" and wifi_networks[grouping_key].security_type == "Open":
+                     wifi_networks[grouping_key].security_type = security_type
                 
             except Exception as e:
                 logger.warning(f"Error processing network: {e}")

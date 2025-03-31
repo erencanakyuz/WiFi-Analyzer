@@ -261,21 +261,17 @@ def parse_netsh_output(output_text: str) -> List[WiFiNetwork]:
     # Set network properties based on strongest BSSID
     for network in networks:
         if network.bssids:
-            # Find strongest BSSID
+            # Log strongest BSSID info (optional)
             strongest_bssid = max(network.bssids, key=lambda b: b.signal_percent)
-            network.channel = strongest_bssid.channel
-            network.band = strongest_bssid.band
-            network.signal_dbm = strongest_bssid.signal_dbm
-            network.bssid = strongest_bssid.bssid  # Set the network's BSSID to the strongest one
-            logger.debug(f"Network {network.ssid} using properties from strongest BSSID: {strongest_bssid.bssid}")
+            logger.debug(f"Network '{network.ssid}' - Strongest BSSID: {strongest_bssid.bssid} (Ch: {strongest_bssid.channel}, Signal: {strongest_bssid.signal_dbm} dBm)")
     
     logger.info(f"Parsed {len(networks)} networks with {sum(len(n.bssids) for n in networks)} BSSIDs")
     
     # If no networks found, log detailed info about the input
     if not networks:
         logger.warning("No networks parsed from netsh output")
-        # Check if there are any patterns that should have been matched
         if pattern_matches["ssid"] == 0:
-            logger.warning("No SSID patterns matched - may indicate unexpected netsh output format")
+            logger.warning("No SSID patterns matched - may indicate unexpected netsh output format or empty scan.")
+            return []
     
     return networks

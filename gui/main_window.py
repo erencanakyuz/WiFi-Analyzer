@@ -343,6 +343,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         # Create channel graph tab
         self.channel_graph = ChannelGraphWidget(self.channel_analyzer)
         self.channel_graph.refresh_requested.connect(self.start_scan)
+        self.channel_graph.channel_canvas.channel_clicked.connect(self.display_channel_details)
         self.tab_widget.addTab(self.channel_graph, "Channel Graph")
         
         # Add tab widget to main layout
@@ -360,9 +361,17 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         self.test_results_title = QLabel("Network Test Results")
         self.test_results_title.setStyleSheet("font-weight: bold;")
         self.test_results_label = QLabel("No tests run yet")
+        self.test_results_label.setWordWrap(True) # Allow text wrapping
         
         self.test_results_layout.addWidget(self.test_results_title)
         self.test_results_layout.addWidget(self.test_results_label)
+        
+        # Add test results frame to main layout (below tabs)
+        # Give the tab widget more stretch factor so it expands more
+        self.main_layout.addWidget(self.tab_widget, 1) # Add stretch factor 1
+        self.main_layout.addWidget(self.test_results_frame, 0) # Add stretch factor 0
+        # Set a maximum height for the test results frame initially
+        self.test_results_frame.setMaximumHeight(100) 
         
         # Create toolbar
         self.setup_toolbar()
@@ -490,6 +499,38 @@ class MainWindow(QMainWindow, NetworkTestMixin):
             
         logger.info(f"Auto-refresh {'enabled' if enabled else 'disabled'}")
     
+    def display_channel_details(self, details: dict):
+        """Display details of a clicked channel in the results area."""
+        if not details:
+            self.test_results_label.setText("No channel details available.")
+            return
+
+        avg_signal_str = f"{details['avg_signal']:.1f} dBm" if details.get('avg_signal') is not None else "N/A"
+        congestion_str = f"{details['congestion_score']:.1f}%" if details.get('congestion_score') is not None else "N/A"
+        
+        report = (
+            f"<b>Channel Details (Clicked):</b><br>"
+            f"Channel: {details.get('channel', 'N/A')} ({details.get('band', 'N/A')})<br>"
+            f"Network Count: {details.get('network_count', 'N/A')}<br>"
+            f"Avg. Signal: {avg_signal_str}<br>"
+            f"Congestion Score: {congestion_str}<br>"
+        )
+        
+        status_tags = []
+        if details.get('is_recommended'):
+            status_tags.append("<span style='color: #4CAF50; font-weight: bold;'>Recommended</span>")
+        if details.get('is_dfs'):
+            status_tags.append("<span style='color: #FFA726;'>DFS</span>")
+        if details.get('is_non_overlapping'):
+             status_tags.append("<span style='color: #66BB6A;'>Non-Overlapping</span>")
+        
+        if status_tags:
+            report += f"Status: {", ".join(status_tags)}<br>"
+            
+        self.test_results_label.setText(report)
+        # Ensure the frame is visible if it was minimized
+        self.test_results_frame.setMaximumHeight(16777215) # Reset max height
+        self.test_results_frame.show()
 
     def start_scan(self):
         """Start a new network scan."""

@@ -32,6 +32,10 @@ from gui.main_window import MainWindow
 from scanner.wifi_scanner import WiFiScanner  # instead of WindowsWiFiScanner
 from gui.theme_manager import apply_theme, get_theme_colors
 
+# --- ADDED: Filter specific Matplotlib warning ---
+import warnings
+warnings.filterwarnings("ignore", message="Glyph .* missing from font.*", category=UserWarning)
+
 
 def setup_logging() -> None:
     """

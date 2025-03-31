@@ -55,6 +55,10 @@ class ChannelGraphCanvas(FigureCanvas):
     Canvas for rendering enhanced channel graphs using Matplotlib.
     """
     
+    # Signal emitted when a channel is clicked
+    channel_clicked = pyqtSignal(dict)
+    draw_complete = pyqtSignal()
+    
     def __init__(
         self, 
         parent: Optional[QWidget] = None, 
@@ -81,6 +85,7 @@ class ChannelGraphCanvas(FigureCanvas):
         
         # Configure for interactive mode
         self.fig.canvas.mpl_connect('motion_notify_event', self._on_hover)
+        self.fig.canvas.mpl_connect('button_press_event', self._on_click)
         
         # Store data
         self.hover_annotation = None
@@ -104,9 +109,9 @@ class ChannelGraphCanvas(FigureCanvas):
         
         # Configure axis styling
         self.axes.spines['bottom'].set_color(GRID_COLOR)
-        self.axes.spines['top'].set_color(GRID_COLOR)
+        self.axes.spines['top'].set_visible(False)  # Hide top spine
         self.axes.spines['left'].set_color(GRID_COLOR)
-        self.axes.spines['right'].set_color(GRID_COLOR)
+        self.axes.spines['right'].set_visible(False) # Hide right spine
         
         # Configure tick styling
         self.axes.tick_params(axis='x', colors=LIGHT_TEXT)
@@ -119,7 +124,8 @@ class ChannelGraphCanvas(FigureCanvas):
         
     def update_graph(self, visualization_data: VisualizationData, band: str = '2.4GHz') -> None:
         """Update the graph with new visualization data."""
-        print(f"DEBUG: ChannelGraphCanvas.update_graph called for band {band}. Received viz data slice: {visualization_data.get(band)}")
+        # --- UPDATED DEBUG PREFIX ---
+        print(f"DEBUG [ChannelGraph]: Update called for band {band}. Received viz data slice: {visualization_data.get(band)}")
         try:
             self.current_band = band
             if band not in visualization_data or not visualization_data[band]:
@@ -128,6 +134,7 @@ class ChannelGraphCanvas(FigureCanvas):
                             ha='center', va='center', color=LIGHT_TEXT)
                 self._configure_style() # Keep style consistent
                 self.draw()
+                self.draw_complete.emit()
                 return
                 
             self.network_data = visualization_data[band]
@@ -154,8 +161,8 @@ class ChannelGraphCanvas(FigureCanvas):
             full_congestion_scores = [data_map.get(ch, {}).get('congestion', 0) for ch in all_channels]
             full_signal_strengths = [data_map.get(ch, {}).get('signal', None) for ch in all_channels]
             
-            # --- ADDED DEBUG PRINT ---
-            print(f"DEBUG: ChannelGraphCanvas.update_graph - Processed data for band {band}:")
+            # --- UPDATED DEBUG PREFIX ---
+            print(f"DEBUG [ChannelGraph]: Processed data for band {band}:")
             print(f"  Channels ({len(all_channels)}): {all_channels}")
             print(f"  Counts   ({len(full_network_counts)}): {full_network_counts}")
             print(f"  Congest. ({len(full_congestion_scores)}): {full_congestion_scores}")
@@ -286,13 +293,16 @@ class ChannelGraphCanvas(FigureCanvas):
             
             # Update canvas
             self.draw()
+            self.draw_complete.emit()
             
         except KeyError as e:
-             logger.warning(f"KeyError accessing visualization data for band {band}: {e}. Might be missing data.")
+            # --- UPDATED DEBUG PREFIX ---
+             logger.warning(f"[ChannelGraph] KeyError accessing visualization data for band {band}: {e}. Might be missing data.")
              self.axes.clear()
              self.axes.text(0.5, 0.5, f"Incomplete data for {band}", ha='center', va='center', color='orange')
              self._configure_style()
              self.draw()
+             self.draw_complete.emit()
         except Exception as e:
             logger.error(f"Error updating graph: {e}", exc_info=True)
             self.axes.clear()
@@ -300,6 +310,7 @@ class ChannelGraphCanvas(FigureCanvas):
                           ha='center', va='center', color='red')
             self._configure_style()
             self.draw()
+            self.draw_complete.emit()
             
     def _configure_graph_appearance(self, ax2: Axes, all_channels: List[int], 
                                   full_network_counts: List[int]) -> None:
@@ -326,8 +337,9 @@ class ChannelGraphCanvas(FigureCanvas):
         self.axes.set_ylim(0, y_max)
         ax2.set_ylim(0, 100)  # Congestion score is 0-100
         
-        # Add grid
-        self.axes.grid(True, axis='y', linestyle='--', alpha=0.3, color=GRID_COLOR)
+        # Add grid (horizontal only, slightly lighter)
+        self.axes.grid(True, axis='y', linestyle='--', alpha=0.2, color=GRID_COLOR)
+        ax2.grid(False) # Ensure secondary axis doesn't have grid
         
         # Add legend
         lines, labels = self.axes.get_legend_handles_labels()
@@ -339,6 +351,50 @@ class ChannelGraphCanvas(FigureCanvas):
             for text in legend.get_texts():
                 text.set_color(LIGHT_TEXT)
         
+    def _on_click(self, event: matplotlib.backend_bases.MouseEvent) -> None:
+        """Handle mouse click event to emit channel details."""
+        if not event.inaxes or event.button != 1: # Only handle left clicks inside axes
+            return
+
+        if not hasattr(self, 'network_data') or not self.network_data:
+            return
+
+        # Get x value (channel)
+        x_mouse = event.xdata
+        channels = self.network_data['channels']
+        
+        if not channels:
+            return
+            
+        # Find closest channel
+        closest_channel_idx = min(range(len(channels)), 
+                                 key=lambda i: abs(channels[i] - x_mouse))
+        closest_channel = channels[closest_channel_idx]
+        
+        # Get data for this channel
+        network_count = self.network_data['network_counts'][closest_channel_idx]
+        congestion_score = self.network_data['congestion_scores'][closest_channel_idx]
+        avg_signal = self.network_data['signal_strengths'][closest_channel_idx]
+        is_recommended = closest_channel == self.network_data['recommended_channel']
+        
+        # Get BSSIDs on this channel (requires ChannelAnalyzer access or storing more data)
+        # For simplicity, we'll just emit basic details for now.
+        # To get BSSIDs, we would need to pass the full analyzer result or 
+        # modify get_visualization_data to include top SSIDs per channel.
+        
+        channel_details = {
+            'channel': closest_channel,
+            'band': self.current_band,
+            'network_count': network_count,
+            'congestion_score': congestion_score,
+            'avg_signal': avg_signal,
+            'is_recommended': is_recommended,
+            'is_dfs': self.current_band == '5GHz' and closest_channel in DFS_CHANNELS,
+            'is_non_overlapping': self.current_band == '2.4GHz' and closest_channel in NON_OVERLAPPING_2_4GHZ
+        }
+        
+        # Emit the signal
+        self.channel_clicked.emit(channel_details)
 
     def _on_hover(self, event: matplotlib.backend_bases.MouseEvent) -> None:
         """
@@ -390,21 +446,24 @@ class ChannelGraphCanvas(FigureCanvas):
         
         # Update or create annotation
         if self.hover_annotation:
-            # Instead of removing, update the existing annotation
-            self.hover_annotation.set_visible(True)
-            self.hover_annotation.set_text(text)
-            self.hover_annotation.xy = (closest_channel, network_count)
-        else:
-            # Create new annotation
-            self.hover_annotation = self.axes.annotate(
-                text,
-                xy=(closest_channel, network_count),
-                xytext=(15, 15),
-                textcoords='offset points',
-                bbox=dict(boxstyle='round,pad=0.5', fc='#444444', alpha=0.9, ec=ACCENT_COLOR),
-                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0', color=ACCENT_COLOR),
-                color=LIGHT_TEXT
-            )
+            # Remove the previous annotation explicitly
+            try:
+                self.hover_annotation.remove()
+            except Exception as e:
+                logger.debug(f"[ChannelGraph] Error removing old annotation: {e}")
+            self.hover_annotation = None # Ensure it's cleared
+
+        # Create new annotation
+        self.hover_annotation = self.axes.annotate(
+            text,
+            xy=(closest_channel, network_count),
+            xytext=(15, 15),
+            textcoords='offset points',
+            bbox=dict(boxstyle='round,pad=0.5', fc='#444444', alpha=0.9, ec=ACCENT_COLOR),
+            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0', color=ACCENT_COLOR),
+            color=LIGHT_TEXT,
+            visible=True # Ensure it's visible initially
+        )
         
         self.draw_idle()
 
@@ -413,6 +472,9 @@ class WaterfallGraphCanvas(FigureCanvas):
     """
     Canvas for rendering enhanced waterfall charts to show signal strength over time.
     """
+    
+    # Signal emitted when drawing is complete
+    draw_complete = pyqtSignal()
     
     def __init__(self, parent=None, width=5, height=4, dpi=100):
         """
@@ -445,12 +507,19 @@ class WaterfallGraphCanvas(FigureCanvas):
     def _configure_style(self):
         """Set up matplotlib style for dark theme"""
         self.axes.tick_params(colors=LIGHT_TEXT)
-        for spine in self.axes.spines.values():
-            spine.set_edgecolor(GRID_COLOR)
+        # Hide top/right spines
+        self.axes.spines['top'].set_visible(False)
+        self.axes.spines['right'].set_visible(False)
+        # Set color for bottom/left spines
+        self.axes.spines['bottom'].set_color(GRID_COLOR)
+        self.axes.spines['left'].set_color(GRID_COLOR)
             
         self.axes.title.set_color(LIGHT_TEXT)
         self.axes.xaxis.label.set_color(LIGHT_TEXT)
         self.axes.yaxis.label.set_color(LIGHT_TEXT)
+        
+        # Add subtle horizontal grid
+        self.axes.grid(True, axis='y', linestyle=':', alpha=0.2, color=GRID_COLOR)
         
     def initialize_data(self, band: str) -> None:
         """
@@ -482,7 +551,8 @@ class WaterfallGraphCanvas(FigureCanvas):
             Updates the waterfall display showing signal strength history over time.
             Newest data is shown at the top of the chart, covering the full channel range.
         """
-        print(f"DEBUG: WaterfallGraphCanvas.update_waterfall called for band {band}.")
+        # --- UPDATED DEBUG PREFIX ---
+        print(f"DEBUG [Waterfall]: Update called for band {band}.")
         print(f"  Received signal_data ({len(signal_data)}): {signal_data}")
         print(f"  Received channels ({len(channels)}): {channels}")
         
@@ -503,6 +573,7 @@ class WaterfallGraphCanvas(FigureCanvas):
              self.axes.text(0.5, 0.5, f"Cannot display waterfall for {band}", ha='center', va='center', color=LIGHT_TEXT)
              self._configure_style()
              self.draw()
+             self.draw_complete.emit()
              return
              
         # Roll the history data (shift older data down)
@@ -517,8 +588,8 @@ class WaterfallGraphCanvas(FigureCanvas):
         for i, ch in enumerate(all_channels):
             self.history_data[0, i] = signal_map.get(ch, np.nan) # Use NaN if no signal data
         
-        # --- ADDED DEBUG PRINT ---
-        print(f"DEBUG: WaterfallGraphCanvas.update_waterfall - Updated history_data shape: {self.history_data.shape}")
+        # --- UPDATED DEBUG PREFIX ---
+        print(f"DEBUG [Waterfall]: Updated history_data shape: {self.history_data.shape}")
         print(f"  Newest row (history_data[0]): {self.history_data[0]}")
         
         # Clear previous graph
@@ -530,6 +601,7 @@ class WaterfallGraphCanvas(FigureCanvas):
                         ha='center', va='center', color=LIGHT_TEXT)
             self._configure_style()
             self.draw()
+            self.draw_complete.emit()
             return
             
         # Create waterfall plot using the full channel range
@@ -546,6 +618,7 @@ class WaterfallGraphCanvas(FigureCanvas):
             self.axes.text(0.5, 0.5, f"No history data for {band}", ha='center', va='center', color=LIGHT_TEXT)
             self._configure_style()
             self.draw()
+            self.draw_complete.emit()
             return
             
         self.im = self.axes.imshow(
@@ -609,6 +682,7 @@ class WaterfallGraphCanvas(FigureCanvas):
             
         # Update canvas
         self.draw()
+        self.draw_complete.emit()
 
 
 class NetworkGraphCanvas(FigureCanvas):
@@ -617,12 +691,15 @@ class NetworkGraphCanvas(FigureCanvas):
     Shows relationships between networks, access points, and channels.
     """
     
+    # Signal emitted when drawing is complete
+    draw_complete = pyqtSignal()
+    
     def __init__(self, parent=None, width=5, height=4, dpi=100):
         """Initialize the network graph canvas."""
         self.fig = Figure(figsize=(width, height), dpi=dpi, tight_layout=True)
         self.fig.patch.set_facecolor(DARK_BG)
         self.axes = self.fig.add_subplot(111)
-        self.axes.set_facecolor("#353535")
+        self.axes.set_facecolor("#404040")
         
         super().__init__(self.fig)
         self.setParent(parent)
@@ -647,70 +724,77 @@ class NetworkGraphCanvas(FigureCanvas):
         
     def update_network_graph(self, networks: List[WiFiNetwork], band='2.4GHz', layout_type='concentric'):
         """Update the network graph with new data."""
+        # --- REVISED LOGIC FOR BAND FILTERING AND NODE CREATION ---
+        logger.debug(f"[NetworkGraph] Updating for band '{band}' with {len(networks)} total networks.")
         try:
             self.G = nx.Graph()
+            self.current_band = band # Store current band
             
-            # Get networks in the selected band
-            band_networks = []
+            channels_in_band = set()
+            networks_added_to_graph = set() # Keep track of SSIDs added
+            bssid_nodes_added = set() # Keep track of BSSIDs added
+
+            # --- First pass: Add nodes and network-to-channel edges ---
             for network in networks:
-                try:
-                    # Use getattr to safely check for band attribute and handle None
-                    network_band = getattr(network, 'band', '')
-                    if network_band and network_band.strip() == band.strip():
-                        band_networks.append(network)
-                except Exception as e:
-                    logger.debug(f"Skipping network in graph: {e}")
+                ssid = network.ssid if network.ssid else "<Hidden Network>"
+                network_node_added = False
+                if not network.bssids:
                     continue
+
+                primary_signal = -100 # Use strongest signal for network node color
+                primary_channel = None
+                bssids_in_band = []
+
+                # Check BSSIDs for the target band
+                for bssid in network.bssids:
+                    if bssid.band and bssid.band.startswith(band[:3]): # Match '2.4' or '5'
+                        bssids_in_band.append(bssid)
+                        if bssid.signal_dbm > primary_signal:
+                            primary_signal = bssid.signal_dbm
+                        if bssid.channel:
+                             channels_in_band.add(bssid.channel)
+                             primary_channel = bssid.channel # Use one channel for positioning
+
+                # If any BSSIDs were in the band, add the network node
+                if bssids_in_band:
+                    if ssid not in networks_added_to_graph:
+                         self.G.add_node(ssid, type='network', signal=primary_signal)
+                         networks_added_to_graph.add(ssid)
+                         network_node_added = True
+
+                    # Connect network to its primary channel (if found)
+                    if primary_channel and network_node_added:
+                        ch_node_id = f"CH {primary_channel}"
+                        if not self.G.has_node(ch_node_id):
+                            self.G.add_node(ch_node_id, type='channel', weight=1) # Initial weight
+                        else:
+                            # Increment weight if channel node exists
+                            self.G.nodes[ch_node_id]['weight'] = self.G.nodes[ch_node_id].get('weight', 0) + 1
+                        
+                        # Add edge network <-> channel
+                        weight = max(0.1, min(1.0, (primary_signal + 90) / 60))
+                        self.G.add_edge(ssid, ch_node_id, weight=weight*3)
+
+                    # Add BSSID nodes and connect them to the network node
+                    for bssid in bssids_in_band:
+                        if bssid.bssid not in bssid_nodes_added:
+                             self.G.add_node(bssid.bssid, type='bssid', signal=bssid.signal_dbm)
+                             bssid_nodes_added.add(bssid.bssid)
+                        # Always add edge from network to its BSSIDs in band
+                        self.G.add_edge(ssid, bssid.bssid, weight=1) 
             
-            if not band_networks:
+            logger.debug(f"[NetworkGraph] Added {len(networks_added_to_graph)} networks, {len(channels_in_band)} channels, {len(bssid_nodes_added)} BSSIDs for band {band}")
+
+            if len(networks_added_to_graph) == 0:
                 self.axes.clear()
                 self.axes.text(0.5, 0.5, f"No networks found in {band} band", 
                              ha='center', va='center', color=LIGHT_TEXT, fontsize=14)
+                self._configure_style() # Apply style even when empty
                 self.axes.set_axis_off()
                 self.draw()
+                self.draw_complete.emit()
                 return
                 
-            # Add channel nodes
-            channels_used = set()
-            for network in band_networks:
-                try:
-                    channel = getattr(network, 'channel', None)
-                    if channel:
-                        channels_used.add(channel)
-                except Exception:
-                    pass
-                    
-            # Add nodes for each channel
-            for channel in sorted(channels_used):
-                # Count networks on this channel for node size
-                networks_on_channel = sum(1 for n in band_networks if n.channel == channel)
-                self.G.add_node(f"CH {channel}", type='channel', weight=networks_on_channel)
-                
-            # Add nodes for each network and connect to its channel
-            for network in band_networks:
-                # Use network SSID as the node identifier or <Hidden> if None
-                ssid = network.ssid if network.ssid else "<Hidden Network>"
-                # Add signal strength as node attribute
-                signal = getattr(network, 'signal_dbm', -75)
-                self.G.add_node(ssid, type='network', signal=signal)
-                
-                # Connect network to channel
-                try:
-                    channel = getattr(network, 'channel', None)
-                    if channel:
-                        # Edge weight based on signal strength (normalized)
-                        weight = max(0.1, min(1.0, (signal + 90) / 60))
-                        # Thicker edges for stronger signals
-                        self.G.add_edge(ssid, f"CH {channel}", weight=weight*3)
-                except Exception:
-                    pass
-                    
-                # Add nodes for each BSSID
-                if hasattr(network, 'bssids') and network.bssids:
-                    for bssid in network.bssids:
-                        self.G.add_node(bssid.bssid, type='bssid', signal=bssid.signal_dbm)
-                        self.G.add_edge(ssid, bssid.bssid, weight=1)
-                        
             # Calculate layout based on type
             if layout_type == 'radial':
                 self.pos = self._calculate_radial_layout()
@@ -719,8 +803,17 @@ class NetworkGraphCanvas(FigureCanvas):
             
             # Draw the graph
             self.axes.clear()
+            # --- SET BG and hide spines before drawing ---
+            self.axes.set_facecolor("#404040")
+            self.axes.spines['top'].set_visible(False)
+            self.axes.spines['right'].set_visible(False)
+            self.axes.spines['bottom'].set_visible(False)
+            self.axes.spines['left'].set_visible(False)
+            self.axes.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False) # Hide ticks too
+
             self._draw_graph()
             self.draw()
+            self.draw_complete.emit()
             
             # Store networks for layout changes
             self.last_networks = networks
@@ -734,6 +827,7 @@ class NetworkGraphCanvas(FigureCanvas):
             self.axes.text(0.5, 0.5, "Error loading graph data", 
                           ha='center', va='center', color=LIGHT_TEXT)
             self.draw()
+            self.draw_complete.emit()
         
     def _calculate_layout(self, layout_type='radial'):
         """Calculate node positions for the graph."""
@@ -891,7 +985,7 @@ class NetworkGraphCanvas(FigureCanvas):
         # Draw channel nodes - size varies by network count
         nx.draw_networkx_nodes(
             self.G, self.pos, nodelist=channel_nodes,
-            node_color='#5294E2', node_size=channel_sizes, alpha=0.9,
+            node_color='#5294E2', node_size=channel_sizes, alpha=0.85,
             edgecolors='white', linewidths=1.5,
             ax=self.axes
         )
@@ -899,7 +993,7 @@ class NetworkGraphCanvas(FigureCanvas):
         # Draw network nodes - color varies by signal strength
         nx.draw_networkx_nodes(
             self.G, self.pos, nodelist=network_nodes,
-            node_color=network_colors, node_size=200, alpha=0.85,
+            node_color=network_colors, node_size=200, alpha=0.8,
             edgecolors='white', linewidths=1,
             ax=self.axes
         )
@@ -907,7 +1001,7 @@ class NetworkGraphCanvas(FigureCanvas):
         # Draw BSSID nodes
         nx.draw_networkx_nodes(
             self.G, self.pos, nodelist=bssid_nodes,
-            node_color='#AB47BC', node_size=100, alpha=0.7,
+            node_color='#AB47BC', node_size=100, alpha=0.65,
             edgecolors='white', linewidths=0.5,
             ax=self.axes
         )
@@ -1077,6 +1171,9 @@ class ChannelGraphWidget(QWidget):
         main_layout.addWidget(controls_panel)
         main_layout.addWidget(self.tab_widget)
         
+        # --- ADDED: Connect tab change signal ---
+        self.tab_widget.currentChanged.connect(self._handle_tab_change)
+        
         # Initialize graphs
         self._update_graphs([])
         
@@ -1103,6 +1200,8 @@ class ChannelGraphWidget(QWidget):
         # Update the network graph with the current networks and new layout
         if hasattr(self, 'last_networks'):
             self.network_canvas.update_network_graph(self.last_networks, self.current_band, layout_type)
+            # --- EMIT SIGNAL after redraw ---
+            self.network_canvas.draw_complete.emit()
         
     def _toggle_auto_refresh(self) -> None:
         """Toggle auto-refresh functionality."""
@@ -1139,14 +1238,16 @@ class ChannelGraphWidget(QWidget):
         Args:
             networks: List of detected WiFi networks
         """
-        print(f"DEBUG: _update_graphs called with {len(networks)} networks for band {self.current_band}")
+        # --- UPDATED DEBUG PREFIX ---
+        print(f"DEBUG [GraphWidget]: _update_graphs called with {len(networks)} networks for band {self.current_band}")
         try:
             # Analyze networks first
             self.channel_analyzer.analyze_channel_usage(networks)
             
             # Get visualization data
             visualization_data = self.channel_analyzer.get_visualization_data()
-            print(f"DEBUG: _update_graphs - Viz data for {self.current_band}: {visualization_data.get(self.current_band)}")
+            # --- UPDATED DEBUG PREFIX ---
+            print(f"DEBUG [GraphWidget]: Viz data for {self.current_band}: {visualization_data.get(self.current_band)}")
             logger.debug(f"Visualization data for {self.current_band}: {visualization_data.get(self.current_band)}")
             
             # Update channel usage graph
@@ -1181,3 +1282,29 @@ class ChannelGraphWidget(QWidget):
         except Exception as e:
             logger.error(f"Error updating graphs: {e}")
             raise
+
+    # --- ADDED: Slot for tab changes ---
+    def _handle_tab_change(self, index: int) -> None:
+        """Handles tab switching to force graph updates if necessary."""
+        widget = self.tab_widget.widget(index)
+        logger.debug(f"[GraphWidget] Tab changed to index {index} ({type(widget).__name__})")
+        
+        # Force redraw Network Graph when selected to fix potential overlap/styling issues
+        if isinstance(widget, NetworkGraphCanvas):
+            logger.debug("[GraphWidget] Network Graph tab selected, forcing redraw.")
+            # Use last known data and layout
+            networks = getattr(self, 'last_networks', [])
+            layout = getattr(self, 'current_layout', 'radial')
+            self.network_canvas.update_network_graph(networks, self.current_band, layout)
+            # --- EMIT SIGNAL after redraw ---
+            self.network_canvas.draw_complete.emit()
+        
+        # Attempt to fix hover annotation issue by redrawing Channel Graph
+        elif isinstance(widget, ChannelGraphCanvas):
+            logger.debug("[GraphWidget] Channel Usage tab selected, forcing redraw to potentially fix hover.")
+            self.channel_canvas.draw_idle() 
+            # --- EMIT SIGNAL after redraw ---
+            self.channel_canvas.draw_complete.emit()
+            # Re-enable hover annotation just in case it got stuck invisible
+            if self.channel_canvas.hover_annotation:
+                 self.channel_canvas.hover_annotation.set_visible(False) # Hide first

@@ -30614,3 +30614,348 @@ TypeError: get_color() takes 1 positional argument but 2 were given
 2025-03-31 03:54:22,875 - gui.main_window - INFO - Starting network scan
 2025-03-31 03:54:25,275 - scanner.wifi_scanner - INFO - Scan completed: 19 networks found
 2025-03-31 03:54:25,491 - gui.main_window - INFO - Scan completed: 19 networks found
+2025-03-31 03:54:52,895 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:54:55,312 - scanner.wifi_scanner - INFO - Scan completed: 18 networks found
+2025-03-31 03:54:55,573 - gui.main_window - INFO - Scan completed: 18 networks found
+2025-03-31 03:55:22,880 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:55:25,573 - scanner.wifi_scanner - INFO - Scan completed: 20 networks found
+2025-03-31 03:55:25,983 - gui.main_window - INFO - Scan completed: 20 networks found
+2025-03-31 03:55:52,862 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:55:55,156 - scanner.wifi_scanner - INFO - Scan completed: 21 networks found
+2025-03-31 03:55:55,499 - gui.main_window - INFO - Scan completed: 21 networks found
+2025-03-31 03:56:22,857 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:56:25,149 - scanner.wifi_scanner - INFO - Scan completed: 20 networks found
+2025-03-31 03:56:25,545 - gui.main_window - INFO - Scan completed: 20 networks found
+2025-03-31 03:56:52,870 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:56:55,109 - scanner.wifi_scanner - INFO - Scan completed: 20 networks found
+2025-03-31 03:56:55,440 - gui.main_window - INFO - Scan completed: 20 networks found
+2025-03-31 03:57:22,652 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 03:57:32,365 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 03:57:32,395 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 03:57:32,403 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 03:57:32,408 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 03:57:32,408 - root - INFO - Applied light theme
+2025-03-31 03:57:32,421 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 03:57:32,422 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 03:57:32,438 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 03:57:32,600 - gui.main_window - INFO - Starting network scan
+2025-03-31 03:57:32,600 - gui.main_window - INFO - Main window initialized
+2025-03-31 03:57:35,015 - scanner.wifi_scanner - INFO - Scan completed: 20 networks found
+2025-03-31 03:57:35,015 - gui.main_window - INFO - Scan completed: 20 networks found
+2025-03-31 04:02:32,216 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:02:32,249 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:02:32,260 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:02:32,264 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:02:32,264 - root - INFO - Applied light theme
+2025-03-31 04:02:32,282 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:02:32,282 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:02:32,302 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:02:32,906 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:02:32,908 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:02:35,302 - scanner.wifi_scanner - INFO - Scan completed: 13 networks found
+2025-03-31 04:02:35,573 - gui.main_window - INFO - Scan completed: 13 networks found
+2025-03-31 04:02:51,766 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:02:54,107 - scanner.wifi_scanner - INFO - Scan completed: 18 networks found
+2025-03-31 04:02:54,388 - gui.main_window - INFO - Scan completed: 18 networks found
+2025-03-31 04:03:02,950 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:03:05,341 - scanner.wifi_scanner - INFO - Scan completed: 21 networks found
+2025-03-31 04:03:05,647 - gui.main_window - INFO - Scan completed: 21 networks found
+2025-03-31 04:03:14,272 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:03:16,607 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:03:16,953 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:03:32,908 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:03:35,187 - scanner.wifi_scanner - INFO - Scan completed: 25 networks found
+2025-03-31 04:03:35,548 - gui.main_window - INFO - Scan completed: 25 networks found
+2025-03-31 04:06:15,407 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:06:15,440 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:06:15,446 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:06:15,449 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:06:15,449 - root - INFO - Applied light theme
+2025-03-31 04:06:15,467 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:06:15,468 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:06:15,484 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:06:15,970 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:06:15,972 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:06:18,363 - scanner.wifi_scanner - INFO - Scan completed: 14 networks found
+2025-03-31 04:06:18,598 - gui.main_window - INFO - Scan completed: 14 networks found
+2025-03-31 04:06:40,272 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:06:42,583 - scanner.wifi_scanner - INFO - Scan completed: 21 networks found
+2025-03-31 04:06:42,906 - gui.main_window - INFO - Scan completed: 21 networks found
+2025-03-31 04:06:46,017 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:06:48,427 - scanner.wifi_scanner - INFO - Scan completed: 24 networks found
+2025-03-31 04:06:48,768 - gui.main_window - INFO - Scan completed: 24 networks found
+2025-03-31 04:07:15,976 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:07:18,261 - scanner.wifi_scanner - INFO - Scan completed: 24 networks found
+2025-03-31 04:07:18,665 - gui.main_window - INFO - Scan completed: 24 networks found
+2025-03-31 04:07:45,976 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:07:48,399 - scanner.wifi_scanner - INFO - Scan completed: 26 networks found
+2025-03-31 04:07:48,792 - gui.main_window - INFO - Scan completed: 26 networks found
+2025-03-31 04:08:15,979 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:08:18,395 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:08:18,847 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:08:45,974 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:08:48,422 - scanner.wifi_scanner - INFO - Scan completed: 22 networks found
+2025-03-31 04:08:48,811 - gui.main_window - INFO - Scan completed: 22 networks found
+2025-03-31 04:09:15,971 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:18,472 - scanner.wifi_scanner - INFO - Scan completed: 24 networks found
+2025-03-31 04:09:19,018 - gui.main_window - INFO - Scan completed: 24 networks found
+2025-03-31 04:09:30,816 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:33,194 - scanner.wifi_scanner - INFO - Scan completed: 26 networks found
+2025-03-31 04:09:33,699 - gui.main_window - INFO - Scan completed: 26 networks found
+2025-03-31 04:09:35,753 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:38,022 - scanner.wifi_scanner - INFO - Scan completed: 27 networks found
+2025-03-31 04:09:38,448 - gui.main_window - INFO - Scan completed: 27 networks found
+2025-03-31 04:09:40,751 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:43,036 - scanner.wifi_scanner - INFO - Scan completed: 30 networks found
+2025-03-31 04:09:43,527 - gui.main_window - INFO - Scan completed: 30 networks found
+2025-03-31 04:09:45,756 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:48,094 - scanner.wifi_scanner - INFO - Scan completed: 29 networks found
+2025-03-31 04:09:48,525 - gui.main_window - INFO - Scan completed: 29 networks found
+2025-03-31 04:09:50,760 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:53,038 - scanner.wifi_scanner - INFO - Scan completed: 31 networks found
+2025-03-31 04:09:53,478 - gui.main_window - INFO - Scan completed: 31 networks found
+2025-03-31 04:09:55,752 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:09:58,053 - scanner.wifi_scanner - INFO - Scan completed: 32 networks found
+2025-03-31 04:09:58,558 - gui.main_window - INFO - Scan completed: 32 networks found
+2025-03-31 04:10:00,755 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:03,168 - scanner.wifi_scanner - INFO - Scan completed: 33 networks found
+2025-03-31 04:10:03,934 - gui.main_window - INFO - Scan completed: 33 networks found
+2025-03-31 04:10:05,753 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:08,086 - scanner.wifi_scanner - INFO - Scan completed: 34 networks found
+2025-03-31 04:10:08,631 - gui.main_window - INFO - Scan completed: 34 networks found
+2025-03-31 04:10:10,761 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:13,109 - scanner.wifi_scanner - INFO - Scan completed: 34 networks found
+2025-03-31 04:10:13,663 - gui.main_window - INFO - Scan completed: 34 networks found
+2025-03-31 04:10:15,754 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:18,158 - scanner.wifi_scanner - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:18,971 - gui.main_window - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:20,755 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:23,176 - scanner.wifi_scanner - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:23,857 - gui.main_window - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:25,761 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:28,170 - scanner.wifi_scanner - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:28,857 - gui.main_window - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:30,755 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:33,154 - scanner.wifi_scanner - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:33,868 - gui.main_window - INFO - Scan completed: 36 networks found
+2025-03-31 04:10:35,753 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:38,166 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:38,942 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:40,756 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:43,224 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:43,987 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:45,755 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:48,108 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:48,879 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:50,769 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:53,110 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:53,801 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:55,782 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:10:58,223 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:10:59,096 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:00,787 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:03,195 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:04,168 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:05,787 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:08,512 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:09,754 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:10,796 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:13,411 - scanner.wifi_scanner - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:14,539 - gui.main_window - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:15,866 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:18,674 - scanner.wifi_scanner - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:20,212 - gui.main_window - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:21,475 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:24,039 - scanner.wifi_scanner - INFO - Scan completed: 39 networks found
+2025-03-31 04:11:24,978 - gui.main_window - INFO - Scan completed: 39 networks found
+2025-03-31 04:11:25,846 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:28,526 - scanner.wifi_scanner - INFO - Scan completed: 39 networks found
+2025-03-31 04:11:29,617 - gui.main_window - INFO - Scan completed: 39 networks found
+2025-03-31 04:11:30,798 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:34,406 - scanner.wifi_scanner - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:36,318 - gui.main_window - INFO - Scan completed: 38 networks found
+2025-03-31 04:11:36,373 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:39,315 - scanner.wifi_scanner - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:41,331 - gui.main_window - INFO - Scan completed: 37 networks found
+2025-03-31 04:11:41,381 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:44,711 - scanner.wifi_scanner - INFO - Scan completed: 35 networks found
+2025-03-31 04:11:46,085 - gui.main_window - INFO - Scan completed: 35 networks found
+2025-03-31 04:11:46,120 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:11:46,121 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:12:50,619 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:12:50,647 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:12:50,655 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:12:50,661 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:12:50,663 - root - INFO - Applied light theme
+2025-03-31 04:12:50,679 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:12:50,681 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:12:50,695 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:12:51,188 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:12:51,190 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:12:53,737 - scanner.wifi_scanner - INFO - Scan completed: 27 networks found
+2025-03-31 04:12:54,118 - gui.main_window - INFO - Scan completed: 27 networks found
+2025-03-31 04:13:21,189 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:13:23,485 - scanner.wifi_scanner - INFO - Scan completed: 24 networks found
+2025-03-31 04:13:23,842 - gui.main_window - INFO - Scan completed: 24 networks found
+2025-03-31 04:13:50,664 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:13:52,961 - scanner.wifi_scanner - INFO - Scan completed: 20 networks found
+2025-03-31 04:13:53,384 - gui.main_window - INFO - Scan completed: 20 networks found
+2025-03-31 04:13:53,393 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:13:55,796 - scanner.wifi_scanner - INFO - Scan completed: 22 networks found
+2025-03-31 04:13:56,420 - gui.main_window - INFO - Scan completed: 22 networks found
+2025-03-31 04:14:21,192 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:14:23,440 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:14:23,839 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:14:51,197 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:14:53,516 - scanner.wifi_scanner - INFO - Scan completed: 26 networks found
+2025-03-31 04:14:53,960 - gui.main_window - INFO - Scan completed: 26 networks found
+2025-03-31 04:15:21,190 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:15:23,582 - scanner.wifi_scanner - INFO - Scan completed: 25 networks found
+2025-03-31 04:15:24,045 - gui.main_window - INFO - Scan completed: 25 networks found
+2025-03-31 04:15:27,361 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:15:29,667 - scanner.wifi_scanner - INFO - Scan completed: 26 networks found
+2025-03-31 04:15:30,104 - gui.main_window - INFO - Scan completed: 26 networks found
+2025-03-31 04:15:31,953 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:15:34,252 - scanner.wifi_scanner - INFO - Scan completed: 29 networks found
+2025-03-31 04:15:34,818 - gui.main_window - INFO - Scan completed: 29 networks found
+2025-03-31 04:15:37,191 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 04:16:45,424 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:16:45,458 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:16:45,472 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:16:45,478 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:16:45,478 - root - INFO - Applied light theme
+2025-03-31 04:16:45,493 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:16:45,495 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:16:45,518 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:16:46,169 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:16:46,169 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:16:48,720 - scanner.wifi_scanner - INFO - Scan completed: 24 networks found
+2025-03-31 04:16:49,068 - gui.main_window - INFO - Scan completed: 24 networks found
+2025-03-31 04:16:56,841 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:16:59,097 - scanner.wifi_scanner - INFO - Scan completed: 21 networks found
+2025-03-31 04:16:59,376 - gui.main_window - INFO - Scan completed: 21 networks found
+2025-03-31 04:17:01,223 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:17:03,458 - scanner.wifi_scanner - INFO - Scan completed: 26 networks found
+2025-03-31 04:17:03,760 - gui.main_window - INFO - Scan completed: 26 networks found
+2025-03-31 04:17:07,500 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 04:22:04,696 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:22:04,732 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:22:04,744 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:22:04,745 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:22:04,748 - root - INFO - Applied light theme
+2025-03-31 04:22:04,767 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:22:04,767 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:22:04,785 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:22:05,261 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:22:05,263 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:22:07,648 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:22:07,918 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:22:35,255 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:23:10,286 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:23:10,662 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:23:12,222 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 04:35:24,150 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:35:24,187 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:35:24,197 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:35:24,201 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:35:24,202 - root - INFO - Applied light theme
+2025-03-31 04:35:24,219 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:35:24,220 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:35:24,238 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:35:24,808 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:35:24,810 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:35:27,211 - scanner.wifi_scanner - INFO - Scan completed: 18 networks found
+2025-03-31 04:35:27,524 - gui.main_window - INFO - Scan completed: 18 networks found
+2025-03-31 04:35:43,239 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:35:45,480 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:35:45,813 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:35:54,815 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:35:57,138 - scanner.wifi_scanner - INFO - Scan completed: 23 networks found
+2025-03-31 04:35:57,491 - gui.main_window - INFO - Scan completed: 23 networks found
+2025-03-31 04:35:57,504 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:35:59,746 - scanner.wifi_scanner - INFO - Scan completed: 28 networks found
+2025-03-31 04:36:00,072 - gui.main_window - INFO - Scan completed: 28 networks found
+2025-03-31 04:36:00,083 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:36:02,389 - scanner.wifi_scanner - INFO - Scan completed: 31 networks found
+2025-03-31 04:36:02,762 - gui.main_window - INFO - Scan completed: 31 networks found
+2025-03-31 04:36:06,616 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 04:37:31,291 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 04:37:31,327 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 04:37:31,339 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 04:37:31,345 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 04:37:31,345 - root - INFO - Applied light theme
+2025-03-31 04:37:31,363 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 04:37:31,364 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 04:37:31,385 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 04:37:32,059 - gui.main_window - INFO - Starting network scan
+2025-03-31 04:37:32,059 - gui.main_window - INFO - Main window initialized
+2025-03-31 04:37:34,565 - scanner.wifi_scanner - INFO - Scan completed: 29 networks found
+2025-03-31 04:37:34,869 - gui.main_window - INFO - Scan completed: 29 networks found
+2025-03-31 04:37:48,754 - root - INFO - WiFi Analyzer shutting down with exit code 0
+2025-03-31 05:10:20,327 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 05:10:20,361 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 05:10:20,366 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 05:10:20,373 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 05:10:20,373 - root - INFO - Applied light theme
+2025-03-31 05:10:20,389 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 05:10:20,390 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 05:10:20,404 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 05:10:20,478 - gui.channel_graph - ERROR - Error updating graphs: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+2025-03-31 05:10:20,478 - root - ERROR - Unhandled exception: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 175, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 344, in setup_ui
+    self.channel_graph = ChannelGraphWidget(self.channel_analyzer)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 1178, in __init__
+    self._update_graphs([])
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 1257, in _update_graphs
+    self.waterfall_canvas.update_waterfall(viz_data_slice, self.current_band)
+TypeError: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+2025-03-31 05:10:36,953 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 05:10:36,977 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 05:10:36,986 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 05:10:36,991 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 05:10:36,991 - root - INFO - Applied light theme
+2025-03-31 05:10:37,001 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 05:10:37,001 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 05:10:37,020 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 05:10:37,084 - gui.channel_graph - ERROR - Error updating graphs: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+2025-03-31 05:10:37,089 - root - ERROR - Unhandled exception: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+Traceback (most recent call last):
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\main.py", line 175, in main
+    main_window = MainWindow(scanner)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 304, in __init__
+    self.setup_ui()
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\main_window.py", line 344, in setup_ui
+    self.channel_graph = ChannelGraphWidget(self.channel_analyzer)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 1178, in __init__
+    self._update_graphs([])
+  File "C:\Users\Quicito\Desktop\Work\WiFi-Analyzer\gui\channel_graph.py", line 1257, in _update_graphs
+    self.waterfall_canvas.update_waterfall(viz_data_slice, self.current_band)
+TypeError: WaterfallGraphCanvas.update_waterfall() missing 1 required positional argument: 'band'
+2025-03-31 05:11:37,273 - root - INFO - Starting WiFi Analyzer v1.0.0
+2025-03-31 05:11:37,301 - gui.widgets - INFO - Loaded font Roboto-Regular from file: fonts/Roboto-VariableFont_wdth,wght.ttf
+2025-03-31 05:11:37,313 - gui.widgets - INFO - Loaded font Roboto-Italic from file: fonts/Roboto-Italic-VariableFont_wdth,wght.ttf
+2025-03-31 05:11:37,314 - gui.theme_manager - INFO - Applied light theme
+2025-03-31 05:11:37,317 - root - INFO - Applied light theme
+2025-03-31 05:11:37,331 - scanner.wifi_scanner - INFO - WiFi scanner initialized using interface: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-03-31 05:11:37,331 - root - INFO - WiFiScanner initialized with admin privileges
+2025-03-31 05:11:37,347 - gui.network_table - INFO - SignalStrengthDelegate set for 'Signal' column.
+2025-03-31 05:11:37,515 - gui.main_window - INFO - Starting network scan
+2025-03-31 05:11:37,520 - gui.main_window - INFO - Main window initialized
+2025-03-31 05:11:39,923 - scanner.wifi_scanner - INFO - Scan completed: 29 networks found
+2025-03-31 05:11:40,110 - gui.main_window - INFO - Scan completed: 29 networks found
+2025-03-31 05:11:49,717 - gui.main_window - INFO - Starting network scan
+2025-03-31 05:11:52,093 - scanner.wifi_scanner - INFO - Scan completed: 38 networks found
+2025-03-31 05:11:52,274 - gui.main_window - INFO - Scan completed: 38 networks found
+2025-03-31 05:11:53,987 - gui.main_window - INFO - Starting network scan
+2025-03-31 05:11:56,321 - scanner.wifi_scanner - INFO - Scan completed: 42 networks found
+2025-03-31 05:11:56,518 - gui.main_window - INFO - Scan completed: 42 networks found
+2025-03-31 05:11:57,907 - root - INFO - WiFi Analyzer shutting down with exit code 0
