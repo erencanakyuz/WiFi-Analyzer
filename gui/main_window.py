@@ -527,6 +527,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         Args:
             result: Scan result object containing networks
         """
+       
         # Ensure UI updates happen in the main thread
         if self.thread() != QThread.currentThread():
             # If called from another thread, re-emit to main thread
@@ -568,7 +569,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         Args:
             network: Selected WiFiNetwork object
         """
-        logger.debug(f"Network selected: {network.ssid}")
+      
         # Other views should update to show this network if needed
     
     def export_as_csv(self):
@@ -606,7 +607,7 @@ class MainWindow(QMainWindow, NetworkTestMixin):
         # Implementation for saving settings
         pass
     
-def closeEvent(self, event: QCloseEvent):
-    """Handle window close event."""
-    self.save_settings()
-    event.accept()
+    def closeEvent(self, event: QCloseEvent):
+        """Handle window close event."""
+        self.save_settings()
+        event.accept()

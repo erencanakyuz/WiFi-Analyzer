@@ -46,7 +46,8 @@ class NetworkTile(QFrame):
         ssid_layout = QHBoxLayout()
         
         # SSID label
-        self.ssid_label = QLabel(self.network.ssid if self.network.ssid else "<Hidden Network>")
+        ssid_text = self.network.ssid if self.network.ssid else "<Hidden Network>"
+        self.ssid_label = QLabel(ssid_text)
         font = self.ssid_label.font()
         font.setPointSize(12)
         font.setBold(True)
@@ -62,10 +63,16 @@ class NetworkTile(QFrame):
         ssid_layout.addStretch()
         info_layout.addLayout(ssid_layout)
         
-        # Details line
-        details = (f"Channel {self.network.channel} • {self.network.band} • "
-                 f"BSSID: {self.network.bssid}")
-        self.details_label = QLabel(details)
+        # Details line - with safe attribute access
+        try:
+            channel = getattr(self.network, 'channel', '?')
+            band = getattr(self.network, 'band', 'Unknown')
+            bssid = getattr(self.network, 'bssid', 'Unknown')
+            details = f"Channel {channel} • {band} • BSSID: {bssid}"
+            self.details_label = QLabel(details)
+        except Exception as e:
+            self.details_label = QLabel("Details unavailable")
+        
         font = self.details_label.font()
         font.setPointSize(9)
         self.details_label.setFont(font)

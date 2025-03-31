@@ -42,13 +42,16 @@ THEMES = {
         'graphGrid': '#CCCCCC',
         'graphLine': '#0078D7',
         'signalStrong': '#00A000',
-        'signalMedium': '#FF8C00',
-        'signalWeak': '#E60000',
+        'signalMedium': '#E0E000',
+        'signalWeak': '#FFA500',
+        'signalVeryWeak': '#D00000',
         'tableBorder': '#E0E0E0',
         'tableHeader': '#F8F8F8',
         'tableAlternate': '#FAFAFA',
         'statusBar': '#F8F8F8',
-        'toolBar': '#FFFFFF'
+        'toolBar': '#FFFFFF',
+        'buttonHover': '#E5E5E5',
+        'iconInactive': '#D3D3D3',
     },
     'dark': {
         'window': '#2D2D2D',
@@ -71,13 +74,16 @@ THEMES = {
         'graphGrid': '#404040',
         'graphLine': '#00A5FF',
         'signalStrong': '#00FF00',
-        'signalMedium': '#FFB700',
-        'signalWeak': '#FF4040',
+        'signalMedium': '#FFFF00',
+        'signalWeak': '#FFA500',
+        'signalVeryWeak': '#FF4040',
         'tableBorder': '#454545',
         'tableHeader': '#404040',
         'tableAlternate': '#383838',
         'statusBar': '#252525',
-        'toolBar': '#303030'
+        'toolBar': '#303030',
+        'buttonHover': '#444444',
+        'iconInactive': '#505050',
     },
     'high_contrast': {
         'window': '#000000',
@@ -106,7 +112,8 @@ THEMES = {
         'tableHeader': '#202020',
         'tableAlternate': '#101010',
         'statusBar': '#000000',
-        'toolBar': '#000000'
+        'toolBar': '#000000',
+        'buttonHover': '#FFFFFF',
     }
 }
 
@@ -253,6 +260,35 @@ class ThemeManager:
             
             QScrollBar::add-line, QScrollBar::sub-line {{
                 background: none;
+            }}
+            
+            QComboBox, QPushButton, QTabBar::tab {{
+                background-color: {theme['button']};
+                color: {theme['buttonText']};
+                border: 1px solid {theme['cardBorder']};
+                padding: 5px 10px;
+                border-radius: 3px;
+            }}
+            
+            QComboBox:hover, QPushButton:hover, QTabBar::tab:hover {{
+                background-color: {theme['buttonHover']};
+            }}
+            
+            QComboBox:pressed, QPushButton:pressed, QTabBar::tab:selected {{
+                background-color: {theme['highlight']};
+            }}
+            
+            QSlider::groove:horizontal {{
+                background: {theme['cardBorder']};
+                height: 6px;
+                border-radius: 3px;
+            }}
+            
+            QSlider::handle:horizontal {{
+                background: {theme['highlight']};
+                width: 16px;
+                margin: -5px 0;
+                border-radius: 8px;
             }}
         """
         QApplication.instance().setStyleSheet(stylesheet)

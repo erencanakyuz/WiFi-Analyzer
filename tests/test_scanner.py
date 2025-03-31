@@ -14,7 +14,7 @@ from pathlib import Path
 # Add project root to path to ensure imports work correctly
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scanner.windows_scanner import WindowsWiFiScanner
+from scanner.windows_scanner import WiFiScanner
 from scanner.parser import parse_netsh_output
 from scanner.models import WiFiNetwork, NetworkBSSID, ScanResult
 from utils.signal_utils import percentage_to_dbm
@@ -93,7 +93,7 @@ class TestWiFiScanner(unittest.TestCase):
         logging.basicConfig(level=logging.ERROR)
         
         # Create a scanner with mocked subprocess
-        self.scanner = WindowsWiFiScanner()
+        self.scanner = WiFiScanner()
         
     @patch('subprocess.run')
     def test_scan_successful(self, mock_run):

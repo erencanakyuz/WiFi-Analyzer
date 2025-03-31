@@ -222,12 +222,16 @@ class WiFiScanner:
     
     def _frequency_to_channel(self, freq):
         """Convert frequency to channel number."""
-        if freq >= 2412 and freq <= 2484:
+        # Convert frequency from Hz to MHz if needed
+        if freq > 100000:  # If frequency is in Hz (e.g., 2412000 instead of 2412)
+            freq = freq // 1000  # Convert to MHz
+        
+        if 2412 <= freq <= 2484:
             # 2.4 GHz band
             if freq == 2484:
                 return 14
             return (freq - 2412) // 5 + 1
-        elif freq >= 5160 and freq <= 5885:
+        elif 5160 <= freq <= 5885:
             # 5 GHz band
             return (freq - 5160) // 5 + 32
         else:
@@ -238,10 +242,6 @@ class WiFiScanner:
         """Convert AKM types to security type string."""
         if not akm_types:
             return "Open"
-            
-        # Check for WPA3
-        if const.AKM_TYPE_SAE in akm_types:
-            return "WPA3-Personal"
             
         # Check for WPA2
         if const.AKM_TYPE_WPA2PSK in akm_types:
@@ -292,9 +292,20 @@ class WiFiScanner:
                 ssid = network.ssid
                 bssid = network.bssid
                 signal_dbm = network.signal
-                freq = network.freq
-                channel = self._frequency_to_channel(freq)
-                band = self._band_from_frequency(freq)
+                freq = network.freq # Original frequency in Hz or MHz
+
+                # Convert frequency to MHz for band detection and channel calculation
+                # Handle cases where freq might already be in MHz or is in Hz
+                if freq > 100000: # Assume Hz if large value
+                    freq_mhz = freq // 1000
+                else: # Assume already MHz or invalid
+                    freq_mhz = freq
+                
+                # Determine channel and band using the potentially converted MHz frequency
+                # Note: _frequency_to_channel handles its own conversion, so original freq is fine there
+                # but passing freq_mhz to _band_from_frequency is crucial.
+                channel = self._frequency_to_channel(freq) # Use original freq here as function handles it
+                band = self._band_from_frequency(freq_mhz) # Use MHz freq here
                 
                 # Security type detection
                 if network.akm:

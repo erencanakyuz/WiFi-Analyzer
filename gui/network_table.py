@@ -32,62 +32,20 @@ class WiFiNetwork:
         self.security_type = security
 # ---------------------------------------------------
 
-# ----- Dummy Theme Manager for demonstration -----
-# Replace this with your actual import:
-# from gui.theme_manager import (
-#     ThemeObserver, ThemeUpdateEvent, register_theme_observer,
-#     get_color, get_current_theme
-# )
-# Example theme data (replace with your actual theme structure)
-THEMES_DATA = {
-    'light': {
-        'signalStrong': '#00A000', 'signalMedium': '#E0E000', 'signalWeak': '#FFA500',
-        'signalVeryWeak': '#D00000', 'iconInactive': '#D3D3D3',
-        'window': '#FFFFFF', 'base': '#FFFFFF', 'text': '#000000',
-        'highlight': '#3399FF', 'highlightedText': '#FFFFFF',
-        # Add other theme colors here
-    },
-    'dark': {
-        'signalStrong': '#00FF00', 'signalMedium': '#FFFF00', 'signalWeak': '#FFA500',
-        'signalVeryWeak': '#FF4040', 'iconInactive': '#505050',
-        'window': '#2E2E2E', 'base': '#1E1E1E', 'text': '#E0E0E0',
-        'highlight': '#4A4A7A', 'highlightedText': '#FFFFFF',
-         # Add other theme colors here
-    }
-}
-_current_theme = 'light'
-_observers = []
-
-class ThemeUpdateEvent:
-    def __init__(self, theme_name):
-        self.theme_name = theme_name
-
-class ThemeObserver:
-    def on_theme_changed(self, event: ThemeUpdateEvent) -> None:
-        raise NotImplementedError
-
-def get_color(key: str, default: str = '#FF00FF') -> str: # Added default magenta for missing keys
-    return THEMES_DATA.get(_current_theme, {}).get(key, default)
-
-def get_current_theme() -> str:
-    return _current_theme
-
-def register_theme_observer(observer: ThemeObserver):
-    if observer not in _observers:
-        _observers.append(observer)
-
-def set_theme(theme_name: str): # Added function to change theme for demo
-    global _current_theme
-    if theme_name in THEMES_DATA:
-        _current_theme = theme_name
-        event = ThemeUpdateEvent(theme_name)
-        for observer in _observers:
-            try:
-                observer.on_theme_changed(event)
-            except Exception as e:
-                logger.error(f"Error notifying observer {observer}: {e}")
-# ---------------------------------------------------
-
+# Replace:
+# THEMES_DATA = { ... }
+# with:
+from gui.theme_manager import get_color, get_current_theme, register_theme_observer, ThemeObserver, ThemeUpdateEvent
+try:
+    from gui.theme_manager import set_current_theme as set_theme
+except ImportError:
+    # Fallback implementation for the example code
+    def set_theme(theme_name):
+        """Local fallback implementation to change themes for testing"""
+        logger.info(f"Setting theme to: {theme_name}")
+        # Notify any theme observers with our own event
+        from gui.theme_manager import notify_theme_changed
+        notify_theme_changed(theme_name)
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO) # Basic logging for demo
@@ -121,8 +79,11 @@ class SignalStrengthDelegate(QStyledItemDelegate):
                 text_pen_color = option.palette.text().color()
                 # Use a subtle color for inactive bars from theme or fallback
                 try:
-                    base_icon_color = QColor(get_color('iconInactive', '#cccccc'))
-                except KeyError:
+                    # Call get_color with only the name
+                    inactive_color_hex = get_color('iconInactive') 
+                    base_icon_color = QColor(inactive_color_hex)
+                except (KeyError, NameError): # Handle if get_color not found or key missing
+                    logger.warning("Could not get 'iconInactive' color from theme, using fallback.")
                     base_icon_color = QColor('#cccccc') # Fallback gray
 
             painter.fillRect(option.rect, bg_brush)
@@ -143,19 +104,19 @@ class SignalStrengthDelegate(QStyledItemDelegate):
                 # Strong signal: All bars, strong color
                 if signal_dbm >= -55:
                     active_bars = 4
-                    active_color = QColor(get_color('signalStrong', '#00A000'))
+                    active_color = QColor(get_color('signalStrong'))
                 # Medium signal: 3 bars, medium color
                 elif signal_dbm >= -65:
                     active_bars = 3
-                    active_color = QColor(get_color('signalMedium', '#E0E000'))
+                    active_color = QColor(get_color('signalMedium'))
                 # Weak signal: 2 bars, weak color
                 elif signal_dbm >= -75:
                     active_bars = 2
-                    active_color = QColor(get_color('signalWeak', '#FFA500'))
+                    active_color = QColor(get_color('signalWeak'))
                 # Very weak signal: 1 bar, very weak color
                 else: # <= -75
                     active_bars = 1
-                    active_color = QColor(get_color('signalVeryWeak', '#D00000'))
+                    active_color = QColor(get_color('signalVeryWeak'))
             else:
                  # Handle non-integer/missing data gracefully
                  display_text = str(signal_dbm_data) # Show original data if not int
@@ -360,9 +321,20 @@ class NetworkTableModel(QAbstractTableModel):
 
     def update_networks(self, networks: List[WiFiNetwork]) -> None:
         """Update the model with new network data."""
-        logger.debug(f"Updating model with {len(networks)} networks.")
+       
+      
+      
         self.beginResetModel()
-        self.networks = sorted(networks, key=lambda x: x.strongest_signal if x.strongest_signal is not None else -999, reverse=True) # Pre-sort by strongest signal
+        
+        # Sort by signal strength with safe attribute access
+        def get_signal(x):
+            if hasattr(x, 'strongest_signal'):
+                return x.strongest_signal if x.strongest_signal is not None else -999
+            if hasattr(x, 'signal_dbm'):
+                return x.signal_dbm if x.signal_dbm is not None else -999
+            return -999
+        
+        self.networks = sorted(networks, key=get_signal, reverse=True)
         self.endResetModel()
 
 # ==================================================
@@ -393,6 +365,7 @@ class NetworkFilterProxyModel(QSortFilterProxyModel):
     def filterAcceptsRow(self, source_row: int, source_parent: QModelIndex) -> bool:
         """Determine if row should be included in filtered results."""
         if self._source_model is None:
+            print(f"DEBUG: filterAcceptsRow({source_row}) -> No source model!") # Debug
             return False # Should not happen if set up correctly
 
         # Band Filter Logic
@@ -403,6 +376,13 @@ class NetworkFilterProxyModel(QSortFilterProxyModel):
                                                   source_parent)
             band_data = self._source_model.data(band_index, Qt.ItemDataRole.DisplayRole)
             band_filter_accepts = (band_data == self.band_filter)
+            # Debug Print for Band Filter
+            print(f"DEBUG: filterAcceptsRow({source_row}), Band Filter: '{self.band_filter}', Row Band: '{band_data}', Accepted: {band_filter_accepts}")
+        else:
+             # Debug Print when no band filter is active
+             print(f"DEBUG: filterAcceptsRow({source_row}), No Band Filter, Accepted: True")
+             pass # No band filter applied, accept row based on this criterion
+
 
         # Add other filters here if needed (e.g., text search)
         # text_filter = self.filterRegularExpression() # Example for text filter
@@ -413,7 +393,9 @@ class NetworkFilterProxyModel(QSortFilterProxyModel):
         #     text_filter_accepts = text_filter.match(ssid_data).hasMatch()
 
         # Combine filter results
-        return band_filter_accepts # and text_filter_accepts
+        final_accept = band_filter_accepts # and text_filter_accepts
+        print(f"DEBUG: filterAcceptsRow({source_row}) -> Final Decision: {final_accept}") # Debug Final Decision
+        return final_accept
 
     def set_band_filter(self, band: Optional[str]) -> None:
         """Set band filter for the model (e.g., '2.4GHz', '5GHz', None for all)."""
@@ -502,12 +484,24 @@ class NetworkTableView(QTableView, ThemeObserver):
 
 
     def set_networks(self, networks: List[WiFiNetwork]) -> None:
-        """Update table with new network data and adjust columns."""
-        self.model.update_networks(networks)
-        # Optionally resize columns to content after data is loaded
-        # QTimer.singleShot(0, self.resizeColumnsToContents) # Resize after model update finishes
-        # Or set fixed widths based on expected content
-        self.set_column_widths()
+        """Set network data for the table."""
+        print(f"DEBUG: NetworkTableView.set_networks called with {len(networks)} networks.")
+        try:
+             if hasattr(self, 'model') and self.model:
+                  self.model.update_networks(networks)
+                  logger.debug(f"Updated network table model with {len(networks)} entries.")
+                  # === Force UI Update ===
+                  # Recalculate column widths based on new data/defaults
+                  self.set_column_widths() 
+                  # Explicitly request a repaint of the viewport and the widget itself
+                  self.viewport().update()
+                  self.update()
+                  logger.debug("Explicitly requested table view update.")
+                  # =======================
+             else:
+                  logger.error("Network table model not initialized when set_networks called.")
+        except Exception as e:
+             logger.exception(f"Error updating network table: {e}")
 
 
     def contextMenuEvent(self, event: QContextMenuEvent) -> None:
@@ -634,6 +628,10 @@ class NetworkTableView(QTableView, ThemeObserver):
         except Exception as e:
              logger.error(f"Error setting column widths: {e}", exc_info=True)
 
+    def filter_by_band(self, band: Optional[str]) -> None:
+        """Filter networks by band."""
+        self.proxy_model.set_band_filter(band)
+
 # ==================================================
 # ==          Example Usage (for testing)         ==
 # ==================================================
@@ -649,7 +647,7 @@ if __name__ == '__main__':
 
     # --- Theme Selector ---
     theme_combo = QComboBox()
-    theme_combo.addItems(THEMES_DATA.keys())
+    theme_combo.addItems(["light", "dark"]) # Example themes
     theme_combo.setCurrentText(get_current_theme())
     theme_combo.currentTextChanged.connect(set_theme) # Connect to dummy theme changer
     layout.addWidget(theme_combo)

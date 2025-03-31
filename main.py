@@ -52,18 +52,24 @@ def setup_logging() -> None:
     logger = logging.getLogger()
     logger.setLevel(getattr(logging, LOG_LEVEL))
     
+    # Suppress INFO messages from pywifi logger
+    logging.getLogger('pywifi').setLevel(logging.WARNING)
+    
     # Create console handler for debugging
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO if LOG_LEVEL == "DEBUG" else getattr(logging, LOG_LEVEL))
     console_formatter = logging.Formatter('%(levelname)s: %(message)s')
     console_handler.setFormatter(console_formatter)
+    # Set UTF-8 encoding for console handler
+    console_handler.setStream(open(sys.stdout.fileno(), mode='w', encoding='utf8', buffering=1))
     logger.addHandler(console_handler)
     
     # Create file handler with rotation
     file_handler = RotatingFileHandler(
         log_path,
         maxBytes=LOG_ROTATION_SIZE,
-        backupCount=LOG_ROTATION_COUNT
+        backupCount=LOG_ROTATION_COUNT,
+        encoding='utf-8'
     )
     file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(file_formatter)
@@ -135,16 +141,19 @@ def main() -> int:
     try:
         # Get theme preference from settings
         settings = QSettings()
-        theme_name = settings.value("app/theme", "dark")
-        
         try:
-            theme = apply_theme(theme_name)
-            logging.info(f"Applied {theme_name} theme successfully")
+            theme_name = settings.value('theme', 'light')
+            apply_theme(theme_name)
+            logging.info(f"Applied {theme_name} theme")
         except Exception as e:
-            logging.error(f"Failed to apply {theme_name} theme: {e}")
-            # Fallback to light theme
-            theme = apply_theme("light")
-            logging.info("Falling back to light theme")
+            logging.error(f"Failed to apply theme: {e}")
+            try:
+                # Fallback to light theme
+                apply_theme("light")
+                logging.info("Falling back to light theme")
+            except Exception as fallback_error:
+                logging.error(f"Critical error applying fallback theme: {fallback_error}")
+                # Continue without theme - basic Qt styling will apply
 
         try:
             # Initialize scanner with proper error handling

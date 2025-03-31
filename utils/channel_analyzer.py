@@ -61,6 +61,7 @@ class ChannelAnalyzer:
         Returns:
             Dictionary with channel usage analysis
         """
+        print(f"DEBUG: ChannelAnalyzer.analyze_channel_usage called with {len(networks)} networks.")
         # Reset channel usage
         self.channel_usage = {
             '2.4GHz': {channel: [] for channel in CHANNELS_2_4GHZ},
@@ -68,30 +69,89 @@ class ChannelAnalyzer:
         }
         
         # Count networks per channel
-        for network in networks:
+        for idx, network in enumerate(networks):
+            print(f"DEBUG: Processing network {idx+1}/{len(networks)}: SSID='{network.ssid}'")
             try:
-                for bssid in network.bssids:
-                    channel = bssid.channel
-                    signal_dbm = bssid.signal_dbm
-                    band = bssid.band
-                    
+                if network.bssids:
+                    for bssid_idx, bssid in enumerate(network.bssids):
+                        print(f"  DEBUG: Processing BSSID {bssid_idx+1}: {bssid.bssid}")
+                        channel = bssid.channel
+                        signal_dbm = bssid.signal_dbm
+                        band = bssid.band.strip()
+                        print(f"    DEBUG: BSSID raw data: Channel={channel}, Signal={signal_dbm}, Band='{band}'")
+                        # If channel from bssid is zero, fallback to network.channel or assign default if still zero
+                        if channel == 0:
+                            fallback_channel = getattr(network, 'channel', 0)
+                            print(f"      DEBUG: BSSID channel 0, fallback to network.channel={fallback_channel}")
+                            if fallback_channel != 0:
+                                channel = fallback_channel
+                            else:
+                                # Assign default based on band (though band might also be unreliable)
+                                if band in ['2.4 GHz', '2.4GHz']:
+                                    channel = 6 # Default 2.4GHz
+                                else:
+                                    channel = 36 # Default 5GHz
+                                print(f"      DEBUG: Fallback channel also 0, assigned default based on band: {channel}")
+                        
+                        if channel and signal_dbm is not None:
+                            if band in ['2.4 GHz', '2.4GHz'] and channel in CHANNELS_2_4GHZ:
+                                print(f"    DEBUG: Adding BSSID to self.channel_usage['2.4GHz'][{channel}]")
+                                self.channel_usage['2.4GHz'][channel].append({
+                                    'ssid': network.ssid,
+                                    'bssid': bssid.bssid,
+                                    'signal_dbm': signal_dbm
+                                })
+                            elif band in ['5 GHz', '5GHz'] and channel in CHANNELS_5GHZ:
+                                print(f"    DEBUG: Adding BSSID to self.channel_usage['5GHz'][{channel}]")
+                                self.channel_usage['5GHz'][channel].append({
+                                    'ssid': network.ssid,
+                                    'bssid': bssid.bssid,
+                                    'signal_dbm': signal_dbm
+                                })
+                            else:
+                                print(f"    WARN: BSSID Band ('{band}')/Channel ({channel}) mismatch or not standard.")
+                        else:
+                            print(f"    WARN: BSSID Invalid channel ({channel}) or signal ({signal_dbm}). Skipping.")
+                else:
+                    print("  WARN: Network has no BSSIDs listed. Trying network-level data.")
+                    # Handle networks without BSSID list (less reliable)
+                    channel = getattr(network, 'channel', 0)
+                    signal_dbm = getattr(network, 'signal_dbm', None)
+                    band = getattr(network, 'band', '').strip()
+                    print(f"    DEBUG: Network raw data: Channel={channel}, Signal={signal_dbm}, Band='{band}'")
                     if channel and signal_dbm is not None:
-                        if band.strip() == '2.4 GHz' and channel in CHANNELS_2_4GHZ:
+                        if band in ['2.4 GHz', '2.4GHz'] and channel in CHANNELS_2_4GHZ:
+                            print(f"    DEBUG: Adding Network to self.channel_usage['2.4GHz'][{channel}]")
                             self.channel_usage['2.4GHz'][channel].append({
                                 'ssid': network.ssid,
-                                'bssid': bssid.bssid,
+                                'bssid': None, # Indicate this is network-level
                                 'signal_dbm': signal_dbm
                             })
-                        elif band.strip() == '5 GHz' and channel in CHANNELS_5GHZ:
+                        elif band in ['5 GHz', '5GHz'] and channel in CHANNELS_5GHZ:
+                            print(f"    DEBUG: Adding Network to self.channel_usage['5GHz'][{channel}]")
                             self.channel_usage['5GHz'][channel].append({
                                 'ssid': network.ssid,
-                                'bssid': bssid.bssid,
+                                'bssid': None,
                                 'signal_dbm': signal_dbm
                             })
-            except (KeyError, TypeError) as e:
-                logger.warning(f"Error processing network: {e}")
+                        else:
+                            print(f"    WARN: Network Band ('{band}')/Channel ({channel}) mismatch or not standard.")
+                    else:
+                        print(f"    WARN: Network Invalid channel ({channel}) or signal ({signal_dbm}). Skipping.")
+            except (AttributeError, KeyError, TypeError) as e:
+                logger.warning(f"Error processing network {idx+1}: {e}")
+                print(f"ERROR: Exception processing network {idx+1}: {e}")
                 continue
         
+        # --- ADDED DEBUG PRINT before returning --- 
+        print(f"DEBUG: ChannelAnalyzer.analyze_channel_usage finished. Final self.channel_usage:")
+        # Print summary, avoid overwhelming logs
+        for band, channels_dict in self.channel_usage.items():
+            print(f"  {band}:")
+            for ch, nets in channels_dict.items():
+                if nets: # Only print channels with networks
+                    print(f"    Channel {ch}: {len(nets)} entries")
+            
         # Analyze congestion
         analysis = {
             '2.4GHz': self._analyze_band_congestion('2.4GHz'),
@@ -140,16 +200,7 @@ class ChannelAnalyzer:
     
     def _calculate_2_4ghz_congestion(self, network_counts: Dict[int, int], 
                                     signal_strengths: Dict[int, float]) -> Dict[int, float]:
-        """
-        Calculate congestion scores for 2.4 GHz channels, considering overlap.
-        
-        Args:
-            network_counts: Dictionary of channel to network count
-            signal_strengths: Dictionary of channel to average signal strength
-            
-        Returns:
-            Dictionary of channel to congestion score (0-100)
-        """
+        """Calculate congestion scores for 2.4 GHz channels, considering overlap."""
         congestion_scores = {}
         
         for channel in CHANNELS_2_4GHZ:
@@ -158,10 +209,11 @@ class ChannelAnalyzer:
                 congestion_scores[channel] = 0
                 continue
                 
-            base_score = min(100, network_counts[channel] * 20)  # Each network adds 20 points
+            base_score = min(70, network_counts[channel] * 15)  # Each network adds 15 points (max 70)
             
             # Consider overlapping channels (channels within 4 of current channel overlap in 2.4GHz)
             overlap_factor = 0
+            
             for other_channel in CHANNELS_2_4GHZ:
                 if other_channel == channel:
                     continue
@@ -179,8 +231,12 @@ class ChannelAnalyzer:
                         overlap_factor += (network_counts[other_channel] * overlap_percentage * signal_factor)
             
             # Add overlap factor to base score
-            overlap_score = min(100, overlap_factor * 10)
+            overlap_score = min(30, overlap_factor * 5)  # Max 30 points from overlap
             final_score = min(100, base_score + overlap_score)
+            
+            # Give preference to standard non-overlapping channels (1, 6, 11)
+            if channel in NON_OVERLAPPING_2_4GHZ:
+                final_score = max(0, final_score - 10)  # 10-point bonus for standard channels
             
             congestion_scores[channel] = round(final_score, 1)
         
@@ -300,12 +356,22 @@ class ChannelAnalyzer:
         Returns:
             Dictionary with data for visualization
         """
+        # --- ADDED DEBUG PRINT ---
+        print("DEBUG: ChannelAnalyzer.get_visualization_data called. Current self.channel_usage:")
+        # Print summary
+        for band, channels_dict in self.channel_usage.items():
+            print(f"  {band}:")
+            for ch, nets in channels_dict.items():
+                if nets: # Only print channels with networks
+                    print(f"    Channel {ch}: {len(nets)} entries")
+            
+        visualization = {}
+        recommendations = self._generate_recommendations()
+        
+        # Process each band
         # Analyze congestion for both bands
         analysis_2_4 = self._analyze_band_congestion('2.4GHz')
         analysis_5 = self._analyze_band_congestion('5GHz')
-        
-        # Get recommendations
-        recommendations = self._generate_recommendations()
         
         # Prepare data for visualization
         visualization_data = {

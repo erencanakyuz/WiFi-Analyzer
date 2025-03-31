@@ -64,70 +64,58 @@ class NetworkBSSID:
         )
 
 
-@dataclass
 class WiFiNetwork:
-    """
-    Represents a WiFi network with one or more BSSIDs.
-    """
-    ssid: str
-    bssids: List[NetworkBSSID] = field(default_factory=list)
-    security_type: Optional[str] = None
-    first_seen: float = field(default_factory=time.time)
-    last_seen: float = field(default_factory=time.time)
-    favorite: bool = False
-    notes: str = ""
-
-    def __post_init__(self):
-        """Validate required fields."""
-        pass  # Defer validation to validate() method
-
-    def validate(self):
-        """Validate network has required fields."""
-        if not self.bssids:
-            raise TypeError("At least one BSSID is required")
-
-    def __eq__(self, other):
-        """Compare WiFiNetworks for equality based on BSSIDs only."""
-        if not isinstance(other, WiFiNetwork):
-            return False
-        return (sorted(self.bssids, key=lambda x: x.bssid) == 
-                sorted(other.bssids, key=lambda x: x.bssid))
-
-    def __str__(self):
-        """Simple string representation showing SSID and strongest signal."""
-        signal = f"{self.strongest_signal} dBm" if self.strongest_signal else "N/A"
-        return f"{self.ssid} ({signal})"
-    
-    @property
-    def strongest_signal(self) -> Optional[float]:
-        """Return the strongest signal strength among all BSSIDs in dBm."""
-        if not self.bssids:
-            return None
-        return max(bssid.signal_dbm for bssid in self.bssids)
+    def __init__(self, ssid, bssids=None, security_type="Unknown"):
+        self.ssid = ssid
+        self.bssids = bssids or []  # Ensure bssids is never None
+        self.security_type = security_type
     
     @property
     def signal_dbm(self):
-        """Get the strongest signal strength among all BSSIDs."""
+        """Get the signal strength in dBm of the strongest BSSID."""
         if not self.bssids:
-            return -100  # Default very weak signal if no BSSIDs
-        return max(bssid.signal_dbm for bssid in self.bssids)
+            return -100
+        return max((b.signal_dbm for b in self.bssids if hasattr(b, 'signal_dbm')), default=-100)
+    
+    @property
+    def bssid(self):
+        """Get the BSSID of the strongest signal."""
+        if not self.bssids:
+            return ""
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm if hasattr(b, 'signal_dbm') else -100)
+        return strongest.bssid
+    
+    @property
+    def signal_percent(self):
+        """Get the signal percentage of the strongest BSSID."""
+        if not self.bssids:
+            return 0
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm if hasattr(b, 'signal_dbm') else -100)
+        return strongest.signal_percent
+    
+    # Essential compatibility properties
+    @property
+    def strongest_signal(self):
+        """Compatibility property for the signal strength in dBm."""
+        return self.signal_dbm
     
     @property
     def channel(self):
-        """Get the channel of the BSSID with the strongest signal."""
+        """Get the channel of the strongest BSSID."""
         if not self.bssids:
             return 0
-        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm if hasattr(b, 'signal_dbm') else -100)
         return strongest.channel
-        
+    
     @property
     def band(self):
-        """Get the frequency band of the BSSID with the strongest signal."""
+        """Get the frequency band of the strongest BSSID."""
         if not self.bssids:
             return "Unknown"
-        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
+        strongest = max(self.bssids, key=lambda b: b.signal_dbm if hasattr(b, 'signal_dbm') else -100)
         return strongest.band
     
+    # Additional compatibility aliases needed by dashboard
     @property
     def primary_channel(self):
         """Alias for channel property."""
@@ -137,76 +125,11 @@ class WiFiNetwork:
     def primary_band(self):
         """Alias for band property."""
         return self.band
-
+        
     @property
-    def bssid(self):
-        """Get the BSSID of the strongest signal."""
-        if not self.bssids:
-            return ""
-        strongest = max(self.bssids, key=lambda b: b.signal_dbm)
-        return strongest.bssid
-    
-    def update_last_seen(self):
-        """Update the last_seen timestamp to current time."""
-        self.last_seen = time.time()
-    
-    def merged_with(self, other: 'WiFiNetwork') -> 'WiFiNetwork':
-        """
-        Merge this network with another network with the same SSID.
-        Updates signal levels and adds any new BSSIDs.
-        """
-        if self.ssid != other.ssid:
-            raise ValueError("Cannot merge networks with different SSIDs")
-        
-        result = WiFiNetwork(
-            ssid=self.ssid,
-            security_type=self.security_type,
-            first_seen=min(self.first_seen, other.first_seen),
-            last_seen=max(self.last_seen, other.last_seen),
-            favorite=self.favorite,
-            notes=self.notes
-        )
-        
-        # Combine BSSIDs, keeping the most recent signal data
-        existing_bssids = {b.bssid: b for b in self.bssids}
-        
-        for other_bssid in other.bssids:
-            if other_bssid.bssid in existing_bssids:
-                # Use the BSSID with the more recent data
-                existing_bssids[other_bssid.bssid] = other_bssid
-            else:
-                # Add the new BSSID
-                existing_bssids[other_bssid.bssid] = other_bssid
-        
-        result.bssids = list(existing_bssids.values())
-        return result
-    
-    def to_dict(self) -> Dict[str, Any]:
-        """Convert to dictionary for serialization."""
-        return {
-            "ssid": self.ssid,
-            "bssids": [b.to_dict() for b in self.bssids],
-            "security_type": self.security_type,
-            "first_seen": self.first_seen,
-            "last_seen": self.last_seen,
-            "favorite": self.favorite,
-            "notes": self.notes,
-        }
-    
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> 'WiFiNetwork':
-        """Create a WiFiNetwork from a dictionary."""
-        network = cls(
-            ssid=data["ssid"],
-            security_type=data.get("security_type"),
-            first_seen=data.get("first_seen", time.time()),
-            last_seen=data.get("last_seen", time.time()),
-            favorite=data.get("favorite", False),
-            notes=data.get("notes", "")
-        )
-        
-        network.bssids = [NetworkBSSID.from_dict(b) for b in data.get("bssids", [])]
-        return network
+    def primary_bssid(self):
+        """Alias for bssid property."""
+        return self.bssid
 
 
 @dataclass

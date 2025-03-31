@@ -214,15 +214,25 @@ class DashboardView(QWidget):
     def _update_channel_stats(self, networks: List[WiFiNetwork]) -> None:
         """Update channel utilization statistics."""
         try:
-            ch_24ghz = [n for n in networks if n.band == "2.4 GHz"]
-            ch_5ghz = [n for n in networks if n.band == "5 GHz"]
+            ch_24ghz = []
+            ch_5ghz = []
+            
+            for network in networks:
+                try:
+                    if network.band == "2.4 GHz":
+                        ch_24ghz.append(network)
+                    elif network.band == "5 GHz":
+                        ch_5ghz.append(network)
+                except Exception:
+                    # Skip this network if band access fails
+                    continue
             
             self._update_band_stats(ch_24ghz, is_24ghz=True)
             self._update_band_stats(ch_5ghz, is_24ghz=False)
         except Exception as e:
             logger.error(f"Error updating channel stats: {e}")
-            self.channel_24_label.setText("2.4 GHz: Error")
-            self.channel_5_label.setText("5 GHz: Error")
+            self.channel_24_label.setText("2.4 GHz: Error loading data")
+            self.channel_5_label.setText("5 GHz: Error loading data")
 
     def _update_band_stats(self, networks: List[WiFiNetwork], is_24ghz: bool) -> None:
         """Update statistics for a specific frequency band."""
